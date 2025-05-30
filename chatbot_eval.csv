@@ -1,0 +1,10 @@
+utterance,model_labels,bot_labels,correct?
+"janus , can you uh",{Turn-Management:Turn-Take},{CORRECT},True
+i think we're getting,{Task:Inform},{CORRECT},True
+"th that that incorporates the trend whilst at the same time not confusing people , if you're looking for functionality .",{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Inform}",False
+"but for the evaluation it's going to be one is true and seven is false , going over these different criteria ,",{Task:Inform},{CORRECT},True
+and you w,{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+oh sorry .,{Social-Obligations-Management:Thanking},"{INCORRECT, Social-Obligations-Management:Apology}",False
+"yeah , a mute button . yes .",{Auto-Feedback:AutoPositive},"{INCORRECT, Allo-Feedback:AlloPositive}",False
+"my name , my job ,",{Task:Inform},"{INCORRECT, Social-Obligations-Management:Init-Self-Introduction}",False
+"and 'cause you have more room then ,",{Task:Inform},{CORRECT},True
