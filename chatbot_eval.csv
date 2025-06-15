@@ -1,10 +1,201 @@
 utterance,model_labels,bot_labels,correct?
-"janus , can you uh",{Turn-Management:Turn-Take},{CORRECT},True
-i think we're getting,{Task:Inform},{CORRECT},True
-"th that that incorporates the trend whilst at the same time not confusing people , if you're looking for functionality .",{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Inform}",False
-"but for the evaluation it's going to be one is true and seven is false , going over these different criteria ,",{Task:Inform},{CORRECT},True
-and you w,{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
-oh sorry .,{Social-Obligations-Management:Thanking},"{INCORRECT, Social-Obligations-Management:Apology}",False
-"yeah , a mute button . yes .",{Auto-Feedback:AutoPositive},"{INCORRECT, Allo-Feedback:AlloPositive}",False
-"my name , my job ,",{Task:Inform},"{INCORRECT, Social-Obligations-Management:Init-Self-Introduction}",False
-"and 'cause you have more room then ,",{Task:Inform},{CORRECT},True
+mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+then i'd like to make a proposal .,{Task:Inform},"{INCORRECT, Task:Offer}",False
+the most users n,{Task:Inform},"{INCORRECT, Own-Communication-Management:Self-Correction}",False
+"just kind of minimise the clutter ,",{Task:Inform},"{INCORRECT, Task:Instruct}",False
+okay .,{Auto-Feedback:AutoPositive},"{INCORRECT, Task:Agreement}",False
+and al we also need a beeper or buzzer or other sort of noise thing for locating the remote .,{Task:Inform},"{INCORRECT, Task:Instruct}",False
+tomorrow you might have a some more functions,{Task:Inform},{CORRECT},True
+is that possible ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},"{INCORRECT, Task:Agreement}",False
+you know .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Other:Other}",False
+"and you u u use you don't use them ,",{Task:Inform},"{INCORRECT, Own-Communication-Management:Self-Correction}",False
+the signal goes via chip,{Task:Inform},{CORRECT},True
+"maybe just in the way that we we use it , in the sense that once we have an idea out there or while work was going on in between meetings , that could have been up on a board uh you know as opposed to in like in text .",{Task:Inform},{CORRECT},True
+"which i think it probably should be ,",{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Inform}",False
+"i think we can reasonably say it's another another one ,",{Task:Inform},{CORRECT},True
+what uh,{Other:Other},{CORRECT},True
+"well i did anyway ,",{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+alphabetically .,{Discourse-Structuring:Interaction-Structuring},{CORRECT},True
+anything about that on the market research or something like regarding whether people want a combined something like that ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"because it it would also be interesting to uh you to know find out if we have a market in really young children as well , to see you know how to how to market this thing .",{Task:Inform},{CORRECT},True
+yes d we do have special form .,{Task:Inform},{CORRECT},True
+or i press button,{Task:Inform},{CORRECT},True
+"and then you can pre-programme the channels , the voice recognition and then the voice response sample locator .",{Task:Inform},{CORRECT},True
+"so ,",{Other:Other},{CORRECT},True
+would anybody like to go first ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+uh the ma the main points i i i uh just said . we have to be original and uh technological innovative .,{Task:Inform},{CORRECT},True
+'kay .,{Other:Other},"{INCORRECT, Auto-Feedback:AutoPositive}",False
+so uh,{Task:Inform},"{INCORRECT, Other:Other}",False
+and thermodynamic also .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Inform}",False
+"i don't know ,",{Task:Inform},"{INCORRECT, Task:Disagreement}",False
+yeah i think the colours detract a little bit .,{Task:Inform},{CORRECT},True
+uh uh um i would uh like to explore the possibility of using um alternative um delivery and sales channel,{Task:Inform},{CORRECT},True
+"yeah ,",{Auto-Feedback:AutoPositive},{CORRECT},True
+well,{Task:Inform},"{INCORRECT, Other:Other}",False
+"yeah , i think so .",{Task:Agreement},{CORRECT},True
+"yeah ,",{Auto-Feedback:AutoPositive},{CORRECT},True
+i got me you've got,{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+but uh nobody knows uh how much uh it will cost uh .,{Task:Inform},{CORRECT},True
+i got a whole table and everything .,{Task:Inform},{CORRECT},True
+"but we wanna keep the company brand as well ,",{Task:Inform},{CORRECT},True
+that's hard .,{Task:Inform},"{INCORRECT, Task:Disagreement}",False
+speci,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Other:Other}",False
+there is a switch uh between these .,{Task:Inform},{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+to have some feedback . yeah .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Allo-Feedback:FeedbackElicitation}",False
+and what are just,{Task:Set-Question},{CORRECT},True
+special form ?,{Turn-Management:Turn-Take},"{INCORRECT, Task:Set-Question}",False
+and then you uh,{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+"and you wouldn't you wouldn't need uh a whole host of extra buttons for that ,",{Task:Inform},{CORRECT},True
+"but uh so far i i was uh looking what what are the blue circuit , i mean radio wave radio frequency circuits are available now ,",{Task:Inform},"{INCORRECT, Task:Set-Question, Own-Communication-Management:Self-Correction}",False
+"'kay . okay ,",{Auto-Feedback:AutoPositive},"{INCORRECT, Task:Agreement}",False
+who wants to go next ?,{Task:Set-Question},{CORRECT},True
+it's got a tail then . b bo both predators .,{Task:Inform},"{INCORRECT, Task:Inform, Own-Communication-Management:Self-Correction}",False
+"and basically they came they said the channel , volume , and power buttons had the highest relevance to users ,",{Task:Inform},{CORRECT},True
+we also asked some users about some specific features that they'd like to see in the on the remote control .,{Task:Inform},{CORRECT},True
+"uh if if we bundle the remote control with something uh to sell then it could be a single device , otherwise it could be programmable one",{Task:Inform},"{INCORRECT, Task:Inform, Time-Management:Stalling}",False
+"um , one thing i thought might be kind of interesting is to put a flip screen on it , just like you have on flip phones ,",{Task:Inform},"{INCORRECT, Task:Offer, Time-Management:Stalling}",False
+"so , um you know , what other buttons do we want ?",{Turn-Management:Turn-Take},"{INCORRECT, Task:Set-Question, Time-Management:Stalling}",False
+and,{Task:Inform},"{INCORRECT, Time-Management:Stalling}",False
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"ebenezer , you wanna have a you wanna draw your favourite animal ?","{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+yep .,{Auto-Feedback:AutoPositive},{CORRECT},True
+my hand is uh different size than yours for example .,{Task:Inform},{CORRECT},True
+okay . now ? yeah .,{Turn-Management:Turn-Take},"{INCORRECT, Turn-Management:Turn-Take, Auto-Feedback:AutoPositive}",False
+"well , a little bit like the yes .",{Task:Inform},"{INCORRECT, Auto-Feedback:AutoPositive}",False
+do you think you can make it or uh,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+"uh second , i think you will get the most revenue from i from it .",{Task:Inform},{CORRECT},True
+"i think we'd like to think the ideas were new ,",{Task:Inform},{CORRECT},True
+"yeah , we're we're ahead of the game there .",{Task:Inform},{CORRECT},True
+no,{Task:Disconfirm},{CORRECT},True
+and so i am i am voting for s to stick to the um infra-red control instead of r_w_,{Task:Inform},{CORRECT},True
+"does the pay-raise immediately come into effect on our next pay-check , or is that","{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+and we think,{Task:Inform},"{INCORRECT, Task:Discourse-Structuring}",False
+hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"yeah , yeah .",{Auto-Feedback:AutoPositive},{CORRECT},True
+maybe it won't work so well .,{Task:Inform},{CORRECT},True
+oh wait a minute .,{Task:Instruct},"{INCORRECT, Own-Communication-Management:Self-Correction}",False
+"yeah , yeah .",{Auto-Feedback:AutoPositive},{CORRECT},True
+alright .,{Auto-Feedback:AutoPositive},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+"hmm , okay .",{Auto-Feedback:AutoPositive},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+thanks .,{Social-Obligations-Management:Thanking},{CORRECT},True
+"yeah , honestly speaking i was thinking that it was seven centimetres initially ,",{Task:Inform},{CORRECT},True
+"yeah , me too ,",{Task:Agreement},{CORRECT},True
+and you w,{Task:Inform},"{INCORRECT, Other:Other}",False
+"okay , after having the inputs from industrial design and user interface , i think most of the points which i want to are already covered here .",{Task:Inform},{CORRECT},True
+but,{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+"yeah , turning yeah , yeah .",{Auto-Feedback:AutoPositive},{CORRECT},True
+participant four .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Other:Other}",False
+"colour , yeah .",{Auto-Feedback:AutoPositive},"{INCORRECT, Task:Inform}",False
+you've already got the numbers for typing in anyway .,{Task:Inform},{CORRECT},True
+they want these high technology features .,{Task:Inform},{CORRECT},True
+"not very complex commands , but easy commands ,",{Task:Inform},{CORRECT},True
+so you don't have hundred channels to choose from .,{Task:Inform},{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+patent patent patent . mm .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Other:Other}",False
+um this time i'm i'm going to um concentrate more on the components and the technical side of the remote controller design .,{Task:Inform},{CORRECT},True
+"uh ,",{Other:Other},{CORRECT},True
+let's see what we got to do .,{Time-Management:Stalling},{CORRECT},True
+but uh i got uh i got an email that basically said to uh make sure that uh whatever device we come up with at the end of the day had to incorporate um the corporate colour and slogan .,{Task:Inform},{CORRECT},True
+you just put it in the drawer until something goes wrong,{Task:Inform},{CORRECT},True
+are we talking about on each colour combination,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+of play doh yeah .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Answer}",False
+because,{Task:Inform},"{INCORRECT, Time-Management:Stalling}",False
+i suppose you c try make it a universal remote,{Task:Inform},"{INCORRECT, Task:Offer}",False
+so,{Task:Inform},"{INCORRECT, Time-Management:Stalling}",False
+do you need the um powerpoint for this ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+your judgement it's is biased .,{Task:Inform},{CORRECT},True
+oh .,{Auto-Feedback:AutoPositive},{CORRECT},True
+uh then would it be uh one o'clock .,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+thank you .,{Social-Obligations-Management:Thanking},{CORRECT},True
+"if we can do this , that'd probably be",{Task:Inform},"{INCORRECT, Task:Offer}",False
+it it just ca it just came up on my um,{Task:Inform},"{INCORRECT, Other:Other}",False
+so uh basically,{Task:Inform},"{INCORRECT, Other:Other}",False
+on like how much more it would be,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Propositional-Question}",False
+we're over ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+uh . huh .,{Auto-Feedback:AutoPositive},{CORRECT},True
+uh a more spongy rubber cover with spongy buttons .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Inform}",False
+what's it like ?,"{Task:Set-Question, Turn-Management:Turn-Take}",{CORRECT},True
+i dunno where it,{Task:Inform},"{INCORRECT, Task:Disconfirm}",False
+"i mean , we we said simplicity is is one of the features ,",{Task:Inform},{CORRECT},True
+and we have to think about some things .,{Task:Inform},{CORRECT},True
+okay .,{Auto-Feedback:AutoPositive},{CORRECT},True
+yep .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"like i said the bouncing ball thing ,",{Task:Inform},{CORRECT},True
+"so you could trigger that to a light ,",{Task:Inform},{CORRECT},True
+i mean the the the the immediate thing that comes to mind with that is that it it it y you've then got the connection,{Task:Inform},{CORRECT},True
+so,{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+okay . yep,{Auto-Feedback:AutoPositive},"{INCORRECT, Auto-Feedback:AutoPositive, Turn-Management:Turn-Take}",False
+mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+it's the uh,{Other:Other},{CORRECT},True
+i dunno what i just did .,{Task:Inform},"{INCORRECT, Own-Communication-Management:Self-Correction}",False
+no .,{Task:Disconfirm},{CORRECT},True
+mm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+you know .,{Discourse-Structuring:Interaction-Structuring},{CORRECT},True
+"i'm just thinking of budgetary issues too ,",{Task:Inform},{CORRECT},True
+"yeah , that's it",{Task:Agreement},{CORRECT},True
+okay .,{Auto-Feedback:AutoPositive},{CORRECT},True
+and then we at least have make it a little harder to lose .,{Task:Inform},{CORRECT},True
+mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+i'll check what they exact mean .,{Task:Inform},"{INCORRECT, Task:Instruct}",False
+'s fiddly .,{Task:Inform},{CORRECT},True
+mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"but when we want a scrolling wheel w we also need the expensive chip ,",{Task:Inform},{CORRECT},True
+so looks like it's just,{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+"and it it it you know , total reliability ,",{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+but are people gonna wanna shake their movie controller ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+yeah okay .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"basically , it's like a um the idea of moving the remote would create enough energy to keep it running .",{Task:Inform},"{INCORRECT, Task:Inform, Own-Communication-Management:Self-Correction}",False
+"um , okay , just um the decision of the power button .",{Task:Inform},"{INCORRECT, Task:Inform, Own-Communication-Management:Self-Correction, Time-Management:Stalling}",False
+"i know ,",{Task:Agreement},{CORRECT},True
+i don't think that's to taxing to uh s engineer . um .,{Task:Inform},"{INCORRECT, Task:Inform, Own-Communication-Management:Self-Correction, Time-Management:Stalling}",False
+yeah . it's okay .,{Task:Agreement},"{INCORRECT, Task:Agreement, Auto-Feedback:AutoPositive}",False
+no,{Task:Disconfirm},{CORRECT},True
+they don't work so hard at the finance department .,{Task:Inform},{CORRECT},True
+well,{Task:Inform},"{INCORRECT, Time-Management:Stalling}",False
+"um the challenge is that current trends right now , across the board in fashion , in furniture , in technology , is a very organic fruit and vegetable kind of thing .",{Task:Inform},"{INCORRECT, Task:Inform, Time-Management:Stalling}",False
+okay .,{Auto-Feedback:AutoPositive},{CORRECT},True
+great .,{Social-Obligations-Management:Thanking},"{INCORRECT, Auto-Feedback:AutoPositive}",False
+that was our main technological innovation,{Task:Inform},{CORRECT},True
+"so , obviously we w w",{Task:Inform},"{INCORRECT, Discourse-Structuring:Interaction-Structuring}",False
+and what colours should the buttons be ?,"{Task:Set-Question, Turn-Management:Turn-Take}",{CORRECT},True
+you saved your y your presentation somewhere ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+"like white , also ni or uh always nice .",{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Task:Inform}",False
+mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+the s,{Other:Other},{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"now , the company must evaluate the feasibility of being able to take enough of the market to justify in production .",{Task:Inform},{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+big microphone .,{Task:Inform},{CORRECT},True
+mm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+so without l_c_d_ ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
+yeah but then uh when you turn turn it,{Task:Inform},"{INCORRECT, Task:Discourse-Structuring:Interaction-Structuring}",False
+'kay .,{Other:Other},{},[]
+i dunno about you guys but i felt like a bit under-stimulated on the whole thing .,{Task:Inform},{},[]
+and don't forget we need to include the colour of our company and the logo .,{Task:Inform},{},[]
+mm .,{Auto-Feedback:AutoPositive},{},[]
+it's just your turning from the base .,{Task:Inform},"{INCORRECT, Auto-Feedback:AutoPositive}",False
+feasible ?,{Turn-Management:Turn-Take},"{INCORRECT, Task:Check-Question}",False
+mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
+"um , and also there's a kinetic energy possibility .",{Task:Inform},{CORRECT},True
+and dynamo might take more space .,{Task:Inform},{CORRECT},True
+well this is a biased judgement,{Task:Inform},{CORRECT},True
+leopard print .,{Auto-Feedback:AutoPositive},"{INCORRECT, Task:Inform}",False
+"uh , okay , what else ?",{Turn-Management:Turn-Take},"{INCORRECT, Discourse-Structuring:Interaction-Structuring, Task:Question}",False
+if .,{Other:Other},{CORRECT},True
+we should c we should come up with a fuzzy one as well .,{Task:Inform},"{INCORRECT, Task:Offer}",False
+our gi,{Task:Inform},"{INCORRECT, Other:Other}",False
+so you are,{Auto-Feedback:AutoPositive},"{INCORRECT, Other:Other}",False
+ignore that .,{Discourse-Structuring:Interaction-Structuring},"{INCORRECT, Own-Communication-Management:Self-Correction}",False
+i know uh you can buy a re a universal uh control for uh only twenty uh euros,{Task:Inform},{CORRECT},True
+i think it does .,{Task:Inform},{CORRECT},True
+i suppose this is a,{Task:Inform},"{INCORRECT, Task:Disconfirm}",False
+so you're four ?,"{Task:Propositional-Question, Turn-Management:Turn-Take}",{CORRECT},True
+there's a lot of options that we have to discuss .,{Task:Inform},{CORRECT},True
+"'cause you have to put it back there to charge the remote ,",{Task:Inform},{CORRECT},True

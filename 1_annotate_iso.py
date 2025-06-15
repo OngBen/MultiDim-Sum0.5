@@ -197,12 +197,12 @@ def predict_labels(model, tokenizer, utterances, threshold=0.5):
     predictions = []
     # pre‑compute a map: dimension -> list of (label_idx, label_name)
     dim_to_indices = {}
-    for idx, lab in enumerate(iso_labels):
-        dim = lab.split(':', 1)[0]
-        dim_to_indices.setdefault(dim, []).append(idx)
-
+    for idx, label in enumerate(iso_labels):
+        dim = label.split(':', 1)[0]
+        dim_to_indices.setdefault(dim, []).append(idx) # {'Task': [0, 1, 2,...], 'Auto-Feedback': [26, 27], 'Allo-Feedback': [28, 29, 30], 'Time-Management': [31, 32], 'Turn-Management': [33, 34, 35,...], 'Own-Communication-Management': [39, 40, 41], 'Partner-Communication-Management': [42, 43], 'Social-Obligations-Management': [44, 45, 46,...], 'Discourse-Structuring': [54], 'Other': [55]}
     for prob_vec in probs:
         utter_labels = []
+        #print(prob_vec)
         # for each dimension, pick the best-scoring function
         for dim, indices in dim_to_indices.items():
             # get (idx, prob) pairs for this dimension
@@ -284,6 +284,6 @@ if __name__ == "__main__":
     model = model.to(device)  # Explicitly move model to device
     # Proceed with annotation
     import sys
-    input_file = sys.argv[1] if len(sys.argv) > 1 else "./data/valid/in"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/valid/da_iso"
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./data/test/in"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/test/da_iso"
     annotate_file(input_file, output_file, model, tokenizer)

@@ -102,6 +102,8 @@ def clean_utterance(utt: str) -> str:
     utt = re.sub(r'-\s*$', '', utt)
     return utt
 
+print(', '.join(f"{{{{{item}}}}}" for item in sorted(set(item for sublist in swda_to_iso.values() for item in sublist))))
+
 # 1. Download and cache the SwDA dataset
 ds = load_dataset("cgpotts/swda")
 unknown_tags = set()

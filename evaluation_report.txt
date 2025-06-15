@@ -1,0 +1,12 @@
+Valid rows evaluated: 196
+Rows skipped due to formatting issues: 4
+Micro-averaged Precision: 0.6934
+Micro-averaged Recall:    0.6476
+Micro-averaged F1:        0.6697
+Macro-averaged Precision: 0.4235
+Macro-averaged Recall:    0.3346
+Macro-averaged F1:        0.3455
+Average Jaccard Index:    0.6437
+Subset Accuracy:          0.6224
+Cohen's Kappa (ChatGPT vs actual): 0.5245
+Krippendorff's Alpha: 0.5190
