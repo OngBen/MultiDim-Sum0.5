@@ -7,11 +7,11 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.python.ops import rnn_cell_impl
 
-from utils import loadSentenceVocabulary
-from utils import loadDAVocabulary
-from utils import computeAccuracy
-from utils import DataProcessor
-from utils import DA_ISO_MAPPING
+from utils_prev import loadSentenceVocabulary
+from utils_prev import loadDAVocabulary
+from utils_prev import computeAccuracy
+from utils_prev import DataProcessor
+from utils_prev import DA_ISO_MAPPING
 import rouge
 
 parser = argparse.ArgumentParser(allow_abbrev=False)

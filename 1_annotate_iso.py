@@ -284,6 +284,6 @@ if __name__ == "__main__":
     model = model.to(device)  # Explicitly move model to device
     # Proceed with annotation
     import sys
-    input_file = sys.argv[1] if len(sys.argv) > 1 else "./data/test/in"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/test/da_iso"
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./data/valid/in"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/valid/da_iso"
     annotate_file(input_file, output_file, model, tokenizer)

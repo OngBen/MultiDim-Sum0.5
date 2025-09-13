@@ -6,14 +6,14 @@ import shutil
 import tensorflow as tf
 import numpy as np
 from tensorflow.python.ops import rnn_cell_impl
-from utils import loadVocabulary, computeAccuracy, DataProcessor, da_vocab_per_dim, dimensions
+from utils_now import loadVocabulary, computeAccuracy, DataProcessor, da_vocab_per_dim, dimensions
 import rouge
 
 parser = argparse.ArgumentParser(allow_abbrev=False)
 
 #Network
 parser.add_argument("--num_units", type=int, default=256, help="Network size.", dest='layer_size')
-parser.add_argument("--model_type", type=str, default='summary_only', help="""full | summary_only(default)
+parser.add_argument("--model_type", type=str, default='full', help="""full | summary_only(default)
                                                                     full: full attention model
                                                                     summary_only: summary attention model""")
 
@@ -38,7 +38,7 @@ parser.add_argument("--train_data_path", type=str, default='train', help="Path t
 parser.add_argument("--test_data_path", type=str, default='test', help="Path to testing data files.")
 parser.add_argument("--valid_data_path", type=str, default='valid', help="Path to validation data files.")
 parser.add_argument("--input_file", type=str, default='in', help="suffix of input file.")
-parser.add_argument("--da_file", type=str, default='da', help="suffix of dialogue act label file.")
+parser.add_argument("--da_file", type=str, default='da_iso', help="suffix of dialogue act label file.")
 parser.add_argument("--sum_file", type=str, default='sum', help="suffix of summary file.")
 
 arg=parser.parse_args()
@@ -71,6 +71,23 @@ in_vocab = loadVocabulary(os.path.join(vocab_path, 'in_vocab'))
 da_vocab = loadVocabulary(os.path.join(vocab_path, 'da_vocab'))
 NUM_DIMS = len(dimensions)
 DA_SIZES = [len(da_vocab_per_dim[d]['vocab']) for d in dimensions]
+
+
+# Add this function after the imports and before valid_model
+def da_turn_to_string(indices, da_vocab_per_dim):
+    """Convert a turn's DA indices to string like {Dimension:Function, ...}"""
+    parts = []
+    for dim in dimensions:  # Process in sorted order
+        idx = indices[dimensions.index(dim)]  # Get the index for this dimension
+        if idx != 0:  # Skip PAD
+            label = da_vocab_per_dim[dim]['rev'][idx]
+            parts.append("{dim}:{label}".format(dim=dim, label=label))
+    if parts:
+        return "{" + ", ".join(parts) + "}"
+    else:
+        return "{}"
+
+
 
 def createModel(input_data, input_size, sequence_length, da_size, decoder_sequence_length, layer_size = 256, isTraining = True):
     cell_fw = tf.contrib.rnn.BasicLSTMCell(layer_size)
@@ -191,13 +208,13 @@ def createModel(input_data, input_size, sequence_length, da_size, decoder_sequen
     with tf.variable_scope('da_proj'):
         da_logits = []
         for i, dim_size in enumerate(DA_SIZES):
-            # linear projection for each dimension
-            da_i = rnn_cell_impl._linear(da_output, dim_size, True, scope='proj_%d' % i)
+            # use tf.layers.dense to avoid _linear dtype/scope issues
+            da_i = tf.layers.dense(da_output, dim_size, name='proj_%d' % i)
             da_logits.append(da_i)
     outputs = da_logits + [decoder_final_outputs.rnn_output, decoder_final_outputs.sample_id]
     return outputs
 
-def valid_model(in_path, da_path, sum_path,sess):
+def valid_model(in_path, da_path, sum_path,sess, save_predictions=False, prediction_prefix=""):
     #return accuracy for dialogue act, rouge-1,2,3,L for summary
     #some useful items are also calculated
     #da_outputs, correct_das: predicted / ground truth of dialogue act
@@ -209,22 +226,43 @@ def valid_model(in_path, da_path, sum_path,sess):
     da_outputs = []
     correct_das = []
 
-    data_processor_valid = DataProcessor(in_path, da_path, sum_path, in_vocab, da_vocab)
+    # Debug counters
+    num_active_dims_pred = 0
+    num_active_dims_true = 0
+    num_turns = 0
+
+    if save_predictions:
+        # Open files for saving predictions
+        # Inside valid_model function, before the open() call:
+        os.makedirs(os.path.dirname(prediction_prefix + "_da_true.txt"), exist_ok=True)
+        da_true_file = open("{prediction_prefix}_da_true.txt".format(prediction_prefix=prediction_prefix), "w")
+        da_pred_file = open("{prediction_prefix}_da_pred.txt".format(prediction_prefix=prediction_prefix), "w")
+        sum_true_file = open("{prediction_prefix}_sum_true.txt".format(prediction_prefix=prediction_prefix), "w")
+        sum_pred_file = open("{prediction_prefix}_sum_pred.txt".format(prediction_prefix=prediction_prefix), "w")
+
+    data_processor_valid = DataProcessor(in_path, da_path, sum_path, in_vocab)
     while True:
         #get a batch of data
         in_data, da_data, da_weight, length, sums, sum_weight,sum_lengths, in_seq, da_seq, sum_seq = data_processor_valid.get_batch(batch_size)
         feed_dict = {input_data.name: in_data, sequence_length.name: length, sum_length.name: sum_lengths}
+
         if data_processor_valid.end != 1 or in_data:
             ret = sess.run(inference_outputs, feed_dict)
+
+
 
             #summary part
             pred_sums = []
             correct_sums = []
-            for batch in ret[1]:
+            # The summary logits are now at index NUM_DIMS (after all DA dimensions)
+            summary_logits = ret[NUM_DIMS]
+
+            for batch in summary_logits:
                 tmp = []
                 for time_i in batch:
                     tmp.append(np.argmax(time_i))
                 pred_sums.append(tmp)
+
             for i in sums:
                 correct_sums.append(i.tolist())
             for pred,corr in zip(pred_sums,correct_sums):
@@ -238,20 +276,86 @@ def valid_model(in_path, da_path, sum_path,sess):
                 rouge_3.append(rouge3)
                 rouge_L.append(rougeL)
 
-            #dialogue act part
-            pred_das = ret[0].reshape((da_data.shape[0], da_data.shape[1], -1))
-            for p, t, i, l in zip(pred_das, da_data, in_data, length):
-                p = np.argmax(p, 1)
-                tmp_pred = []
-                tmp_correct = []
-                for j in range(l):
-                    tmp_pred.append(da_vocab['rev'][p[j]])
-                    tmp_correct.append(da_vocab['rev'][t[j]])
-                da_outputs.append(tmp_pred)
-                correct_das.append(tmp_correct)
+            # Replace the DA processing section with:
+            da_logits_list = ret[:NUM_DIMS]  # Get all dimension outputs
+            pred_indices_per_dim = []
+
+            # Get the actual batch size from the data
+            actual_batch_size = da_data.shape[0]
+            max_turns = da_data.shape[1]
+
+            for d in range(NUM_DIMS):
+                # Reshape from [batch_size * max_turns, num_classes] to [batch_size, max_turns, num_classes]
+                da_logits_d = da_logits_list[d].reshape((actual_batch_size, max_turns, -1))
+                pred_indices_per_dim.append(np.argmax(da_logits_d, axis=-1))
+
+            # Stack to [batch, turns, NUM_DIMS]
+            pred_das = np.stack(pred_indices_per_dim, axis=-1)
+
+            for i in range(da_data.shape[0]):  # Batch dimension
+                dialogue_pred = []
+                dialogue_true = []
+                for j in range(length[i]):     # Turn dimension
+                    # Only include turns with at least one active DA dimension
+                    if np.any(da_weight[i, j] > 0):
+                        dialogue_pred.append(pred_das[i, j].tolist())
+                        # print(pred_das[i, j])
+                        dialogue_true.append(da_data[i, j].tolist())
+                        # Debug: count active dimensions
+                        num_turns += 1
+                        num_active_dims_pred += np.count_nonzero(pred_das[i, j])
+                        num_active_dims_true += np.count_nonzero(da_data[i, j])
+                da_outputs.append(dialogue_pred)
+                correct_das.append(dialogue_true)
+
+            # print("DEBUG: ret lengths:", [r.shape if hasattr(r, 'shape') else r for r in ret])
+            # print("DEBUG: sample_id shape:", ret[1].shape)
+            # print("DEBUG: pred_das shape:", pred_das.shape)
+            # print("DEBUG: length:", length)
+            # print("DEBUG: da_data shape:", da_data.shape)
+
+            if save_predictions:
+                for i in range(len(in_seq)):
+                    # Write true DA and summary
+                    da_true_file.write(da_seq[i] + "\n")
+                    sum_true_file.write(sum_seq[i] + "\n")
+
+                    # Generate predicted DA string
+                    pred_da_list = []
+                    for j in range(length[i]):
+                        turn_indices = pred_das[i, j]
+                        pred_da_list.append(da_turn_to_string(turn_indices, da_vocab_per_dim))
+                    pred_da_str = " ".join(pred_da_list)
+                    da_pred_file.write(pred_da_str + "\n")
+
+                    # Generate predicted summary string
+                    pred_sum_indices = pred_sums[i]
+                    pred_sum_words = []
+                    for idx in pred_sum_indices:
+                        if idx != 0:  # Skip PAD tokens
+                            if idx < len(in_vocab['rev']):
+                                pred_sum_words.append(in_vocab['rev'][idx])
+                            else:
+                                pred_sum_words.append('_UNK')
+                    pred_sum_str = " ".join(pred_sum_words)
+                    sum_pred_file.write(pred_sum_str + "\n")
 
         if data_processor_valid.end == 1:
             break
+
+    if save_predictions:
+        da_true_file.close()
+        da_pred_file.close()
+        sum_true_file.close()
+        sum_pred_file.close()
+
+    # Calculate average active dimensions
+    if num_turns > 0:
+        avg_active_pred = num_active_dims_pred / num_turns
+        avg_active_true = num_active_dims_true / num_turns
+        print("Average active dimensions per turn: pred={:.2f}, true={:.2f}".format(avg_active_pred, avg_active_true))
+    else:
+        print("No turns processed for active dimensions calculation.")
 
     precision = computeAccuracy(correct_das, da_outputs)
     logging.info('da precision: ' + str(precision))
@@ -263,16 +367,19 @@ def valid_model(in_path, da_path, sum_path,sess):
     data_processor_valid.close()
     return np.mean(rouge_1),np.mean(rouge_2),np.mean(rouge_3),np.mean(rouge_L),precision
 
-# Create Training Model
+# Placeholders for DA (now [batch, turns, dims])
 input_data = tf.placeholder(tf.int32, [None, None, None], name='inputs')
 sequence_length = tf.placeholder(tf.int32, [None], name='sequence_length')
 global_step = tf.Variable(0, trainable=False, name='global_step')
+# multidim DAS / weights
 das = tf.placeholder(tf.int32, [None, None, NUM_DIMS], name='das')
 da_weights = tf.placeholder(tf.float32, [None, None, NUM_DIMS], name='da_weights')
+# summaries as before
 summ = tf.placeholder(tf.int32, [None, None], name='summ')
 sum_weights = tf.placeholder(tf.float32, [None, None], name='sum_weights')
 sum_length = tf.placeholder(tf.int32, [None], name='sum_length')
 
+# Build training and inference graphs
 with tf.variable_scope('model'):
     training_outputs = createModel(input_data, len(in_vocab['vocab']), sequence_length, DA_SIZES, sum_length, layer_size=arg.layer_size)
 # extract DA logits list
@@ -329,7 +436,19 @@ with tf.variable_scope('model', reuse=True):
 inference_da_output = tf.nn.softmax(inference_outputs[0], name='da_output')
 inference_sum_output = tf.nn.softmax(inference_outputs[1], name='sum_output')
 
-inference_outputs = [inference_da_output, inference_sum_output]
+# Create softmax outputs for each DA dimension
+inference_da_output = []
+for i in range(NUM_DIMS):
+    da_output = tf.nn.softmax(inference_outputs[i], name='da_output_dim_%d' % i)
+    inference_da_output.append(da_output)
+
+# Get summary sample IDs (index NUM_DIMS+1)
+inference_sum_output = tf.nn.softmax(inference_outputs[NUM_DIMS], name='sum_output')
+
+# Return all DA outputs + summary sample IDs
+inference_outputs = inference_da_output + [inference_sum_output]
+
+# inference_outputs = [inference_da_output, inference_sum_output]
 inference_inputs = [input_data, sequence_length, sum_length]
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
@@ -345,9 +464,11 @@ if arg.evaluate_model:
     valid_path = 'valid'
     test_path = 'test'
     logging.info('Valid:')
-    _ = valid_model(os.path.join(full_valid_path, arg.input_file), os.path.join(full_valid_path, arg.da_file), os.path.join(full_valid_path, arg.sum_file),sess)
+    _ = valid_model(os.path.join(full_valid_path, arg.input_file), os.path.join(full_valid_path, arg.da_file), os.path.join(full_valid_path, arg.sum_file),sess, 
+                                                                  save_predictions=True, prediction_prefix=os.path.join(arg.result_path + "/predictions", "valid"))
     logging.info('Test:')
-    _ = valid_model(os.path.join(full_test_path, arg.input_file), os.path.join(full_test_path, arg.da_file), os.path.join(full_test_path, arg.sum_file),sess)
+    _ = valid_model(os.path.join(full_test_path, arg.input_file), os.path.join(full_test_path, arg.da_file), os.path.join(full_test_path, arg.sum_file),sess, 
+                                                                  save_predictions=True, prediction_prefix=os.path.join(arg.result_path + "/predictions", "test"))
     exit(0)
 
 # Start Training
@@ -378,7 +499,7 @@ with tf.Session() as sess:
     logging.info('Training Start')
     while True:
         if data_processor == None:
-            data_processor = DataProcessor(os.path.join(full_train_path, arg.input_file), os.path.join(full_train_path, arg.da_file), os.path.join(full_train_path, arg.sum_file), in_vocab, da_vocab)
+            data_processor = DataProcessor(os.path.join(full_train_path, arg.input_file), os.path.join(full_train_path, arg.da_file), os.path.join(full_train_path, arg.sum_file), in_vocab)
         in_data, da_data, da_weight, length, sums,sum_weight,sum_lengths,_,_,_ = data_processor.get_batch(batch_size)
         feed_dict = {input_data.name: in_data, das.name: da_data, da_weights.name: da_weight, sequence_length.name: length, summ.name: sums, sum_weights.name: sum_weight, sum_length.name: sum_lengths}
         if data_processor.end != 1 or in_data:
@@ -408,9 +529,11 @@ with tf.Session() as sess:
 
             logging.info('Valid:')
             #variable starts wih e stands for current epoch
-            e_v_r1, e_v_r2,e_v_r3,e_v_rL,e_valid_da = valid_model(os.path.join(full_valid_path, arg.input_file), os.path.join(full_valid_path, arg.da_file), os.path.join(full_valid_path, arg.sum_file), sess)
+            e_v_r1, e_v_r2,e_v_r3,e_v_rL,e_valid_da = valid_model(os.path.join(full_valid_path, arg.input_file), os.path.join(full_valid_path, arg.da_file), os.path.join(full_valid_path, arg.sum_file), sess, 
+                                                                  save_predictions=True, prediction_prefix=os.path.join(arg.result_path + "/predictions", "valid"))
             logging.info('Test:')
-            e_t_r1, e_t_r2,e_t_r3,e_t_rL,e_test_da = valid_model(os.path.join(full_test_path, arg.input_file), os.path.join(full_test_path, arg.da_file), os.path.join(full_test_path, arg.sum_file), sess)
+            e_t_r1, e_t_r2,e_t_r3,e_t_rL,e_test_da = valid_model(os.path.join(full_test_path, arg.input_file), os.path.join(full_test_path, arg.da_file), os.path.join(full_test_path, arg.sum_file), sess, 
+                                                                 save_predictions=True, prediction_prefix=os.path.join(arg.result_path + "/predictions", "test"))
 
             if e_v_r2 <= v_r2 and e_valid_da <= valid_da:
                 no_improve += 1
