@@ -1,7 +1,9 @@
 import torch, re
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments, AutoConfig
 from datasets import load_dataset, DatasetDict, Dataset
 import numpy as np
+from collections import defaultdict
+from sklearn.metrics import f1_score, precision_score, recall_score
 print(torch.__version__)
 print("CUDA available:", torch.cuda.is_available())
 if torch.cuda.is_available():
@@ -28,7 +30,7 @@ dimensions = {
     "Social-Obligations-Management": ["Init-Greeting", "Return-Greeting", 
                                      "Init-Self-Introduction", "Return-Self-Introduction",
                                      "Apology", "Accept-Apology", "Thanking", "Accept-Thanking",
-                                     "Goodbye", "Return-Goodbye"],
+                                     "Init-Goodbye", "Return-Goodbye"],
     "Discourse-Structuring": ["Interaction-Structuring"],
     "Other": ["Other"]
 }
@@ -118,105 +120,196 @@ def clean_utterance(utt: str) -> str:
     return utt
 
 
-def prepare_dataset():
-    # load with trust_remote_code so that the Python script you uploaded is used
+def prepare_dataset_balanced():
     raw = load_dataset('cgpotts/swda', trust_remote_code=True)
-
-    # get the ClassLabel feature so we can convert indices to strings
     damsl_feature = raw['train'].features['damsl_act_tag']
 
-    train_texts, train_labels = [], []
+    # Collect all valid examples
+    all_texts = []
+    all_labels = []
+    label_counts = defaultdict(int)
+    
     for ex in raw['train']:
-        text = ex['text']
-        text = clean_utterance(text)
+        text = clean_utterance(ex['text'])
         if not text:
-            # skip truly empty utterances
             continue
 
-        damsl_idx = ex['damsl_act_tag']                # integer 0–42
-        damsl_tag = damsl_feature.names[damsl_idx]     # string like "sd", "aa", etc.
-
+        damsl_idx = ex['damsl_act_tag']
+        damsl_tag = damsl_feature.names[damsl_idx]
         iso_funcs = swda_to_iso.get(damsl_tag)
+        
         if not iso_funcs:
-            print(f"{damsl_tag}\t{text}")
-            # you may choose to skip or assign a default
             continue
+            
+        all_texts.append(text)
+        label_vec = [1.0 if lab in iso_funcs else 0.0 for lab in iso_labels]
+        all_labels.append(label_vec)
+        
+        for label in iso_funcs:
+            label_counts[label] += 1
 
-        # build a multi-hot vector over your full iso_labels list
-        label_vector = [1.0 if lab in iso_funcs else 0.0 for lab in iso_labels]
-
-        train_texts.append(text)
-        train_labels.append(label_vector)
-
-    if not train_texts:
-        raise ValueError("No examples mapped—check your swbd_damsl_to_iso keys!")
-
-    ds = Dataset.from_dict({"text": train_texts, "labels": train_labels})
+    print(f"Using full dataset: {len(all_texts)} examples")
+    print("Label distribution:")
+    for label, count in sorted(label_counts.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {label}: {count} ({count/len(all_texts)*100:.2f}%)")
+    
+    ds = Dataset.from_dict({"text": all_texts, "labels": all_labels})
     return DatasetDict({"train": ds})
 
-def train_model(train_dataset, model_name='bert-base-uncased'):
-    """Fine-tune a transformer model on the training dataset."""
+def train_model_improved(train_dataset, model_name='bert-base-uncased'):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(
-        model_name, num_labels=len(iso_labels), problem_type="multi_label_classification"
+    
+    # Calculate ACTUAL labels that appear in our dataset
+    labels_array = np.array(train_dataset["train"]["labels"])
+    positive_counts = labels_array.sum(axis=0)
+    total_examples = len(labels_array)
+    
+    # Filter to only labels that actually appear
+    valid_label_indices = [i for i, count in enumerate(positive_counts) if count > 0]
+    valid_iso_labels = [iso_labels[i] for i in valid_label_indices]
+    
+    print(f"Using {len(valid_iso_labels)} labels that actually appear in dataset")
+    print("Label distribution:")
+    for i in valid_label_indices:
+        count = positive_counts[i]
+        if count > 0:  # Double check
+            print(f"  {iso_labels[i]}: {count} ({count/len(labels_array)*100:.2f}%)")
+    
+    positive_ratios = positive_counts / total_examples
+    class_weights = torch.tensor(
+        np.sqrt(1.0 / np.clip(positive_ratios, 0.0001, 1.0)),
+        dtype=torch.float
     )
-    # Tokenize inputs and attach labels
+
+    print("Class weights (for existing labels):")
+    for i in valid_label_indices:
+        weight = class_weights[i].item()
+        print(f"  {iso_labels[i]}: {weight:.2f}")
+
+    # Use standard model - no custom class needed
+    model = AutoModelForSequenceClassification.from_pretrained(
+        model_name,
+        num_labels=len(iso_labels),  # Keep original number for compatibility
+        problem_type="multi_label_classification"
+    )
+    
     def tokenize_fn(examples):
-        tokens = tokenizer(examples["text"], truncation=True, padding="max_length")
+        tokens = tokenizer(
+            examples["text"], 
+            truncation=True, 
+            padding="max_length",
+            max_length=128
+        )
         tokens["labels"] = examples["labels"]
         return tokens
+        
     tokenized = train_dataset.map(tokenize_fn, batched=True)
     tokenized = tokenized.remove_columns(["text"])
-    # Training arguments (adjust epochs, batch size, etc. as needed)
+    
+    # Use focal loss or other techniques if needed, but start simple
     args = TrainingArguments(
-        output_dir="dialog_act_model",
-        num_train_epochs=1,               # Short demo training
-        per_device_train_batch_size=8,
-        gradient_accumulation_steps=2,     # Accumulate gradients if OOM occurs
-        fp16=True,                        # Enable mixed-precision training
-        logging_steps=200,                # Reduce logging frequency
-        learning_rate=5e-5,               # Slightly higher learning rate
-        optim="adamw_torch_fused",        # Faster optimizer
-        report_to="none"                  # Disable unnecessary logging
+        output_dir="dialog_act_model_improved_3",
+        num_train_epochs=3,
+        per_device_train_batch_size=16,
+        per_device_eval_batch_size=16,
+        learning_rate=2e-5,
+        warmup_steps=1000,
+        weight_decay=0.01,
+        logging_steps=500,
+        evaluation_strategy="steps",
+        eval_steps=2000,
+        save_steps=2000,
+        load_best_model_at_end=False,
+        metric_for_best_model="eval_micro_f1",
+        greater_is_better=True,
+        fp16=True if torch.cuda.is_available() else False,
+        report_to="none",
     )
-    trainer = Trainer(model=model, args=args,
-                      train_dataset=tokenized["train"],
-                      tokenizer=tokenizer)
+    
+    def compute_metrics(eval_pred):
+        logits, labels = eval_pred
+        predictions = (torch.sigmoid(torch.tensor(logits)) > 0.5).int()
+        
+        micro_f1 = f1_score(labels, predictions, average='micro', zero_division=0)
+        macro_f1 = f1_score(labels, predictions, average='macro', zero_division=0)
+        
+        return {
+            'eval_micro_f1': micro_f1,
+            'eval_macro_f1': macro_f1,
+        }
+
+    # Custom Trainer handles the weighted loss
+    class WeightedLossTrainer(Trainer):
+        def __init__(self, *args, class_weights=None, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.class_weights = class_weights
+            
+        def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+            labels = inputs.pop("labels")
+            outputs = model(**inputs)
+            logits = outputs.logits
+            
+            loss_fct = torch.nn.BCEWithLogitsLoss(
+                pos_weight=self.class_weights.to(logits.device)
+            )
+            loss = loss_fct(logits, labels)
+            
+            return (loss, outputs) if return_outputs else loss
+
+    train_val_split = tokenized["train"].train_test_split(test_size=0.1, seed=42)
+    
+    trainer = WeightedLossTrainer(  # Use custom trainer
+        model=model,
+        args=args,
+        train_dataset=train_val_split["train"],
+        eval_dataset=train_val_split["test"],
+        tokenizer=tokenizer,
+        compute_metrics=compute_metrics,
+        class_weights=class_weights  # Pass weights here
+    )
+
     trainer.train()
     return model, tokenizer
 
-def predict_labels(model, tokenizer, utterances, threshold=0.5):
-    """Predict ISO labels for a list of utterances (multi-label output)."""
-    device = model.device  # Get the device the model is on
+def predict_labels_improved(model, tokenizer, utterances, confidence_threshold=0.5):
+    """Improved prediction with per-dimension confidence thresholds"""
+    device = model.device
     inputs = tokenizer(utterances, truncation=True, padding=True, return_tensors='pt')
-    inputs = {k: v.to(device) for k, v in inputs.items()}  # Key fix
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+    
     with torch.no_grad():
         outputs = model(**inputs)
         logits = outputs.logits
         probs = torch.sigmoid(logits)
+    
+    
     predictions = []
-    # pre‑compute a map: dimension -> list of (label_idx, label_name)
     dim_to_indices = {}
+    
     for idx, label in enumerate(iso_labels):
         dim = label.split(':', 1)[0]
-        dim_to_indices.setdefault(dim, []).append(idx) # {'Task': [0, 1, 2,...], 'Auto-Feedback': [26, 27], 'Allo-Feedback': [28, 29, 30], 'Time-Management': [31, 32], 'Turn-Management': [33, 34, 35,...], 'Own-Communication-Management': [39, 40, 41], 'Partner-Communication-Management': [42, 43], 'Social-Obligations-Management': [44, 45, 46,...], 'Discourse-Structuring': [54], 'Other': [55]}
+        dim_to_indices.setdefault(dim, []).append((idx, label))
+    
     for prob_vec in probs:
-        utter_labels = []
-        #print(prob_vec)
-        # for each dimension, pick the best-scoring function
+        selected_labels = []
+        used_dimensions = set()
+        
+        # Strategy 1: Per-dimension max with adaptive threshold
         for dim, indices in dim_to_indices.items():
-            # get (idx, prob) pairs for this dimension
-            dim_probs = [(i, prob_vec[i].item()) for i in indices]
-            best_idx, best_score = max(dim_probs, key=lambda x: x[1])
-            if best_score > threshold:
-                utter_labels.append(iso_labels[best_idx])
-
-        # Fallback: if no labels passed threshold, pick the single highest-probability label
-        if not utter_labels:
+            dim_probs = [(idx, label, prob_vec[idx].item()) for idx, label in indices]
+            best_idx, best_label, best_score = max(dim_probs, key=lambda x: x[2])
+            
+            if best_score > confidence_threshold:
+                selected_labels.append(best_label)
+                used_dimensions.add(dim)
+        
+        # Fallback: If still empty, use SINGLE highest-probability label (safer)
+        if not selected_labels:
             overall_idx = int(torch.argmax(prob_vec).item())
-            utter_labels.append(iso_labels[overall_idx])
-
-        predictions.append(utter_labels)
+            selected_labels.append(iso_labels[overall_idx])
+        
+        predictions.append(selected_labels)
+    
     return predictions
 
 def annotate_file(input_path, output_path, model, tokenizer,
@@ -244,7 +337,7 @@ def annotate_file(input_path, output_path, model, tokenizer,
 
             # 2) annotate each utterance
             #    predict_labels expects a list, so we can batch them:
-            batch_preds = predict_labels(model, tokenizer, utterances)
+            batch_preds = predict_labels_improved(model, tokenizer, utterances)
 
             # 3) format each prediction as a JSON-like set
             formatted_preds = []
@@ -259,31 +352,28 @@ def annotate_file(input_path, output_path, model, tokenizer,
             fout.write(join_with.join(formatted_preds) + "\n")
 
 if __name__ == "__main__":
+    model_dir = "dialog_act_model"
     
-    model_dir = "./dialog_act_model"
-    
-    # Check if saved model exists
     try:
-        # Load pre-trained model and tokenizer
         model = AutoModelForSequenceClassification.from_pretrained(model_dir)
         tokenizer = AutoTokenizer.from_pretrained(model_dir)
-        print(f"Loaded existing model from {model_dir}")
-        
+        print(f"Loaded existing improved model from {model_dir}")
     except:
-        # Train and save if no model exists
-        print("Training new model...")
-        train_dataset = prepare_dataset()
-        model, tokenizer = train_model(train_dataset)
+        print("Training improved model with balanced data...")
+        train_dataset = prepare_dataset_balanced()  # Use balanced version
+        model, tokenizer = train_model_improved(train_dataset)
         
-        # Explicitly save after training
         model.save_pretrained(model_dir)
         tokenizer.save_pretrained(model_dir)
-        print(f"Saved model/tokenizer to {model_dir}")
+        print(f"Saved improved model to {model_dir}")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = model.to(device)  # Explicitly move model to device
-    # Proceed with annotation
+    model = model.to(device)
+    
+    # Use improved prediction
     import sys
-    input_file = sys.argv[1] if len(sys.argv) > 1 else "./data/valid/in"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/valid/da_iso"
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./data/train/in"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/train/da_iso_improved_3"
+    
+    # You might want to modify annotate_file to use predict_labels_improved
     annotate_file(input_file, output_file, model, tokenizer)

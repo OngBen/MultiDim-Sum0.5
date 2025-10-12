@@ -58,11 +58,11 @@ swda_to_iso = {
     "b^m":  ["Auto-Feedback:AutoPositive"],  # Signals one's recognition of the other speaker's speech.
     "qo":   ["Task:Question", "Turn-Management:Turn-Take"],  # Open-ended questions are questions that cannot be mapped to specific question types.
     "qh":   ["Task:Inform"],  # Semantically still functions as a statement.
-    "^h ":   ["Time-Management:Stalling"],  # Indicates delay before responding, mapping to time management functions.
+    "^h":   ["Time-Management:Stalling"],  # Indicates delay before responding, mapping to time management functions.
     "ar":   ["Task:Disagreement"],  # Explicit rejection.
     "ng":   ["Task:Disconfirm"],  # Non-standard negative responses still serve to disconfirm.
     "nn^e":  ["Task:Disconfirm"],  # Non-standard negative responses still serve to disconfirm.
-    "br":   ["Auto-Feedback:AutoNegative"],  # Indicates failure to understand on part of the speaker.
+    "br ":   ["Auto-Feedback:AutoNegative"],  # Indicates failure to understand on part of the speaker.
     "no":   ["Task:Answer"],  # Generic answers that don't fit other categories still serve to answer.
     "fp":   ["Social-Obligations-Management:Init-Greeting"],  # Serves the function of initiating conversation.
     "qrr":  ["Task:Choice-Question"],  # Gives alternatives for choice, hence mapping to choice-questions.

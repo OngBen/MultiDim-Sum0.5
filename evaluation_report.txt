@@ -1,12 +1,23 @@
-Valid rows evaluated: 196
-Rows skipped due to formatting issues: 4
-Micro-averaged Precision: 0.6934
-Micro-averaged Recall:    0.6476
-Micro-averaged F1:        0.6697
-Macro-averaged Precision: 0.4235
-Macro-averaged Recall:    0.3346
-Macro-averaged F1:        0.3455
-Average Jaccard Index:    0.6437
-Subset Accuracy:          0.6224
-Cohen's Kappa (ChatGPT vs actual): 0.5245
-Krippendorff's Alpha: 0.5190
+Dialogue Act Annotation Evaluation Report
+=========================================
+
+Valid rows evaluated: 506
+
+LLM Evaluation Summary:
+  Correct annotations: 405/506 (0.8004)
+  Incorrect annotations: 101/506 (0.1996)
+
+Performance Metrics:
+  Micro-averaged Precision: 0.8363
+  Micro-averaged Recall:    0.9211
+  Micro-averaged F1:        0.8766
+  Macro-averaged Precision: 0.6327
+  Macro-averaged Recall:    0.6816
+  Macro-averaged F1:        0.6298
+  Average Jaccard Index:    0.8575
+  Subset Accuracy:          0.8004
+  Hamming Loss:             0.0110
+
+Agreement Metrics:
+  Cohen's Kappa: 0.7596
+  Krippendorff's Alpha: 0.7594
