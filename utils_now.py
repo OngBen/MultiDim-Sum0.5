@@ -161,25 +161,36 @@ def computeMetrics(correct_das, pred_das):
                 if gold_dim_present:
                     dim_total[dim_idx] += 1
                 
+                # Dimension-level: only care about presence/absence
+                if gold_dim_present and pred_dim_present:
+                    total_tp_dim += 1
+                    dim_tp[dim_idx] += 1
+                elif not gold_dim_present and pred_dim_present:
+                    total_fp_dim += 1
+                    dim_fp[dim_idx] += 1
+                elif gold_dim_present and not pred_dim_present:
+                    total_fn_dim += 1
+                    dim_fn[dim_idx] += 1
+
                 # CORRECTED: Dimension-level TP/FP/FN
                 # A dimension-level TP only occurs when BOTH:
                 # 1. The dimension is present in gold AND prediction
                 # 2. The specific function is correct
-                if gold_dim_present and pred_dim_present:
-                    if gold_label == pred_label:  # CORRECT FUNCTION
-                        total_tp_dim += 1
-                        dim_tp[dim_idx] += 1
-                    else:  # WRONG FUNCTION - counts as FP and FN at dimension level
-                        total_fp_dim += 1
-                        total_fn_dim += 1
-                        dim_fp[dim_idx] += 1
-                        dim_fn[dim_idx] += 1
-                elif not gold_dim_present and pred_dim_present:  # False positive dimension
-                    total_fp_dim += 1
-                    dim_fp[dim_idx] += 1
-                elif gold_dim_present and not pred_dim_present:  # False negative dimension
-                    total_fn_dim += 1
-                    dim_fn[dim_idx] += 1
+                # if gold_dim_present and pred_dim_present:
+                #     if gold_label == pred_label:  # CORRECT FUNCTION
+                #         total_tp_dim += 1
+                #         dim_tp[dim_idx] += 1
+                #     else:  # WRONG FUNCTION - counts as FP and FN at dimension level
+                #         total_fp_dim += 1
+                #         total_fn_dim += 1
+                #         dim_fp[dim_idx] += 1
+                #         dim_fn[dim_idx] += 1
+                # elif not gold_dim_present and pred_dim_present:  # False positive dimension
+                #     total_fp_dim += 1
+                #     dim_fp[dim_idx] += 1
+                # elif gold_dim_present and not pred_dim_present:  # False negative dimension
+                #     total_fn_dim += 1
+                #     dim_fn[dim_idx] += 1
                 
                 # ===== FUNCTION-LEVEL METRICS =====
                 if gold_dim_present:
@@ -208,7 +219,6 @@ def computeMetrics(correct_das, pred_das):
                     total_fn_func += 1
                     func_fn[func_key] += 1
                 
-                # Count hamming error (dimension-level)
                 if gold_label != pred_label:
                     hamming_errors += 1
     
@@ -475,7 +485,7 @@ class DataProcessor(object):
         
         # Compute sampling weights based on inverse frequency of dimension-function pairs
         total_utterances = sum(len(re.findall(r'\{([^}]+)\}', data['da'])) for data in self.all_data)
-        print("Number of DAs: {}".format(total_utterances))
+        print("Number of utterances: {}".format(total_utterances))
         total_dialogues = len(self.all_data)
         self.sampling_weights = []
         

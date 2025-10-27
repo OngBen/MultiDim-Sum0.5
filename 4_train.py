@@ -22,7 +22,7 @@ parser.add_argument("--model_type", type=str, default='full', help="""full | sum
 parser.add_argument("--batch_size", type=int, default=16, help="Batch size.")
 parser.add_argument("--max_epochs", type=int, default=100, help="Max epochs to train.")
 parser.add_argument("--no_early_stop", action='store_false',dest='early_stop', help="Disable early stop, which is based on dialogue act accuracy and ROUGE-2 of summary.")
-parser.add_argument("--patience", type=int, default=5, help="Patience to wait before stop.")
+parser.add_argument("--patience", type=int, default=10, help="Patience to wait before stop.")
 parser.add_argument("--joint_training", action='store_true', default=False, 
                    help="Whether to train jointly with summary generation (default: True). Set to False for independent DA training.")
 
@@ -254,7 +254,7 @@ def createModel(input_data, input_size, sequence_length, da_size, decoder_sequen
     outputs = da_logits + [decoder_final_outputs.rnn_output, decoder_final_outputs.sample_id]
     return outputs
 
-def valid_model(in_path, da_path, sum_path,sess, save_predictions=False, prediction_prefix=""):
+def valid_model(in_path, da_path, sum_path,sess, save_predictions=True, prediction_prefix=""):
     #return accuracy for dialogue act, rouge-1,2,3,L for summary
     #some useful items are also calculated
     #da_outputs, correct_das: predicted / ground truth of dialogue act
@@ -599,8 +599,8 @@ with tf.Session() as sess:
     no_improve = 0
 
     #variables to store highest values among epochs, v stands for valid and t stands for test
-    valid_prec = -1
-    test_prec = -1
+    valid_f1 = -1
+    test_f1 = -1
     valid_metrics = {}
     test_metrics = {}
     v_r1 = -1
@@ -658,20 +658,21 @@ with tf.Session() as sess:
             e_t_r1, e_t_r2,e_t_r3,e_t_rL,e_test_metrics = valid_model(os.path.join(full_test_path, arg.input_file), os.path.join(full_test_path, arg.da_file), os.path.join(full_test_path, arg.sum_file), sess, 
                                                                  save_predictions=True, prediction_prefix=os.path.join(arg.result_path + "/predictions", "test"))
             
-            e_valid_prec = e_valid_metrics['micro_precision']
-            e_test_prec = e_test_metrics['micro_precision']
+            e_valid_f1 = e_valid_metrics['micro_f1']
+            e_test_f1 = e_test_metrics['micro_f1']
             
 
-            if e_v_r2 <= v_r2 and e_valid_prec <= valid_prec:
+            if e_valid_f1 <= valid_f1:
                 no_improve += 1
             else:
                 no_improve = 0
-
-            if e_valid_prec > valid_prec:
-                valid_prec = e_valid_prec
-                test_prec = e_test_prec
+            
+            if e_valid_f1 > valid_f1:
+                valid_f1 = e_valid_f1
+                test_f1 = e_test_f1
                 valid_metrics = e_valid_metrics
                 test_metrics = e_test_metrics
+            print("NO IMPROVE: {}, valid_f1: {}, e_valid_f1: {}".format(no_improve, valid_f1, e_valid_f1))
 
             if e_v_r2 > v_r2:
                 v_r2 = e_v_r2
@@ -698,10 +699,10 @@ with tf.Session() as sess:
                 break
 
             if early_stop == True:
-                if no_improve > arg.patience:
+                if no_improve >= arg.patience:
                     break
 
-            if test_prec == -1 or valid_prec == -1 or t_r2 == -1 or v_r2 == -1:
+            if test_f1 == -1 or valid_f1 == -1 or t_r2 == -1 or v_r2 == -1:
                 print('something in validation or testing goes wrong! did not update error.')
                 exit(1)
 

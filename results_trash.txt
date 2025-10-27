@@ -1,0 +1,1456 @@
+Epochs: 48
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 32.286813854567555%
+Micro-Recall: 92.49516441005802%
+Micro-F1: 47.86547219858866%
+Macro-Precision: 33.36266120301218%
+Macro-Recall: 66.03753114027573%
+Macro-F1: 37.09006844947211%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 32.286813854567555%
+Micro-Recall: 92.49516441005802%
+Micro-F1: 47.86547219858866%
+Macro-Precision: 23.01898334328812%
+Macro-Recall: 89.81569863747791%
+Macro-F1: 34.63697801311588%
+=== OTHER METRICS ===
+Hamming Loss: 26.784199363732768%
+Exact Match: 1.6967126193001063%
+Average active dimensions per turn: pred=3.93, true=1.37
+Function-Level Total: TP: 4782, FP: 10029, FN: 388
+Dimension-Level Total: TP: 4782, FP: 10029, FN: 388
+Per-Dimension Accuracy:
+  Task                           | TP: 2150 FP: 1611 FN: 296  | Total: 2446 | P: 57.17% R: 87.90% F1: 69.28%
+  Auto-Feedback                  | TP: 975  FP: 1417 FN: 6    | Total: 981  | P: 40.76% R: 99.39% F1: 57.81%
+  Allo-Feedback                  | TP: 33   FP: 163  FN: 4    | Total: 37   | P: 16.84% R: 89.19% F1: 28.33%
+  Time-Management                | TP: 17   FP: 150  FN: 3    | Total: 20   | P: 10.18% R: 85.00% F1: 18.18%
+  Turn-Management                | TP: 296  FP: 1198 FN: 13   | Total: 309  | P: 19.81% R: 95.79% F1: 32.83%
+  Own-Communication-Management   | TP: 6    FP: 74   FN: 1    | Total: 7    | P:  7.50% R: 85.71% F1: 13.79%
+  Partner-Communication-Management | TP: 60   FP: 516  FN: 31   | Total: 91   | P: 10.42% R: 65.93% F1: 17.99%
+  Discourse-Structuring          | TP: 534  FP: 2543 FN: 2    | Total: 536  | P: 17.35% R: 99.63% F1: 29.56%
+  Social-Obligations-Management  | TP: 272  FP: 641  FN: 30   | Total: 302  | P: 29.79% R: 90.07% F1: 44.77%
+  Other                          | TP: 439  FP: 1716 FN: 2    | Total: 441  | P: 20.37% R: 99.55% F1: 33.82%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1682 FP: 775 FN: 55  | Total: 1737 | P: 68.46% R: 96.83% F1: 80.21%
+  Task:Agreement                                | TP: 171 FP: 521 FN: 20  | Total: 191 | P: 24.71% R: 89.53% F1: 38.73%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 2   FP: 0   FN: 7   | Total: 9   | P: 100.00% R: 22.22% F1: 36.36%
+  Task:Confirm                                  | TP: 32  FP: 43  FN: 31  | Total: 63  | P: 42.67% R: 50.79% F1: 46.38%
+  Task:Disconfirm                               | TP: 35  FP: 14  FN: 7   | Total: 42  | P: 71.43% R: 83.33% F1: 76.92%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 42  FP: 16  FN: 16  | Total: 58  | P: 72.41% R: 72.41% F1: 72.41%
+  Task:Propositional-Question                   | TP: 140 FP: 44  FN: 81  | Total: 221 | P: 76.09% R: 63.35% F1: 69.14%
+  Task:Choice-Question                          | TP: 2   FP: 5   FN: 11  | Total: 13  | P: 28.57% R: 15.38% F1: 20.00%
+  Task:Check-Question                           | TP: 12  FP: 7   FN: 0   | Total: 12  | P: 63.16% R: 100.00% F1: 77.42%
+  Task:Offer                                    | TP: 1   FP: 1   FN: 8   | Total: 9   | P: 50.00% R: 11.11% F1: 18.18%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 31  FP: 183 FN: 44  | Total: 75  | P: 14.49% R: 41.33% F1: 21.45%
+  Auto-Feedback:AutoPositive                    | TP: 941 FP: 1228 FN: 5   | Total: 946 | P: 43.38% R: 99.47% F1: 60.42%
+  Auto-Feedback:AutoNegative                    | TP: 34  FP: 189 FN: 1   | Total: 35  | P: 15.25% R: 97.14% F1: 26.36%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 163 FN: 4   | Total: 37  | P: 16.84% R: 89.19% F1: 28.33%
+  Time-Management:Stalling                      | TP: 17  FP: 150 FN: 3   | Total: 20  | P: 10.18% R: 85.00% F1: 18.18%
+  Turn-Management:Turn-Take                     | TP: 296 FP: 1198 FN: 13  | Total: 309 | P: 19.81% R: 95.79% F1: 32.83%
+  Own-Communication-Management:Self-Correction  | TP: 6   FP: 74  FN: 1   | Total: 7   | P:  7.50% R: 85.71% F1: 13.79%
+  Partner-Communication-Management:Completion   | TP: 60  FP: 516 FN: 31  | Total: 91  | P: 10.42% R: 65.93% F1: 17.99%
+  Discourse-Structuring:Interaction-Structuring | TP: 534 FP: 2543 FN: 2   | Total: 536 | P: 17.35% R: 99.63% F1: 29.56%
+  Social-Obligations-Management:Init-Greeting   | TP: 10  FP: 27  FN: 4   | Total: 14  | P: 27.03% R: 71.43% F1: 39.22%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 4   FN: 0   | Total: 7   | P: 63.64% R: 100.00% F1: 77.78%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 36  FN: 8   | Total: 11  | P:  7.69% R: 27.27% F1: 12.00%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 358 FN: 6   | Total: 89  | P: 18.82% R: 93.26% F1: 31.32%
+  Social-Obligations-Management:Init-Goodbye    | TP: 169 FP: 216 FN: 12  | Total: 181 | P: 43.90% R: 93.37% F1: 59.72%
+  Other:Other                                   | TP: 439 FP: 1716 FN: 2   | Total: 441 | P: 20.37% R: 99.55% F1: 33.82%
+==================================================
+Epochs: 71
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 35.07119386637459%
+Micro-Recall: 92.90135396518376%
+Micro-F1: 50.919692552345616%
+Macro-Precision: 35.95393602827402%
+Macro-Recall: 64.56016878127835%
+Macro-F1: 38.66082054195831%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 35.07119386637459%
+Micro-Recall: 92.90135396518376%
+Micro-F1: 50.919692552345616%
+Macro-Precision: 26.328175728811715%
+Macro-Recall: 92.59074970659553%
+Macro-F1: 39.07834827000493%
+=== OTHER METRICS ===
+Hamming Loss: 23.756627783669142%
+Exact Match: 2.0943796394485683%
+Average active dimensions per turn: pred=3.63, true=1.37
+Function-Level Total: TP: 4803, FP: 8892, FN: 367
+Dimension-Level Total: TP: 4803, FP: 8892, FN: 367
+Per-Dimension Accuracy:
+  Task                           | TP: 2166 FP: 1559 FN: 280  | Total: 2446 | P: 58.15% R: 88.55% F1: 70.20%
+  Auto-Feedback                  | TP: 973  FP: 1268 FN: 8    | Total: 981  | P: 43.42% R: 99.18% F1: 60.40%
+  Allo-Feedback                  | TP: 33   FP: 106  FN: 4    | Total: 37   | P: 23.74% R: 89.19% F1: 37.50%
+  Time-Management                | TP: 17   FP: 95   FN: 3    | Total: 20   | P: 15.18% R: 85.00% F1: 25.76%
+  Turn-Management                | TP: 292  FP: 698  FN: 17   | Total: 309  | P: 29.49% R: 94.50% F1: 44.96%
+  Own-Communication-Management   | TP: 7    FP: 63   FN: 0    | Total: 7    | P: 10.00% R: 100.00% F1: 18.18%
+  Partner-Communication-Management | TP: 74   FP: 567  FN: 17   | Total: 91   | P: 11.54% R: 81.32% F1: 20.22%
+  Discourse-Structuring          | TP: 533  FP: 2507 FN: 3    | Total: 536  | P: 17.53% R: 99.44% F1: 29.81%
+  Social-Obligations-Management  | TP: 270  FP: 612  FN: 32   | Total: 302  | P: 30.61% R: 89.40% F1: 45.61%
+  Other                          | TP: 438  FP: 1417 FN: 3    | Total: 441  | P: 23.61% R: 99.32% F1: 38.15%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1698 FP: 838 FN: 39  | Total: 1737 | P: 66.96% R: 97.75% F1: 79.48%
+  Task:Agreement                                | TP: 172 FP: 513 FN: 19  | Total: 191 | P: 25.11% R: 90.05% F1: 39.27%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 1   FP: 0   FN: 8   | Total: 9   | P: 100.00% R: 11.11% F1: 20.00%
+  Task:Confirm                                  | TP: 33  FP: 77  FN: 30  | Total: 63  | P: 30.00% R: 52.38% F1: 38.15%
+  Task:Disconfirm                               | TP: 35  FP: 4   FN: 7   | Total: 42  | P: 89.74% R: 83.33% F1: 86.42%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 47  FP: 15  FN: 11  | Total: 58  | P: 75.81% R: 81.03% F1: 78.33%
+  Task:Propositional-Question                   | TP: 144 FP: 35  FN: 77  | Total: 221 | P: 80.45% R: 65.16% F1: 72.00%
+  Task:Choice-Question                          | TP: 0   FP: 4   FN: 13  | Total: 13  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Check-Question                           | TP: 11  FP: 3   FN: 1   | Total: 12  | P: 78.57% R: 91.67% F1: 84.62%
+  Task:Offer                                    | TP: 1   FP: 1   FN: 8   | Total: 9   | P: 50.00% R: 11.11% F1: 18.18%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 24  FP: 67  FN: 51  | Total: 75  | P: 26.37% R: 32.00% F1: 28.92%
+  Auto-Feedback:AutoPositive                    | TP: 941 FP: 1101 FN: 5   | Total: 946 | P: 46.08% R: 99.47% F1: 62.99%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 167 FN: 3   | Total: 35  | P: 16.08% R: 91.43% F1: 27.35%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 106 FN: 4   | Total: 37  | P: 23.74% R: 89.19% F1: 37.50%
+  Time-Management:Stalling                      | TP: 17  FP: 95  FN: 3   | Total: 20  | P: 15.18% R: 85.00% F1: 25.76%
+  Turn-Management:Turn-Take                     | TP: 292 FP: 698 FN: 17  | Total: 309 | P: 29.49% R: 94.50% F1: 44.96%
+  Own-Communication-Management:Self-Correction  | TP: 7   FP: 63  FN: 0   | Total: 7   | P: 10.00% R: 100.00% F1: 18.18%
+  Partner-Communication-Management:Completion   | TP: 74  FP: 567 FN: 17  | Total: 91  | P: 11.54% R: 81.32% F1: 20.22%
+  Discourse-Structuring:Interaction-Structuring | TP: 533 FP: 2507 FN: 3   | Total: 536 | P: 17.53% R: 99.44% F1: 29.81%
+  Social-Obligations-Management:Init-Greeting   | TP: 5   FP: 9   FN: 9   | Total: 14  | P: 35.71% R: 35.71% F1: 35.71%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 27  FN: 8   | Total: 11  | P: 10.00% R: 27.27% F1: 14.63%
+  Social-Obligations-Management:Thanking        | TP: 85  FP: 400 FN: 4   | Total: 89  | P: 17.53% R: 95.51% F1: 29.62%
+  Social-Obligations-Management:Init-Goodbye    | TP: 170 FP: 174 FN: 11  | Total: 181 | P: 49.42% R: 93.92% F1: 64.76%
+  Other:Other                                   | TP: 438 FP: 1417 FN: 3   | Total: 441 | P: 23.61% R: 99.32% F1: 38.15%
+==================================================
+Epochs: 51
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 34.10730870900907%
+Micro-Recall: 92.34042553191489%
+Micro-F1: 49.81478582981165%
+Macro-Precision: 32.98944571950671%
+Macro-Recall: 65.09460889976992%
+Macro-F1: 38.08424015606016%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 34.10730870900907%
+Micro-Recall: 92.34042553191489%
+Micro-F1: 49.81478582981165%
+Macro-Precision: 25.096996674276156%
+Macro-Recall: 90.89746590615835%
+Macro-F1: 37.394631447559135%
+=== OTHER METRICS ===
+Hamming Loss: 24.67391304347826%
+Exact Match: 2.4920466595970305%
+Average active dimensions per turn: pred=3.71, true=1.37
+Function-Level Total: TP: 4774, FP: 9223, FN: 396
+Dimension-Level Total: TP: 4774, FP: 9223, FN: 396
+Per-Dimension Accuracy:
+  Task                           | TP: 2151 FP: 1533 FN: 295  | Total: 2446 | P: 58.39% R: 87.94% F1: 70.18%
+  Auto-Feedback                  | TP: 974  FP: 1481 FN: 7    | Total: 981  | P: 39.67% R: 99.29% F1: 56.69%
+  Allo-Feedback                  | TP: 33   FP: 106  FN: 4    | Total: 37   | P: 23.74% R: 89.19% F1: 37.50%
+  Time-Management                | TP: 18   FP: 150  FN: 2    | Total: 20   | P: 10.71% R: 90.00% F1: 19.15%
+  Turn-Management                | TP: 282  FP: 646  FN: 27   | Total: 309  | P: 30.39% R: 91.26% F1: 45.59%
+  Own-Communication-Management   | TP: 6    FP: 53   FN: 1    | Total: 7    | P: 10.17% R: 85.71% F1: 18.18%
+  Partner-Communication-Management | TP: 70   FP: 678  FN: 21   | Total: 91   | P:  9.36% R: 76.92% F1: 16.69%
+  Discourse-Structuring          | TP: 528  FP: 2208 FN: 8    | Total: 536  | P: 19.30% R: 98.51% F1: 32.27%
+  Social-Obligations-Management  | TP: 275  FP: 686  FN: 27   | Total: 302  | P: 28.62% R: 91.06% F1: 43.55%
+  Other                          | TP: 437  FP: 1682 FN: 4    | Total: 441  | P: 20.62% R: 99.09% F1: 34.14%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1690 FP: 789 FN: 47  | Total: 1737 | P: 68.17% R: 97.29% F1: 80.17%
+  Task:Agreement                                | TP: 174 FP: 579 FN: 17  | Total: 191 | P: 23.11% R: 91.10% F1: 36.86%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 32  FP: 57  FN: 31  | Total: 63  | P: 35.96% R: 50.79% F1: 42.11%
+  Task:Disconfirm                               | TP: 35  FP: 5   FN: 7   | Total: 42  | P: 87.50% R: 83.33% F1: 85.37%
+  Task:Question                                 | TP: 0   FP: 1   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 40  FP: 12  FN: 18  | Total: 58  | P: 76.92% R: 68.97% F1: 72.73%
+  Task:Propositional-Question                   | TP: 136 FP: 36  FN: 85  | Total: 221 | P: 79.07% R: 61.54% F1: 69.21%
+  Task:Choice-Question                          | TP: 0   FP: 2   FN: 13  | Total: 13  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Check-Question                           | TP: 12  FP: 6   FN: 0   | Total: 12  | P: 66.67% R: 100.00% F1: 80.00%
+  Task:Offer                                    | TP: 3   FP: 1   FN: 6   | Total: 9   | P: 75.00% R: 33.33% F1: 46.15%
+  Task:Address-Offer                            | TP: 1   FP: 2   FN: 11  | Total: 12  | P: 33.33% R:  8.33% F1: 13.33%
+  Task:Instruct                                 | TP: 28  FP: 43  FN: 47  | Total: 75  | P: 39.44% R: 37.33% F1: 38.36%
+  Auto-Feedback:AutoPositive                    | TP: 942 FP: 1317 FN: 4   | Total: 946 | P: 41.70% R: 99.58% F1: 58.78%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 164 FN: 3   | Total: 35  | P: 16.33% R: 91.43% F1: 27.71%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 106 FN: 4   | Total: 37  | P: 23.74% R: 89.19% F1: 37.50%
+  Time-Management:Stalling                      | TP: 18  FP: 150 FN: 2   | Total: 20  | P: 10.71% R: 90.00% F1: 19.15%
+  Turn-Management:Turn-Take                     | TP: 282 FP: 646 FN: 27  | Total: 309 | P: 30.39% R: 91.26% F1: 45.59%
+  Own-Communication-Management:Self-Correction  | TP: 6   FP: 53  FN: 1   | Total: 7   | P: 10.17% R: 85.71% F1: 18.18%
+  Partner-Communication-Management:Completion   | TP: 70  FP: 678 FN: 21  | Total: 91  | P:  9.36% R: 76.92% F1: 16.69%
+  Discourse-Structuring:Interaction-Structuring | TP: 528 FP: 2208 FN: 8   | Total: 536 | P: 19.30% R: 98.51% F1: 32.27%
+  Social-Obligations-Management:Init-Greeting   | TP: 7   FP: 20  FN: 7   | Total: 14  | P: 25.93% R: 50.00% F1: 34.15%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 5   FN: 0   | Total: 7   | P: 58.33% R: 100.00% F1: 73.68%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 30  FN: 8   | Total: 11  | P:  9.09% R: 27.27% F1: 13.64%
+  Social-Obligations-Management:Thanking        | TP: 86  FP: 431 FN: 3   | Total: 89  | P: 16.63% R: 96.63% F1: 28.38%
+  Social-Obligations-Management:Init-Goodbye    | TP: 172 FP: 200 FN: 9   | Total: 181 | P: 46.24% R: 95.03% F1: 62.21%
+  Other:Other                                   | TP: 437 FP: 1682 FN: 4   | Total: 441 | P: 20.62% R: 99.09% F1: 34.14%
+==================================================
+Epochs: 33
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 33.57007242809929%
+Micro-Recall: 92.34042553191489%
+Micro-F1: 49.239337837140944%
+Macro-Precision: 35.167275215764136%
+Macro-Recall: 63.310288510009116%
+Macro-F1: 38.90168044932988%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 33.57007242809929%
+Micro-Recall: 92.34042553191489%
+Micro-F1: 49.239337837140944%
+Macro-Precision: 25.593932073089555%
+Macro-Recall: 88.83668238393373%
+Macro-F1: 38.135775435873065%
+=== OTHER METRICS ===
+Hamming Loss: 25.281018027571577%
+Exact Match: 1.6171792152704134%
+Average active dimensions per turn: pred=3.77, true=1.37
+Function-Level Total: TP: 4774, FP: 9447, FN: 396
+Dimension-Level Total: TP: 4774, FP: 9447, FN: 396
+Per-Dimension Accuracy:
+  Task                           | TP: 2156 FP: 1576 FN: 290  | Total: 2446 | P: 57.77% R: 88.14% F1: 69.80%
+  Auto-Feedback                  | TP: 972  FP: 1288 FN: 9    | Total: 981  | P: 43.01% R: 99.08% F1: 59.98%
+  Allo-Feedback                  | TP: 33   FP: 127  FN: 4    | Total: 37   | P: 20.62% R: 89.19% F1: 33.50%
+  Time-Management                | TP: 15   FP: 83   FN: 5    | Total: 20   | P: 15.31% R: 75.00% F1: 25.42%
+  Turn-Management                | TP: 286  FP: 912  FN: 23   | Total: 309  | P: 23.87% R: 92.56% F1: 37.96%
+  Own-Communication-Management   | TP: 6    FP: 32   FN: 1    | Total: 7    | P: 15.79% R: 85.71% F1: 26.67%
+  Partner-Communication-Management | TP: 64   FP: 527  FN: 27   | Total: 91   | P: 10.83% R: 70.33% F1: 18.77%
+  Discourse-Structuring          | TP: 534  FP: 2552 FN: 2    | Total: 536  | P: 17.30% R: 99.63% F1: 29.49%
+  Social-Obligations-Management  | TP: 270  FP: 586  FN: 32   | Total: 302  | P: 31.54% R: 89.40% F1: 46.63%
+  Other                          | TP: 438  FP: 1764 FN: 3    | Total: 441  | P: 19.89% R: 99.32% F1: 33.14%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1697 FP: 799 FN: 40  | Total: 1737 | P: 67.99% R: 97.70% F1: 80.18%
+  Task:Agreement                                | TP: 174 FP: 647 FN: 17  | Total: 191 | P: 21.19% R: 91.10% F1: 34.39%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 31  FP: 11  FN: 32  | Total: 63  | P: 73.81% R: 49.21% F1: 59.05%
+  Task:Disconfirm                               | TP: 36  FP: 5   FN: 6   | Total: 42  | P: 87.80% R: 85.71% F1: 86.75%
+  Task:Question                                 | TP: 0   FP: 1   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 41  FP: 6   FN: 17  | Total: 58  | P: 87.23% R: 70.69% F1: 78.10%
+  Task:Propositional-Question                   | TP: 141 FP: 38  FN: 80  | Total: 221 | P: 78.77% R: 63.80% F1: 70.50%
+  Task:Choice-Question                          | TP: 2   FP: 2   FN: 11  | Total: 13  | P: 50.00% R: 15.38% F1: 23.53%
+  Task:Check-Question                           | TP: 11  FP: 5   FN: 1   | Total: 12  | P: 68.75% R: 91.67% F1: 78.57%
+  Task:Offer                                    | TP: 1   FP: 1   FN: 8   | Total: 9   | P: 50.00% R: 11.11% F1: 18.18%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 22  FP: 61  FN: 53  | Total: 75  | P: 26.51% R: 29.33% F1: 27.85%
+  Auto-Feedback:AutoPositive                    | TP: 940 FP: 1128 FN: 6   | Total: 946 | P: 45.45% R: 99.37% F1: 62.38%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 160 FN: 3   | Total: 35  | P: 16.67% R: 91.43% F1: 28.19%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 127 FN: 4   | Total: 37  | P: 20.62% R: 89.19% F1: 33.50%
+  Time-Management:Stalling                      | TP: 15  FP: 83  FN: 5   | Total: 20  | P: 15.31% R: 75.00% F1: 25.42%
+  Turn-Management:Turn-Take                     | TP: 286 FP: 912 FN: 23  | Total: 309 | P: 23.87% R: 92.56% F1: 37.96%
+  Own-Communication-Management:Self-Correction  | TP: 6   FP: 32  FN: 1   | Total: 7   | P: 15.79% R: 85.71% F1: 26.67%
+  Partner-Communication-Management:Completion   | TP: 64  FP: 527 FN: 27  | Total: 91  | P: 10.83% R: 70.33% F1: 18.77%
+  Discourse-Structuring:Interaction-Structuring | TP: 534 FP: 2552 FN: 2   | Total: 536 | P: 17.30% R: 99.63% F1: 29.49%
+  Social-Obligations-Management:Init-Greeting   | TP: 7   FP: 16  FN: 7   | Total: 14  | P: 30.43% R: 50.00% F1: 37.84%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 22  FN: 8   | Total: 11  | P: 12.00% R: 27.27% F1: 16.67%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 362 FN: 6   | Total: 89  | P: 18.65% R: 93.26% F1: 31.09%
+  Social-Obligations-Management:Init-Goodbye    | TP: 170 FP: 184 FN: 11  | Total: 181 | P: 48.02% R: 93.92% F1: 63.55%
+  Other:Other                                   | TP: 438 FP: 1764 FN: 3   | Total: 441 | P: 19.89% R: 99.32% F1: 33.14%
+==================================================
+Epochs: 47
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 34.10046312789455%
+Micro-Recall: 92.57253384912958%
+Micro-F1: 49.84118719083572%
+Macro-Precision: 31.917265779198665%
+Macro-Recall: 65.7778180546611%
+Macro-F1: 38.04492411172201%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 34.10046312789455%
+Micro-Recall: 92.57253384912958%
+Micro-F1: 49.84118719083572%
+Macro-Precision: 24.73610145387108%
+Macro-Recall: 89.72983909428416%
+Macro-F1: 36.842053112726056%
+=== OTHER METRICS ===
+Hamming Loss: 24.716330858960763%
+Exact Match: 3.2873806998939554%
+Average active dimensions per turn: pred=3.72, true=1.37
+Function-Level Total: TP: 4786, FP: 9249, FN: 384
+Dimension-Level Total: TP: 4786, FP: 9249, FN: 384
+Per-Dimension Accuracy:
+  Task                           | TP: 2153 FP: 1508 FN: 293  | Total: 2446 | P: 58.81% R: 88.02% F1: 70.51%
+  Auto-Feedback                  | TP: 972  FP: 1384 FN: 9    | Total: 981  | P: 41.26% R: 99.08% F1: 58.26%
+  Allo-Feedback                  | TP: 33   FP: 129  FN: 4    | Total: 37   | P: 20.37% R: 89.19% F1: 33.17%
+  Time-Management                | TP: 18   FP: 151  FN: 2    | Total: 20   | P: 10.65% R: 90.00% F1: 19.05%
+  Turn-Management                | TP: 293  FP: 967  FN: 16   | Total: 309  | P: 23.25% R: 94.82% F1: 37.35%
+  Own-Communication-Management   | TP: 5    FP: 46   FN: 2    | Total: 7    | P:  9.80% R: 71.43% F1: 17.24%
+  Partner-Communication-Management | TP: 69   FP: 677  FN: 22   | Total: 91   | P:  9.25% R: 75.82% F1: 16.49%
+  Discourse-Structuring          | TP: 533  FP: 2417 FN: 3    | Total: 536  | P: 18.07% R: 99.44% F1: 30.58%
+  Social-Obligations-Management  | TP: 273  FP: 581  FN: 29   | Total: 302  | P: 31.97% R: 90.40% F1: 47.23%
+  Other                          | TP: 437  FP: 1389 FN: 4    | Total: 441  | P: 23.93% R: 99.09% F1: 38.55%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1682 FP: 761 FN: 55  | Total: 1737 | P: 68.85% R: 96.83% F1: 80.48%
+  Task:Agreement                                | TP: 173 FP: 472 FN: 18  | Total: 191 | P: 26.82% R: 90.58% F1: 41.39%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 36  FP: 110 FN: 27  | Total: 63  | P: 24.66% R: 57.14% F1: 34.45%
+  Task:Disconfirm                               | TP: 34  FP: 7   FN: 8   | Total: 42  | P: 82.93% R: 80.95% F1: 81.93%
+  Task:Question                                 | TP: 0   FP: 1   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 43  FP: 17  FN: 15  | Total: 58  | P: 71.67% R: 74.14% F1: 72.88%
+  Task:Propositional-Question                   | TP: 138 FP: 49  FN: 83  | Total: 221 | P: 73.80% R: 62.44% F1: 67.65%
+  Task:Choice-Question                          | TP: 0   FP: 2   FN: 13  | Total: 13  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Check-Question                           | TP: 11  FP: 2   FN: 1   | Total: 12  | P: 84.62% R: 91.67% F1: 88.00%
+  Task:Offer                                    | TP: 3   FP: 1   FN: 6   | Total: 9   | P: 75.00% R: 33.33% F1: 46.15%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 33  FP: 86  FN: 42  | Total: 75  | P: 27.73% R: 44.00% F1: 34.02%
+  Auto-Feedback:AutoPositive                    | TP: 939 FP: 1202 FN: 7   | Total: 946 | P: 43.86% R: 99.26% F1: 60.84%
+  Auto-Feedback:AutoNegative                    | TP: 33  FP: 182 FN: 2   | Total: 35  | P: 15.35% R: 94.29% F1: 26.40%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 129 FN: 4   | Total: 37  | P: 20.37% R: 89.19% F1: 33.17%
+  Time-Management:Stalling                      | TP: 18  FP: 151 FN: 2   | Total: 20  | P: 10.65% R: 90.00% F1: 19.05%
+  Turn-Management:Turn-Take                     | TP: 293 FP: 967 FN: 16  | Total: 309 | P: 23.25% R: 94.82% F1: 37.35%
+  Own-Communication-Management:Self-Correction  | TP: 5   FP: 46  FN: 2   | Total: 7   | P:  9.80% R: 71.43% F1: 17.24%
+  Partner-Communication-Management:Completion   | TP: 69  FP: 677 FN: 22  | Total: 91  | P:  9.25% R: 75.82% F1: 16.49%
+  Discourse-Structuring:Interaction-Structuring | TP: 533 FP: 2417 FN: 3   | Total: 536 | P: 18.07% R: 99.44% F1: 30.58%
+  Social-Obligations-Management:Init-Greeting   | TP: 12  FP: 39  FN: 2   | Total: 14  | P: 23.53% R: 85.71% F1: 36.92%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 18  FN: 8   | Total: 11  | P: 14.29% R: 27.27% F1: 18.75%
+  Social-Obligations-Management:Thanking        | TP: 80  FP: 340 FN: 9   | Total: 89  | P: 19.05% R: 89.89% F1: 31.43%
+  Social-Obligations-Management:Init-Goodbye    | TP: 171 FP: 182 FN: 10  | Total: 181 | P: 48.44% R: 94.48% F1: 64.04%
+  Other:Other                                   | TP: 437 FP: 1389 FN: 4   | Total: 441 | P: 23.93% R: 99.09% F1: 38.55%
+==================================================
+Epochs: 41
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 33.03497085761865%
+Micro-Recall: 92.0889748549323%
+Micro-F1: 48.626289449494436%
+Macro-Precision: 32.04882429321554%
+Macro-Recall: 62.53582007382852%
+Macro-F1: 37.262186618589716%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 33.03497085761865%
+Micro-Recall: 92.0889748549323%
+Micro-F1: 48.626289449494436%
+Macro-Precision: 25.360756944258235%
+Macro-Recall: 90.65301652265427%
+Macro-F1: 37.63086698170496%
+=== OTHER METRICS ===
+Hamming Loss: 25.808589607635206%
+Exact Match: 2.1474019088016965%
+Average active dimensions per turn: pred=3.82, true=1.37
+Function-Level Total: TP: 4761, FP: 9651, FN: 409
+Dimension-Level Total: TP: 4761, FP: 9651, FN: 409
+Per-Dimension Accuracy:
+  Task                           | TP: 2136 FP: 1614 FN: 310  | Total: 2446 | P: 56.96% R: 87.33% F1: 68.95%
+  Auto-Feedback                  | TP: 969  FP: 1315 FN: 12   | Total: 981  | P: 42.43% R: 98.78% F1: 59.36%
+  Allo-Feedback                  | TP: 32   FP: 133  FN: 5    | Total: 37   | P: 19.39% R: 86.49% F1: 31.68%
+  Time-Management                | TP: 17   FP: 112  FN: 3    | Total: 20   | P: 13.18% R: 85.00% F1: 22.82%
+  Turn-Management                | TP: 280  FP: 654  FN: 29   | Total: 309  | P: 29.98% R: 90.61% F1: 45.05%
+  Own-Communication-Management   | TP: 6    FP: 43   FN: 1    | Total: 7    | P: 12.24% R: 85.71% F1: 21.43%
+  Partner-Communication-Management | TP: 76   FP: 813  FN: 15   | Total: 91   | P:  8.55% R: 83.52% F1: 15.51%
+  Discourse-Structuring          | TP: 535  FP: 2791 FN: 1    | Total: 536  | P: 16.09% R: 99.81% F1: 27.71%
+  Social-Obligations-Management  | TP: 271  FP: 533  FN: 31   | Total: 302  | P: 33.71% R: 89.74% F1: 49.01%
+  Other                          | TP: 439  FP: 1643 FN: 2    | Total: 441  | P: 21.09% R: 99.55% F1: 34.80%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1709 FP: 990 FN: 28  | Total: 1737 | P: 63.32% R: 98.39% F1: 77.05%
+  Task:Agreement                                | TP: 165 FP: 501 FN: 26  | Total: 191 | P: 24.77% R: 86.39% F1: 38.51%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 34  FP: 36  FN: 29  | Total: 63  | P: 48.57% R: 53.97% F1: 51.13%
+  Task:Disconfirm                               | TP: 33  FP: 6   FN: 9   | Total: 42  | P: 84.62% R: 78.57% F1: 81.48%
+  Task:Question                                 | TP: 0   FP: 1   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 34  FP: 11  FN: 24  | Total: 58  | P: 75.56% R: 58.62% F1: 66.02%
+  Task:Propositional-Question                   | TP: 139 FP: 39  FN: 82  | Total: 221 | P: 78.09% R: 62.90% F1: 69.67%
+  Task:Choice-Question                          | TP: 0   FP: 3   FN: 13  | Total: 13  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Check-Question                           | TP: 10  FP: 1   FN: 2   | Total: 12  | P: 90.91% R: 83.33% F1: 86.96%
+  Task:Offer                                    | TP: 2   FP: 4   FN: 7   | Total: 9   | P: 33.33% R: 22.22% F1: 26.67%
+  Task:Address-Offer                            | TP: 0   FP: 1   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 10  FP: 21  FN: 65  | Total: 75  | P: 32.26% R: 13.33% F1: 18.87%
+  Auto-Feedback:AutoPositive                    | TP: 939 FP: 1157 FN: 7   | Total: 946 | P: 44.80% R: 99.26% F1: 61.74%
+  Auto-Feedback:AutoNegative                    | TP: 30  FP: 158 FN: 5   | Total: 35  | P: 15.96% R: 85.71% F1: 26.91%
+  Allo-Feedback:FeedbackElicitation             | TP: 32  FP: 133 FN: 5   | Total: 37  | P: 19.39% R: 86.49% F1: 31.68%
+  Time-Management:Stalling                      | TP: 17  FP: 112 FN: 3   | Total: 20  | P: 13.18% R: 85.00% F1: 22.82%
+  Turn-Management:Turn-Take                     | TP: 280 FP: 654 FN: 29  | Total: 309 | P: 29.98% R: 90.61% F1: 45.05%
+  Own-Communication-Management:Self-Correction  | TP: 6   FP: 43  FN: 1   | Total: 7   | P: 12.24% R: 85.71% F1: 21.43%
+  Partner-Communication-Management:Completion   | TP: 76  FP: 813 FN: 15  | Total: 91  | P:  8.55% R: 83.52% F1: 15.51%
+  Discourse-Structuring:Interaction-Structuring | TP: 535 FP: 2791 FN: 1   | Total: 536 | P: 16.09% R: 99.81% F1: 27.71%
+  Social-Obligations-Management:Init-Greeting   | TP: 9   FP: 26  FN: 5   | Total: 14  | P: 25.71% R: 64.29% F1: 36.73%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 3   FN: 0   | Total: 7   | P: 70.00% R: 100.00% F1: 82.35%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 17  FN: 8   | Total: 11  | P: 15.00% R: 27.27% F1: 19.35%
+  Social-Obligations-Management:Thanking        | TP: 82  FP: 347 FN: 7   | Total: 89  | P: 19.11% R: 92.13% F1: 31.66%
+  Social-Obligations-Management:Init-Goodbye    | TP: 170 FP: 140 FN: 11  | Total: 181 | P: 54.84% R: 93.92% F1: 69.25%
+  Other:Other                                   | TP: 439 FP: 1643 FN: 2   | Total: 441 | P: 21.09% R: 99.55% F1: 34.80%
+==================================================
+Epochs: 34
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 32.300646551724135%
+Micro-Recall: 92.76595744680851%
+Micro-F1: 47.9168748126686%
+Macro-Precision: 30.042000139736384%
+Macro-Recall: 64.39764466483797%
+Macro-F1: 35.490732740862704%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 32.300646551724135%
+Micro-Recall: 92.76595744680851%
+Micro-F1: 47.9168748126686%
+Macro-Precision: 23.314893650164002%
+Macro-Recall: 91.86314293872351%
+Macro-F1: 35.01226237347521%
+=== OTHER METRICS ===
+Hamming Loss: 26.80275715800636%
+Exact Match: 2.0943796394485683%
+Average active dimensions per turn: pred=3.94, true=1.37
+Function-Level Total: TP: 4796, FP: 10052, FN: 374
+Dimension-Level Total: TP: 4796, FP: 10052, FN: 374
+Per-Dimension Accuracy:
+  Task                           | TP: 2150 FP: 1598 FN: 296  | Total: 2446 | P: 57.36% R: 87.90% F1: 69.42%
+  Auto-Feedback                  | TP: 972  FP: 1279 FN: 9    | Total: 981  | P: 43.18% R: 99.08% F1: 60.15%
+  Allo-Feedback                  | TP: 33   FP: 126  FN: 4    | Total: 37   | P: 20.75% R: 89.19% F1: 33.67%
+  Time-Management                | TP: 18   FP: 168  FN: 2    | Total: 20   | P:  9.68% R: 90.00% F1: 17.48%
+  Turn-Management                | TP: 293  FP: 845  FN: 16   | Total: 309  | P: 25.75% R: 94.82% F1: 40.50%
+  Own-Communication-Management   | TP: 6    FP: 77   FN: 1    | Total: 7    | P:  7.23% R: 85.71% F1: 13.33%
+  Partner-Communication-Management | TP: 74   FP: 783  FN: 17   | Total: 91   | P:  8.63% R: 81.32% F1: 15.61%
+  Discourse-Structuring          | TP: 536  FP: 2601 FN: 0    | Total: 536  | P: 17.09% R: 100.00% F1: 29.19%
+  Social-Obligations-Management  | TP: 275  FP: 983  FN: 27   | Total: 302  | P: 21.86% R: 91.06% F1: 35.26%
+  Other                          | TP: 439  FP: 1592 FN: 2    | Total: 441  | P: 21.61% R: 99.55% F1: 35.52%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1695 FP: 796 FN: 42  | Total: 1737 | P: 68.04% R: 97.58% F1: 80.18%
+  Task:Agreement                                | TP: 174 FP: 584 FN: 17  | Total: 191 | P: 22.96% R: 91.10% F1: 36.67%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 31  FP: 21  FN: 32  | Total: 63  | P: 59.62% R: 49.21% F1: 53.91%
+  Task:Disconfirm                               | TP: 36  FP: 7   FN: 6   | Total: 42  | P: 83.72% R: 85.71% F1: 84.71%
+  Task:Question                                 | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 44  FP: 20  FN: 14  | Total: 58  | P: 68.75% R: 75.86% F1: 72.13%
+  Task:Propositional-Question                   | TP: 138 FP: 38  FN: 83  | Total: 221 | P: 78.41% R: 62.44% F1: 69.52%
+  Task:Choice-Question                          | TP: 0   FP: 2   FN: 13  | Total: 13  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Check-Question                           | TP: 11  FP: 7   FN: 1   | Total: 12  | P: 61.11% R: 91.67% F1: 73.33%
+  Task:Offer                                    | TP: 1   FP: 1   FN: 8   | Total: 9   | P: 50.00% R: 11.11% F1: 18.18%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 20  FP: 122 FN: 55  | Total: 75  | P: 14.08% R: 26.67% F1: 18.43%
+  Auto-Feedback:AutoPositive                    | TP: 940 FP: 1096 FN: 6   | Total: 946 | P: 46.17% R: 99.37% F1: 63.04%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 183 FN: 3   | Total: 35  | P: 14.88% R: 91.43% F1: 25.60%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 126 FN: 4   | Total: 37  | P: 20.75% R: 89.19% F1: 33.67%
+  Time-Management:Stalling                      | TP: 18  FP: 168 FN: 2   | Total: 20  | P:  9.68% R: 90.00% F1: 17.48%
+  Turn-Management:Turn-Take                     | TP: 293 FP: 845 FN: 16  | Total: 309 | P: 25.75% R: 94.82% F1: 40.50%
+  Own-Communication-Management:Self-Correction  | TP: 6   FP: 77  FN: 1   | Total: 7   | P:  7.23% R: 85.71% F1: 13.33%
+  Partner-Communication-Management:Completion   | TP: 74  FP: 783 FN: 17  | Total: 91  | P:  8.63% R: 81.32% F1: 15.61%
+  Discourse-Structuring:Interaction-Structuring | TP: 536 FP: 2601 FN: 0   | Total: 536 | P: 17.09% R: 100.00% F1: 29.19%
+  Social-Obligations-Management:Init-Greeting   | TP: 9   FP: 42  FN: 5   | Total: 14  | P: 17.65% R: 64.29% F1: 27.69%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 3   FN: 0   | Total: 7   | P: 70.00% R: 100.00% F1: 82.35%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 12  FN: 8   | Total: 11  | P: 20.00% R: 27.27% F1: 23.08%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 711 FN: 6   | Total: 89  | P: 10.45% R: 93.26% F1: 18.80%
+  Social-Obligations-Management:Init-Goodbye    | TP: 173 FP: 215 FN: 8   | Total: 181 | P: 44.59% R: 95.58% F1: 60.81%
+  Other:Other                                   | TP: 439 FP: 1592 FN: 2   | Total: 441 | P: 21.61% R: 99.55% F1: 35.52%
+==================================================
+Epochs: 53
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 34.32407207983344%
+Micro-Recall: 92.47582205029013%
+Micro-F1: 50.06544845279856%
+Macro-Precision: 35.198129816153816%
+Macro-Recall: 64.22204126594882%
+Macro-F1: 38.951694219924896%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 34.32407207983344%
+Micro-Recall: 92.47582205029013%
+Micro-F1: 50.06544845279856%
+Macro-Precision: 26.128275075091373%
+Macro-Recall: 89.43978347062554%
+Macro-F1: 38.59948366668666%
+=== OTHER METRICS ===
+Hamming Loss: 24.45917285259809%
+Exact Match: 2.8366914103923646%
+Average active dimensions per turn: pred=3.69, true=1.37
+Function-Level Total: TP: 4781, FP: 9148, FN: 389
+Dimension-Level Total: TP: 4781, FP: 9148, FN: 389
+Per-Dimension Accuracy:
+  Task                           | TP: 2152 FP: 1526 FN: 294  | Total: 2446 | P: 58.51% R: 87.98% F1: 70.28%
+  Auto-Feedback                  | TP: 974  FP: 1444 FN: 7    | Total: 981  | P: 40.28% R: 99.29% F1: 57.31%
+  Allo-Feedback                  | TP: 33   FP: 107  FN: 4    | Total: 37   | P: 23.57% R: 89.19% F1: 37.29%
+  Time-Management                | TP: 17   FP: 109  FN: 3    | Total: 20   | P: 13.49% R: 85.00% F1: 23.29%
+  Turn-Management                | TP: 282  FP: 572  FN: 27   | Total: 309  | P: 33.02% R: 91.26% F1: 48.50%
+  Own-Communication-Management   | TP: 5    FP: 41   FN: 2    | Total: 7    | P: 10.87% R: 71.43% F1: 18.87%
+  Partner-Communication-Management | TP: 74   FP: 750  FN: 17   | Total: 91   | P:  8.98% R: 81.32% F1: 16.17%
+  Discourse-Structuring          | TP: 536  FP: 2560 FN: 0    | Total: 536  | P: 17.31% R: 100.00% F1: 29.52%
+  Social-Obligations-Management  | TP: 272  FP: 568  FN: 30   | Total: 302  | P: 32.38% R: 90.07% F1: 47.64%
+  Other                          | TP: 436  FP: 1471 FN: 5    | Total: 441  | P: 22.86% R: 98.87% F1: 37.14%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1700 FP: 874 FN: 37  | Total: 1737 | P: 66.05% R: 97.87% F1: 78.87%
+  Task:Agreement                                | TP: 170 FP: 463 FN: 21  | Total: 191 | P: 26.86% R: 89.01% F1: 41.26%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 33  FP: 83  FN: 30  | Total: 63  | P: 28.45% R: 52.38% F1: 36.87%
+  Task:Disconfirm                               | TP: 33  FP: 4   FN: 9   | Total: 42  | P: 89.19% R: 78.57% F1: 83.54%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 43  FP: 9   FN: 15  | Total: 58  | P: 82.69% R: 74.14% F1: 78.18%
+  Task:Propositional-Question                   | TP: 134 FP: 34  FN: 87  | Total: 221 | P: 79.76% R: 60.63% F1: 68.89%
+  Task:Choice-Question                          | TP: 1   FP: 3   FN: 12  | Total: 13  | P: 25.00% R:  7.69% F1: 11.76%
+  Task:Check-Question                           | TP: 11  FP: 2   FN: 1   | Total: 12  | P: 84.62% R: 91.67% F1: 88.00%
+  Task:Offer                                    | TP: 2   FP: 0   FN: 7   | Total: 9   | P: 100.00% R: 22.22% F1: 36.36%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 25  FP: 52  FN: 50  | Total: 75  | P: 32.47% R: 33.33% F1: 32.89%
+  Auto-Feedback:AutoPositive                    | TP: 941 FP: 1268 FN: 5   | Total: 946 | P: 42.60% R: 99.47% F1: 59.65%
+  Auto-Feedback:AutoNegative                    | TP: 33  FP: 176 FN: 2   | Total: 35  | P: 15.79% R: 94.29% F1: 27.05%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 107 FN: 4   | Total: 37  | P: 23.57% R: 89.19% F1: 37.29%
+  Time-Management:Stalling                      | TP: 17  FP: 109 FN: 3   | Total: 20  | P: 13.49% R: 85.00% F1: 23.29%
+  Turn-Management:Turn-Take                     | TP: 282 FP: 572 FN: 27  | Total: 309 | P: 33.02% R: 91.26% F1: 48.50%
+  Own-Communication-Management:Self-Correction  | TP: 5   FP: 41  FN: 2   | Total: 7   | P: 10.87% R: 71.43% F1: 18.87%
+  Partner-Communication-Management:Completion   | TP: 74  FP: 750 FN: 17  | Total: 91  | P:  8.98% R: 81.32% F1: 16.17%
+  Discourse-Structuring:Interaction-Structuring | TP: 536 FP: 2560 FN: 0   | Total: 536 | P: 17.31% R: 100.00% F1: 29.52%
+  Social-Obligations-Management:Init-Greeting   | TP: 9   FP: 25  FN: 5   | Total: 14  | P: 26.47% R: 64.29% F1: 37.50%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 3   FN: 0   | Total: 7   | P: 70.00% R: 100.00% F1: 82.35%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 21  FN: 8   | Total: 11  | P: 12.50% R: 27.27% F1: 17.14%
+  Social-Obligations-Management:Thanking        | TP: 85  FP: 380 FN: 4   | Total: 89  | P: 18.28% R: 95.51% F1: 30.69%
+  Social-Obligations-Management:Init-Goodbye    | TP: 168 FP: 139 FN: 13  | Total: 181 | P: 54.72% R: 92.82% F1: 68.85%
+  Other:Other                                   | TP: 436 FP: 1471 FN: 5   | Total: 441 | P: 22.86% R: 98.87% F1: 37.14%
+==================================================
+Epochs: 51
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 34.46531791907515%
+Micro-Recall: 92.26305609284333%
+Micro-F1: 50.18411362440821%
+Macro-Precision: 37.86201505125339%
+Macro-Recall: 64.10157808211886%
+Macro-F1: 38.77207489114179%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 34.46531791907515%
+Micro-Recall: 92.26305609284333%
+Micro-F1: 50.18411362440821%
+Macro-Precision: 25.289971817688894%
+Macro-Recall: 88.7397066442519%
+Macro-F1: 37.58529682047353%
+=== OTHER METRICS ===
+Hamming Loss: 24.257688229056203%
+Exact Match: 3.0752916224814424%
+Average active dimensions per turn: pred=3.67, true=1.37
+Function-Level Total: TP: 4770, FP: 9070, FN: 400
+Dimension-Level Total: TP: 4770, FP: 9070, FN: 400
+Per-Dimension Accuracy:
+  Task                           | TP: 2146 FP: 1487 FN: 300  | Total: 2446 | P: 59.07% R: 87.74% F1: 70.60%
+  Auto-Feedback                  | TP: 974  FP: 1383 FN: 7    | Total: 981  | P: 41.32% R: 99.29% F1: 58.36%
+  Allo-Feedback                  | TP: 33   FP: 111  FN: 4    | Total: 37   | P: 22.92% R: 89.19% F1: 36.46%
+  Time-Management                | TP: 16   FP: 106  FN: 4    | Total: 20   | P: 13.11% R: 80.00% F1: 22.54%
+  Turn-Management                | TP: 281  FP: 670  FN: 28   | Total: 309  | P: 29.55% R: 90.94% F1: 44.60%
+  Own-Communication-Management   | TP: 5    FP: 44   FN: 2    | Total: 7    | P: 10.20% R: 71.43% F1: 17.86%
+  Partner-Communication-Management | TP: 73   FP: 735  FN: 18   | Total: 91   | P:  9.03% R: 80.22% F1: 16.24%
+  Discourse-Structuring          | TP: 533  FP: 2288 FN: 3    | Total: 536  | P: 18.89% R: 99.44% F1: 31.75%
+  Social-Obligations-Management  | TP: 272  FP: 782  FN: 30   | Total: 302  | P: 25.81% R: 90.07% F1: 40.12%
+  Other                          | TP: 437  FP: 1464 FN: 4    | Total: 441  | P: 22.99% R: 99.09% F1: 37.32%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1689 FP: 745 FN: 48  | Total: 1737 | P: 69.39% R: 97.24% F1: 80.99%
+  Task:Agreement                                | TP: 173 FP: 622 FN: 18  | Total: 191 | P: 21.76% R: 90.58% F1: 35.09%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 32  FP: 23  FN: 31  | Total: 63  | P: 58.18% R: 50.79% F1: 54.24%
+  Task:Disconfirm                               | TP: 34  FP: 6   FN: 8   | Total: 42  | P: 85.00% R: 80.95% F1: 82.93%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 47  FP: 10  FN: 11  | Total: 58  | P: 82.46% R: 81.03% F1: 81.74%
+  Task:Propositional-Question                   | TP: 132 FP: 32  FN: 89  | Total: 221 | P: 80.49% R: 59.73% F1: 68.57%
+  Task:Choice-Question                          | TP: 0   FP: 1   FN: 13  | Total: 13  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Check-Question                           | TP: 11  FP: 6   FN: 1   | Total: 12  | P: 64.71% R: 91.67% F1: 75.86%
+  Task:Offer                                    | TP: 2   FP: 0   FN: 7   | Total: 9   | P: 100.00% R: 22.22% F1: 36.36%
+  Task:Address-Offer                            | TP: 1   FP: 0   FN: 11  | Total: 12  | P: 100.00% R:  8.33% F1: 15.38%
+  Task:Instruct                                 | TP: 25  FP: 40  FN: 50  | Total: 75  | P: 38.46% R: 33.33% F1: 35.71%
+  Auto-Feedback:AutoPositive                    | TP: 940 FP: 1208 FN: 6   | Total: 946 | P: 43.76% R: 99.37% F1: 60.76%
+  Auto-Feedback:AutoNegative                    | TP: 34  FP: 175 FN: 1   | Total: 35  | P: 16.27% R: 97.14% F1: 27.87%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 111 FN: 4   | Total: 37  | P: 22.92% R: 89.19% F1: 36.46%
+  Time-Management:Stalling                      | TP: 16  FP: 106 FN: 4   | Total: 20  | P: 13.11% R: 80.00% F1: 22.54%
+  Turn-Management:Turn-Take                     | TP: 281 FP: 670 FN: 28  | Total: 309 | P: 29.55% R: 90.94% F1: 44.60%
+  Own-Communication-Management:Self-Correction  | TP: 5   FP: 44  FN: 2   | Total: 7   | P: 10.20% R: 71.43% F1: 17.86%
+  Partner-Communication-Management:Completion   | TP: 73  FP: 735 FN: 18  | Total: 91  | P:  9.03% R: 80.22% F1: 16.24%
+  Discourse-Structuring:Interaction-Structuring | TP: 533 FP: 2288 FN: 3   | Total: 536 | P: 18.89% R: 99.44% F1: 31.75%
+  Social-Obligations-Management:Init-Greeting   | TP: 8   FP: 26  FN: 6   | Total: 14  | P: 23.53% R: 57.14% F1: 33.33%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 15  FN: 8   | Total: 11  | P: 16.67% R: 27.27% F1: 20.69%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 487 FN: 6   | Total: 89  | P: 14.56% R: 93.26% F1: 25.19%
+  Social-Obligations-Management:Init-Goodbye    | TP: 171 FP: 252 FN: 10  | Total: 181 | P: 40.43% R: 94.48% F1: 56.62%
+  Other:Other                                   | TP: 437 FP: 1464 FN: 4   | Total: 441 | P: 22.99% R: 99.09% F1: 37.32%
+==================================================
+Epochs: 48
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 33.34735661197588%
+Micro-Recall: 91.99226305609284%
+Micro-F1: 48.95018526142445%
+Macro-Precision: 33.11855181660185%
+Macro-Recall: 63.683687248553845%
+Macro-F1: 37.28304747020404%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 33.34735661197588%
+Micro-Recall: 91.99226305609284%
+Micro-F1: 48.95018526142445%
+Macro-Precision: 24.04607662806914%
+Macro-Recall: 89.01763612685676%
+Macro-F1: 36.114005863807144%
+=== OTHER METRICS ===
+Hamming Loss: 25.43743372216331%
+Exact Match: 1.7762460233297985%
+Average active dimensions per turn: pred=3.78, true=1.37
+Function-Level Total: TP: 4756, FP: 9506, FN: 414
+Dimension-Level Total: TP: 4756, FP: 9506, FN: 414
+Per-Dimension Accuracy:
+  Task                           | TP: 2140 FP: 1556 FN: 306  | Total: 2446 | P: 57.90% R: 87.49% F1: 69.68%
+  Auto-Feedback                  | TP: 973  FP: 1492 FN: 8    | Total: 981  | P: 39.47% R: 99.18% F1: 56.47%
+  Allo-Feedback                  | TP: 33   FP: 135  FN: 4    | Total: 37   | P: 19.64% R: 89.19% F1: 32.20%
+  Time-Management                | TP: 17   FP: 140  FN: 3    | Total: 20   | P: 10.83% R: 85.00% F1: 19.21%
+  Turn-Management                | TP: 284  FP: 750  FN: 25   | Total: 309  | P: 27.47% R: 91.91% F1: 42.29%
+  Own-Communication-Management   | TP: 6    FP: 55   FN: 1    | Total: 7    | P:  9.84% R: 85.71% F1: 17.65%
+  Partner-Communication-Management | TP: 56   FP: 401  FN: 35   | Total: 91   | P: 12.25% R: 61.54% F1: 20.44%
+  Discourse-Structuring          | TP: 533  FP: 2480 FN: 3    | Total: 536  | P: 17.69% R: 99.44% F1: 30.04%
+  Social-Obligations-Management  | TP: 276  FP: 863  FN: 26   | Total: 302  | P: 24.23% R: 91.39% F1: 38.31%
+  Other                          | TP: 438  FP: 1634 FN: 3    | Total: 441  | P: 21.14% R: 99.32% F1: 34.86%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1698 FP: 856 FN: 39  | Total: 1737 | P: 66.48% R: 97.75% F1: 79.14%
+  Task:Agreement                                | TP: 174 FP: 590 FN: 17  | Total: 191 | P: 22.77% R: 91.10% F1: 36.44%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 27  FP: 5   FN: 36  | Total: 63  | P: 84.38% R: 42.86% F1: 56.84%
+  Task:Disconfirm                               | TP: 35  FP: 11  FN: 7   | Total: 42  | P: 76.09% R: 83.33% F1: 79.55%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 39  FP: 6   FN: 19  | Total: 58  | P: 86.67% R: 67.24% F1: 75.73%
+  Task:Propositional-Question                   | TP: 139 FP: 34  FN: 82  | Total: 221 | P: 80.35% R: 62.90% F1: 70.56%
+  Task:Choice-Question                          | TP: 2   FP: 3   FN: 11  | Total: 13  | P: 40.00% R: 15.38% F1: 22.22%
+  Task:Check-Question                           | TP: 12  FP: 7   FN: 0   | Total: 12  | P: 63.16% R: 100.00% F1: 77.42%
+  Task:Offer                                    | TP: 2   FP: 3   FN: 7   | Total: 9   | P: 40.00% R: 22.22% F1: 28.57%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 12  FP: 39  FN: 63  | Total: 75  | P: 23.53% R: 16.00% F1: 19.05%
+  Auto-Feedback:AutoPositive                    | TP: 940 FP: 1323 FN: 6   | Total: 946 | P: 41.54% R: 99.37% F1: 58.59%
+  Auto-Feedback:AutoNegative                    | TP: 33  FP: 169 FN: 2   | Total: 35  | P: 16.34% R: 94.29% F1: 27.85%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 135 FN: 4   | Total: 37  | P: 19.64% R: 89.19% F1: 32.20%
+  Time-Management:Stalling                      | TP: 17  FP: 140 FN: 3   | Total: 20  | P: 10.83% R: 85.00% F1: 19.21%
+  Turn-Management:Turn-Take                     | TP: 284 FP: 750 FN: 25  | Total: 309 | P: 27.47% R: 91.91% F1: 42.29%
+  Own-Communication-Management:Self-Correction  | TP: 6   FP: 55  FN: 1   | Total: 7   | P:  9.84% R: 85.71% F1: 17.65%
+  Partner-Communication-Management:Completion   | TP: 56  FP: 401 FN: 35  | Total: 91  | P: 12.25% R: 61.54% F1: 20.44%
+  Discourse-Structuring:Interaction-Structuring | TP: 533 FP: 2480 FN: 3   | Total: 536 | P: 17.69% R: 99.44% F1: 30.04%
+  Social-Obligations-Management:Init-Greeting   | TP: 7   FP: 28  FN: 7   | Total: 14  | P: 20.00% R: 50.00% F1: 28.57%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 4   FP: 53  FN: 7   | Total: 11  | P:  7.02% R: 36.36% F1: 11.76%
+  Social-Obligations-Management:Thanking        | TP: 87  FP: 608 FN: 2   | Total: 89  | P: 12.52% R: 97.75% F1: 22.19%
+  Social-Obligations-Management:Init-Goodbye    | TP: 171 FP: 172 FN: 10  | Total: 181 | P: 49.85% R: 94.48% F1: 65.27%
+  Other:Other                                   | TP: 438 FP: 1634 FN: 3   | Total: 441 | P: 21.14% R: 99.32% F1: 34.86%
+==================================================  
+Epochs: 100
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 36.678147722923846%
+Micro-Recall: 92.68858800773694%
+Micro-F1: 52.558267068823696%
+Macro-Precision: 39.09489235678788%
+Macro-Recall: 65.48482955909832%
+Macro-F1: 40.870549030605154%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 36.678147722923846%
+Micro-Recall: 92.68858800773694%
+Micro-F1: 52.558267068823696%
+Macro-Precision: 27.35650360195061%
+Macro-Recall: 87.16793107409829%
+Macro-F1: 40.002660034156236%
+=== OTHER METRICS ===
+Hamming Loss: 22.16595970307529%
+Exact Match: 2.8101802757158003%
+Average active dimensions per turn: pred=3.46, true=1.37
+Function-Level Total: TP: 4792, FP: 8273, FN: 378
+Dimension-Level Total: TP: 4792, FP: 8273, FN: 378
+Per-Dimension Accuracy:
+  Task                           | TP: 2170 FP: 1515 FN: 276  | Total: 2446 | P: 58.89% R: 88.72% F1: 70.79%
+  Auto-Feedback                  | TP: 973  FP: 1203 FN: 8    | Total: 981  | P: 44.72% R: 99.18% F1: 61.64%
+  Allo-Feedback                  | TP: 33   FP: 105  FN: 4    | Total: 37   | P: 23.91% R: 89.19% F1: 37.71%
+  Time-Management                | TP: 17   FP: 103  FN: 3    | Total: 20   | P: 14.17% R: 85.00% F1: 24.29%
+  Turn-Management                | TP: 285  FP: 595  FN: 24   | Total: 309  | P: 32.39% R: 92.23% F1: 47.94%
+  Own-Communication-Management   | TP: 4    FP: 42   FN: 3    | Total: 7    | P:  8.70% R: 57.14% F1: 15.09%
+  Partner-Communication-Management | TP: 64   FP: 413  FN: 27   | Total: 91   | P: 13.42% R: 70.33% F1: 22.54%
+  Discourse-Structuring          | TP: 534  FP: 2307 FN: 2    | Total: 536  | P: 18.80% R: 99.63% F1: 31.63%
+  Social-Obligations-Management  | TP: 276  FP: 489  FN: 26   | Total: 302  | P: 36.08% R: 91.39% F1: 51.73%
+  Other                          | TP: 436  FP: 1501 FN: 5    | Total: 441  | P: 22.51% R: 98.87% F1: 36.67%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1706 FP: 861 FN: 31  | Total: 1737 | P: 66.46% R: 98.22% F1: 79.28%
+  Task:Agreement                                | TP: 171 FP: 474 FN: 20  | Total: 191 | P: 26.51% R: 89.53% F1: 40.91%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 1   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 36  FP: 62  FN: 27  | Total: 63  | P: 36.73% R: 57.14% F1: 44.72%
+  Task:Disconfirm                               | TP: 33  FP: 5   FN: 9   | Total: 42  | P: 86.84% R: 78.57% F1: 82.50%
+  Task:Question                                 | TP: 0   FP: 1   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 43  FP: 11  FN: 15  | Total: 58  | P: 79.63% R: 74.14% F1: 76.79%
+  Task:Propositional-Question                   | TP: 135 FP: 28  FN: 86  | Total: 221 | P: 82.82% R: 61.09% F1: 70.31%
+  Task:Choice-Question                          | TP: 2   FP: 3   FN: 11  | Total: 13  | P: 40.00% R: 15.38% F1: 22.22%
+  Task:Check-Question                           | TP: 12  FP: 13  FN: 0   | Total: 12  | P: 48.00% R: 100.00% F1: 64.86%
+  Task:Offer                                    | TP: 3   FP: 0   FN: 6   | Total: 9   | P: 100.00% R: 33.33% F1: 50.00%
+  Task:Address-Offer                            | TP: 1   FP: 0   FN: 11  | Total: 12  | P: 100.00% R:  8.33% F1: 15.38%
+  Task:Instruct                                 | TP: 28  FP: 56  FN: 47  | Total: 75  | P: 33.33% R: 37.33% F1: 35.22%
+  Auto-Feedback:AutoPositive                    | TP: 941 FP: 1036 FN: 5   | Total: 946 | P: 47.60% R: 99.47% F1: 64.39%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 167 FN: 3   | Total: 35  | P: 16.08% R: 91.43% F1: 27.35%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 105 FN: 4   | Total: 37  | P: 23.91% R: 89.19% F1: 37.71%
+  Time-Management:Stalling                      | TP: 17  FP: 103 FN: 3   | Total: 20  | P: 14.17% R: 85.00% F1: 24.29%
+  Turn-Management:Turn-Take                     | TP: 285 FP: 595 FN: 24  | Total: 309 | P: 32.39% R: 92.23% F1: 47.94%
+  Own-Communication-Management:Self-Correction  | TP: 4   FP: 42  FN: 3   | Total: 7   | P:  8.70% R: 57.14% F1: 15.09%
+  Partner-Communication-Management:Completion   | TP: 64  FP: 413 FN: 27  | Total: 91  | P: 13.42% R: 70.33% F1: 22.54%
+  Discourse-Structuring:Interaction-Structuring | TP: 534 FP: 2307 FN: 2   | Total: 536 | P: 18.80% R: 99.63% F1: 31.63%
+  Social-Obligations-Management:Init-Greeting   | TP: 10  FP: 25  FN: 4   | Total: 14  | P: 28.57% R: 71.43% F1: 40.82%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 3   FN: 0   | Total: 7   | P: 70.00% R: 100.00% F1: 82.35%
+  Social-Obligations-Management:Accept-Apology  | TP: 4   FP: 16  FN: 7   | Total: 11  | P: 20.00% R: 36.36% F1: 25.81%
+  Social-Obligations-Management:Thanking        | TP: 85  FP: 317 FN: 4   | Total: 89  | P: 21.14% R: 95.51% F1: 34.62%
+  Social-Obligations-Management:Init-Goodbye    | TP: 170 FP: 128 FN: 11  | Total: 181 | P: 57.05% R: 93.92% F1: 70.98%
+  Other:Other                                   | TP: 436 FP: 1501 FN: 5   | Total: 441 | P: 22.51% R: 98.87% F1: 36.67%
+==================================================
+Epochs: 44
+Joint Training: True
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 33.33102156876343%
+Micro-Recall: 92.95938104448743%
+Micro-F1: 49.068354688856%
+Macro-Precision: 31.32270197492045%
+Macro-Recall: 64.77805586527239%
+Macro-F1: 36.96649852813104%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 35.42548026908939%
+Micro-Recall: 98.80077369439071%
+Micro-F1: 52.15171780080657%
+Macro-Precision: 25.266346047538068%
+Macro-Recall: 93.00736784883074%
+Macro-F1: 37.55250285058293%
+=== OTHER METRICS ===
+Hamming Loss: 25.649522799575823%
+Exact Match: 2.067868504772004%
+Average active dimensions per turn: pred=3.82, true=1.37
+Function-Level Total: TP: 4806, FP: 9613, FN: 364
+Dimension-Level Total: TP: 5108, FP: 9311, FN: 62
+Per-Dimension Accuracy:
+  Task                           | TP: 2446 FP: 1248 FN: 0    | Total: 2446 | P: 66.22% R: 100.00% F1: 79.67%
+  Auto-Feedback                  | TP: 975  FP: 1333 FN: 6    | Total: 981  | P: 42.24% R: 99.39% F1: 59.29%
+  Allo-Feedback                  | TP: 33   FP: 108  FN: 4    | Total: 37   | P: 23.40% R: 89.19% F1: 37.08%
+  Time-Management                | TP: 17   FP: 143  FN: 3    | Total: 20   | P: 10.62% R: 85.00% F1: 18.89%
+  Turn-Management                | TP: 290  FP: 882  FN: 19   | Total: 309  | P: 24.74% R: 93.85% F1: 39.16%
+  Own-Communication-Management   | TP: 6    FP: 69   FN: 1    | Total: 7    | P:  8.00% R: 85.71% F1: 14.63%
+  Partner-Communication-Management | TP: 73   FP: 698  FN: 18   | Total: 91   | P:  9.47% R: 80.22% F1: 16.94%
+  Discourse-Structuring          | TP: 535  FP: 2570 FN: 1    | Total: 536  | P: 17.23% R: 99.81% F1: 29.39%
+  Social-Obligations-Management  | TP: 294  FP: 747  FN: 8    | Total: 302  | P: 28.24% R: 97.35% F1: 43.78%
+  Other                          | TP: 439  FP: 1513 FN: 2    | Total: 441  | P: 22.49% R: 99.55% F1: 36.69%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1709 FP: 809 FN: 28  | Total: 1737 | P: 67.87% R: 98.39% F1: 80.33%
+  Task:Agreement                                | TP: 171 FP: 575 FN: 20  | Total: 191 | P: 22.92% R: 89.53% F1: 36.50%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 0   FP: 0   FN: 9   | Total: 9   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Confirm                                  | TP: 32  FP: 15  FN: 31  | Total: 63  | P: 68.09% R: 50.79% F1: 58.18%
+  Task:Disconfirm                               | TP: 33  FP: 3   FN: 9   | Total: 42  | P: 91.67% R: 78.57% F1: 84.62%
+  Task:Question                                 | TP: 0   FP: 4   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 41  FP: 21  FN: 17  | Total: 58  | P: 66.13% R: 70.69% F1: 68.33%
+  Task:Propositional-Question                   | TP: 138 FP: 28  FN: 83  | Total: 221 | P: 83.13% R: 62.44% F1: 71.32%
+  Task:Choice-Question                          | TP: 0   FP: 1   FN: 13  | Total: 13  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Check-Question                           | TP: 11  FP: 3   FN: 1   | Total: 12  | P: 78.57% R: 91.67% F1: 84.62%
+  Task:Offer                                    | TP: 4   FP: 2   FN: 5   | Total: 9   | P: 66.67% R: 44.44% F1: 53.33%
+  Task:Address-Offer                            | TP: 0   FP: 0   FN: 12  | Total: 12  | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Instruct                                 | TP: 26  FP: 68  FN: 49  | Total: 75  | P: 27.66% R: 34.67% F1: 30.77%
+  Auto-Feedback:AutoPositive                    | TP: 941 FP: 1163 FN: 5   | Total: 946 | P: 44.72% R: 99.47% F1: 61.70%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 172 FN: 3   | Total: 35  | P: 15.69% R: 91.43% F1: 26.78%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 108 FN: 4   | Total: 37  | P: 23.40% R: 89.19% F1: 37.08%
+  Time-Management:Stalling                      | TP: 17  FP: 143 FN: 3   | Total: 20  | P: 10.62% R: 85.00% F1: 18.89%
+  Turn-Management:Turn-Take                     | TP: 290 FP: 882 FN: 19  | Total: 309 | P: 24.74% R: 93.85% F1: 39.16%
+  Own-Communication-Management:Self-Correction  | TP: 6   FP: 69  FN: 1   | Total: 7   | P:  8.00% R: 85.71% F1: 14.63%
+  Partner-Communication-Management:Completion   | TP: 73  FP: 698 FN: 18  | Total: 91  | P:  9.47% R: 80.22% F1: 16.94%
+  Discourse-Structuring:Interaction-Structuring | TP: 535 FP: 2570 FN: 1   | Total: 536 | P: 17.23% R: 99.81% F1: 29.39%
+  Social-Obligations-Management:Init-Greeting   | TP: 7   FP: 36  FN: 7   | Total: 14  | P: 16.28% R: 50.00% F1: 24.56%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 8   FN: 0   | Total: 7   | P: 46.67% R: 100.00% F1: 63.64%
+  Social-Obligations-Management:Accept-Apology  | TP: 3   FP: 31  FN: 8   | Total: 11  | P:  8.82% R: 27.27% F1: 13.33%
+  Social-Obligations-Management:Thanking        | TP: 85  FP: 427 FN: 4   | Total: 89  | P: 16.60% R: 95.51% F1: 28.29%
+  Social-Obligations-Management:Init-Goodbye    | TP: 173 FP: 264 FN: 8   | Total: 181 | P: 39.59% R: 95.58% F1: 55.99%
+  Other:Other                                   | TP: 439 FP: 1513 FN: 2   | Total: 441 | P: 22.49% R: 99.55% F1: 36.69%
+==================================================
+
+MULTIDIM_INDEPENDENT
+
+==================================================
+
+Epochs: 41
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 60.59094397544129%
+Micro-Recall: 91.6247582205029%
+Micro-F1: 72.94425623652603%
+Macro-Precision: 55.79664345154139%
+Macro-Recall: 76.24906789515468%
+Macro-F1: 62.20001028105233%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 60.59094397544129%
+Micro-Recall: 91.6247582205029%
+Micro-F1: 72.94425623652603%
+Macro-Precision: 49.51121602590629%
+Macro-Recall: 83.82745928286622%
+Macro-F1: 60.83665303652174%
+=== OTHER METRICS ===
+Hamming Loss: 8.669141039236479%
+Exact Match: 42.20572640509014%
+Average active dimensions per turn: pred=2.07, true=1.37
+Function-Level Total: TP: 4737, FP: 3081, FN: 433
+Dimension-Level Total: TP: 4737, FP: 3081, FN: 433
+Per-Dimension Accuracy:
+  Task                           | TP: 2203 FP: 881  FN: 243  | Total: 2446 | P: 71.43% R: 90.07% F1: 79.67%
+  Auto-Feedback                  | TP: 964  FP: 317  FN: 17   | Total: 981  | P: 75.25% R: 98.27% F1: 85.23%
+  Allo-Feedback                  | TP: 31   FP: 37   FN: 6    | Total: 37   | P: 45.59% R: 83.78% F1: 59.05%
+  Time-Management                | TP: 18   FP: 47   FN: 2    | Total: 20   | P: 27.69% R: 90.00% F1: 42.35%
+  Turn-Management                | TP: 256  FP: 98   FN: 53   | Total: 309  | P: 72.32% R: 82.85% F1: 77.22%
+  Own-Communication-Management   | TP: 3    FP: 12   FN: 4    | Total: 7    | P: 20.00% R: 42.86% F1: 27.27%
+  Partner-Communication-Management | TP: 62   FP: 120  FN: 29   | Total: 91   | P: 34.07% R: 68.13% F1: 45.42%
+  Discourse-Structuring          | TP: 486  FP: 1038 FN: 50   | Total: 536  | P: 31.89% R: 90.67% F1: 47.18%
+  Social-Obligations-Management  | TP: 285  FP: 171  FN: 17   | Total: 302  | P: 62.50% R: 94.37% F1: 75.20%
+  Other                          | TP: 429  FP: 360  FN: 12   | Total: 441  | P: 54.37% R: 97.28% F1: 69.76%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1670 FP: 576 FN: 67  | Total: 1737 | P: 74.35% R: 96.14% F1: 83.86%
+  Task:Agreement                                | TP: 179 FP: 145 FN: 12  | Total: 191 | P: 55.25% R: 93.72% F1: 69.51%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 5   FP: 1   FN: 4   | Total: 9   | P: 83.33% R: 55.56% F1: 66.67%
+  Task:Confirm                                  | TP: 42  FP: 22  FN: 21  | Total: 63  | P: 65.62% R: 66.67% F1: 66.14%
+  Task:Disconfirm                               | TP: 35  FP: 5   FN: 7   | Total: 42  | P: 87.50% R: 83.33% F1: 85.37%
+  Task:Question                                 | TP: 1   FP: 3   FN: 1   | Total: 2   | P: 25.00% R: 50.00% F1: 33.33%
+  Task:Set-Question                             | TP: 50  FP: 8   FN: 8   | Total: 58  | P: 86.21% R: 86.21% F1: 86.21%
+  Task:Propositional-Question                   | TP: 143 FP: 39  FN: 78  | Total: 221 | P: 78.57% R: 64.71% F1: 70.97%
+  Task:Choice-Question                          | TP: 7   FP: 10  FN: 6   | Total: 13  | P: 41.18% R: 53.85% F1: 46.67%
+  Task:Check-Question                           | TP: 12  FP: 7   FN: 0   | Total: 12  | P: 63.16% R: 100.00% F1: 77.42%
+  Task:Offer                                    | TP: 5   FP: 3   FN: 4   | Total: 9   | P: 62.50% R: 55.56% F1: 58.82%
+  Task:Address-Offer                            | TP: 9   FP: 2   FN: 3   | Total: 12  | P: 81.82% R: 75.00% F1: 78.26%
+  Task:Instruct                                 | TP: 45  FP: 60  FN: 30  | Total: 75  | P: 42.86% R: 60.00% F1: 50.00%
+  Auto-Feedback:AutoPositive                    | TP: 933 FP: 235 FN: 13  | Total: 946 | P: 79.88% R: 98.63% F1: 88.27%
+  Auto-Feedback:AutoNegative                    | TP: 31  FP: 82  FN: 4   | Total: 35  | P: 27.43% R: 88.57% F1: 41.89%
+  Allo-Feedback:FeedbackElicitation             | TP: 31  FP: 37  FN: 6   | Total: 37  | P: 45.59% R: 83.78% F1: 59.05%
+  Time-Management:Stalling                      | TP: 18  FP: 47  FN: 2   | Total: 20  | P: 27.69% R: 90.00% F1: 42.35%
+  Turn-Management:Turn-Take                     | TP: 256 FP: 98  FN: 53  | Total: 309 | P: 72.32% R: 82.85% F1: 77.22%
+  Own-Communication-Management:Self-Correction  | TP: 3   FP: 12  FN: 4   | Total: 7   | P: 20.00% R: 42.86% F1: 27.27%
+  Partner-Communication-Management:Completion   | TP: 62  FP: 120 FN: 29  | Total: 91  | P: 34.07% R: 68.13% F1: 45.42%
+  Discourse-Structuring:Interaction-Structuring | TP: 486 FP: 1038 FN: 50  | Total: 536 | P: 31.89% R: 90.67% F1: 47.18%
+  Social-Obligations-Management:Init-Greeting   | TP: 11  FP: 4   FN: 3   | Total: 14  | P: 73.33% R: 78.57% F1: 75.86%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 9   FP: 10  FN: 2   | Total: 11  | P: 47.37% R: 81.82% F1: 60.00%
+  Social-Obligations-Management:Thanking        | TP: 85  FP: 112 FN: 4   | Total: 89  | P: 43.15% R: 95.51% F1: 59.44%
+  Social-Obligations-Management:Init-Goodbye    | TP: 173 FP: 43  FN: 8   | Total: 181 | P: 80.09% R: 95.58% F1: 87.15%
+  Other:Other                                   | TP: 429 FP: 360 FN: 12  | Total: 441 | P: 54.37% R: 97.28% F1: 69.76%
+==================================================
+Epochs: 42
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 61.47733194372069%
+Micro-Recall: 91.27659574468086%
+Micro-F1: 73.47034096216721%
+Macro-Precision: 56.67582003812692%
+Macro-Recall: 75.98662531850631%
+Macro-F1: 62.59969955620326%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 61.47733194372069%
+Micro-Recall: 91.27659574468086%
+Micro-F1: 73.47034096216721%
+Macro-Precision: 50.72938648884562%
+Macro-Recall: 83.8715587658584%
+Macro-F1: 62.065477701446724%
+=== OTHER METRICS ===
+Hamming Loss: 8.396076352067869%
+Exact Match: 44.24708377518558%
+Average active dimensions per turn: pred=2.03, true=1.37
+Function-Level Total: TP: 4719, FP: 2957, FN: 451
+Dimension-Level Total: TP: 4719, FP: 2957, FN: 451
+Per-Dimension Accuracy:
+  Task                           | TP: 2204 FP: 822  FN: 242  | Total: 2446 | P: 72.84% R: 90.11% F1: 80.56%
+  Auto-Feedback                  | TP: 962  FP: 320  FN: 19   | Total: 981  | P: 75.04% R: 98.06% F1: 85.02%
+  Allo-Feedback                  | TP: 33   FP: 30   FN: 4    | Total: 37   | P: 52.38% R: 89.19% F1: 66.00%
+  Time-Management                | TP: 18   FP: 36   FN: 2    | Total: 20   | P: 33.33% R: 90.00% F1: 48.65%
+  Turn-Management                | TP: 258  FP: 101  FN: 51   | Total: 309  | P: 71.87% R: 83.50% F1: 77.25%
+  Own-Communication-Management   | TP: 3    FP: 11   FN: 4    | Total: 7    | P: 21.43% R: 42.86% F1: 28.57%
+  Partner-Communication-Management | TP: 61   FP: 129  FN: 30   | Total: 91   | P: 32.11% R: 67.03% F1: 43.42%
+  Discourse-Structuring          | TP: 471  FP: 969  FN: 65   | Total: 536  | P: 32.71% R: 87.87% F1: 47.67%
+  Social-Obligations-Management  | TP: 281  FP: 176  FN: 21   | Total: 302  | P: 61.49% R: 93.05% F1: 74.04%
+  Other                          | TP: 428  FP: 363  FN: 13   | Total: 441  | P: 54.11% R: 97.05% F1: 69.48%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1676 FP: 545 FN: 61  | Total: 1737 | P: 75.46% R: 96.49% F1: 84.69%
+  Task:Agreement                                | TP: 172 FP: 107 FN: 19  | Total: 191 | P: 61.65% R: 90.05% F1: 73.19%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 5   FP: 0   FN: 4   | Total: 9   | P: 100.00% R: 55.56% F1: 71.43%
+  Task:Confirm                                  | TP: 46  FP: 29  FN: 17  | Total: 63  | P: 61.33% R: 73.02% F1: 66.67%
+  Task:Disconfirm                               | TP: 35  FP: 0   FN: 7   | Total: 42  | P: 100.00% R: 83.33% F1: 90.91%
+  Task:Question                                 | TP: 1   FP: 5   FN: 1   | Total: 2   | P: 16.67% R: 50.00% F1: 25.00%
+  Task:Set-Question                             | TP: 46  FP: 8   FN: 12  | Total: 58  | P: 85.19% R: 79.31% F1: 82.14%
+  Task:Propositional-Question                   | TP: 145 FP: 37  FN: 76  | Total: 221 | P: 79.67% R: 65.61% F1: 71.96%
+  Task:Choice-Question                          | TP: 7   FP: 10  FN: 6   | Total: 13  | P: 41.18% R: 53.85% F1: 46.67%
+  Task:Check-Question                           | TP: 12  FP: 5   FN: 0   | Total: 12  | P: 70.59% R: 100.00% F1: 82.76%
+  Task:Offer                                    | TP: 5   FP: 4   FN: 4   | Total: 9   | P: 55.56% R: 55.56% F1: 55.56%
+  Task:Address-Offer                            | TP: 9   FP: 4   FN: 3   | Total: 12  | P: 69.23% R: 75.00% F1: 72.00%
+  Task:Instruct                                 | TP: 45  FP: 68  FN: 30  | Total: 75  | P: 39.82% R: 60.00% F1: 47.87%
+  Auto-Feedback:AutoPositive                    | TP: 932 FP: 236 FN: 14  | Total: 946 | P: 79.79% R: 98.52% F1: 88.17%
+  Auto-Feedback:AutoNegative                    | TP: 30  FP: 84  FN: 5   | Total: 35  | P: 26.32% R: 85.71% F1: 40.27%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 30  FN: 4   | Total: 37  | P: 52.38% R: 89.19% F1: 66.00%
+  Time-Management:Stalling                      | TP: 18  FP: 36  FN: 2   | Total: 20  | P: 33.33% R: 90.00% F1: 48.65%
+  Turn-Management:Turn-Take                     | TP: 258 FP: 101 FN: 51  | Total: 309 | P: 71.87% R: 83.50% F1: 77.25%
+  Own-Communication-Management:Self-Correction  | TP: 3   FP: 11  FN: 4   | Total: 7   | P: 21.43% R: 42.86% F1: 28.57%
+  Partner-Communication-Management:Completion   | TP: 61  FP: 129 FN: 30  | Total: 91  | P: 32.11% R: 67.03% F1: 43.42%
+  Discourse-Structuring:Interaction-Structuring | TP: 471 FP: 969 FN: 65  | Total: 536 | P: 32.71% R: 87.87% F1: 47.67%
+  Social-Obligations-Management:Init-Greeting   | TP: 11  FP: 5   FN: 3   | Total: 14  | P: 68.75% R: 78.57% F1: 73.33%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 1   FN: 0   | Total: 7   | P: 87.50% R: 100.00% F1: 93.33%
+  Social-Obligations-Management:Accept-Apology  | TP: 9   FP: 9   FN: 2   | Total: 11  | P: 50.00% R: 81.82% F1: 62.07%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 112 FN: 6   | Total: 89  | P: 42.56% R: 93.26% F1: 58.45%
+  Social-Obligations-Management:Init-Goodbye    | TP: 171 FP: 49  FN: 10  | Total: 181 | P: 77.73% R: 94.48% F1: 85.29%
+  Other:Other                                   | TP: 428 FP: 363 FN: 13  | Total: 441 | P: 54.11% R: 97.05% F1: 69.48%
+==================================================
+Epochs: 66
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 64.07979232135538%
+Micro-Recall: 90.71566731141199%
+Micro-F1: 75.1060933621587%
+Macro-Precision: 59.801006324784524%
+Macro-Recall: 75.96451946029649%
+Macro-F1: 64.7614944516616%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 64.07979232135538%
+Micro-Recall: 90.71566731141199%
+Micro-F1: 75.1060933621587%
+Macro-Precision: 53.86382654411661%
+Macro-Recall: 83.90768915979959%
+Macro-F1: 64.37627533652359%
+=== OTHER METRICS ===
+Hamming Loss: 7.606044538706256%
+Exact Match: 47.53446447507954%
+Average active dimensions per turn: pred=1.94, true=1.37
+Function-Level Total: TP: 4690, FP: 2629, FN: 480
+Dimension-Level Total: TP: 4690, FP: 2629, FN: 480
+Per-Dimension Accuracy:
+  Task                           | TP: 2202 FP: 791  FN: 244  | Total: 2446 | P: 73.57% R: 90.02% F1: 80.97%
+  Auto-Feedback                  | TP: 960  FP: 243  FN: 21   | Total: 981  | P: 79.80% R: 97.86% F1: 87.91%
+  Allo-Feedback                  | TP: 32   FP: 29   FN: 5    | Total: 37   | P: 52.46% R: 86.49% F1: 65.31%
+  Time-Management                | TP: 17   FP: 29   FN: 3    | Total: 20   | P: 36.96% R: 85.00% F1: 51.52%
+  Turn-Management                | TP: 249  FP: 85   FN: 60   | Total: 309  | P: 74.55% R: 80.58% F1: 77.45%
+  Own-Communication-Management   | TP: 4    FP: 15   FN: 3    | Total: 7    | P: 21.05% R: 57.14% F1: 30.77%
+  Partner-Communication-Management | TP: 61   FP: 85   FN: 30   | Total: 91   | P: 41.78% R: 67.03% F1: 51.48%
+  Discourse-Structuring          | TP: 459  FP: 887  FN: 77   | Total: 536  | P: 34.10% R: 85.63% F1: 48.78%
+  Social-Obligations-Management  | TP: 280  FP: 129  FN: 22   | Total: 302  | P: 68.46% R: 92.72% F1: 78.76%
+  Other                          | TP: 426  FP: 336  FN: 15   | Total: 441  | P: 55.91% R: 96.60% F1: 70.82%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1663 FP: 531 FN: 74  | Total: 1737 | P: 75.80% R: 95.74% F1: 84.61%
+  Task:Agreement                                | TP: 174 FP: 89  FN: 17  | Total: 191 | P: 66.16% R: 91.10% F1: 76.65%
+  Task:Disagreement                             | TP: 0   FP: 1   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 5   FP: 2   FN: 4   | Total: 9   | P: 71.43% R: 55.56% F1: 62.50%
+  Task:Confirm                                  | TP: 43  FP: 18  FN: 20  | Total: 63  | P: 70.49% R: 68.25% F1: 69.35%
+  Task:Disconfirm                               | TP: 35  FP: 3   FN: 7   | Total: 42  | P: 92.11% R: 83.33% F1: 87.50%
+  Task:Question                                 | TP: 1   FP: 3   FN: 1   | Total: 2   | P: 25.00% R: 50.00% F1: 33.33%
+  Task:Set-Question                             | TP: 49  FP: 7   FN: 9   | Total: 58  | P: 87.50% R: 84.48% F1: 85.96%
+  Task:Propositional-Question                   | TP: 150 FP: 46  FN: 71  | Total: 221 | P: 76.53% R: 67.87% F1: 71.94%
+  Task:Choice-Question                          | TP: 9   FP: 9   FN: 4   | Total: 13  | P: 50.00% R: 69.23% F1: 58.06%
+  Task:Check-Question                           | TP: 12  FP: 5   FN: 0   | Total: 12  | P: 70.59% R: 100.00% F1: 82.76%
+  Task:Offer                                    | TP: 3   FP: 1   FN: 6   | Total: 9   | P: 75.00% R: 33.33% F1: 46.15%
+  Task:Address-Offer                            | TP: 8   FP: 3   FN: 4   | Total: 12  | P: 72.73% R: 66.67% F1: 69.57%
+  Task:Instruct                                 | TP: 50  FP: 73  FN: 25  | Total: 75  | P: 40.65% R: 66.67% F1: 50.51%
+  Auto-Feedback:AutoPositive                    | TP: 929 FP: 179 FN: 17  | Total: 946 | P: 83.84% R: 98.20% F1: 90.46%
+  Auto-Feedback:AutoNegative                    | TP: 31  FP: 64  FN: 4   | Total: 35  | P: 32.63% R: 88.57% F1: 47.69%
+  Allo-Feedback:FeedbackElicitation             | TP: 32  FP: 29  FN: 5   | Total: 37  | P: 52.46% R: 86.49% F1: 65.31%
+  Time-Management:Stalling                      | TP: 17  FP: 29  FN: 3   | Total: 20  | P: 36.96% R: 85.00% F1: 51.52%
+  Turn-Management:Turn-Take                     | TP: 249 FP: 85  FN: 60  | Total: 309 | P: 74.55% R: 80.58% F1: 77.45%
+  Own-Communication-Management:Self-Correction  | TP: 4   FP: 15  FN: 3   | Total: 7   | P: 21.05% R: 57.14% F1: 30.77%
+  Partner-Communication-Management:Completion   | TP: 61  FP: 85  FN: 30  | Total: 91  | P: 41.78% R: 67.03% F1: 51.48%
+  Discourse-Structuring:Interaction-Structuring | TP: 459 FP: 887 FN: 77  | Total: 536 | P: 34.10% R: 85.63% F1: 48.78%
+  Social-Obligations-Management:Init-Greeting   | TP: 10  FP: 3   FN: 4   | Total: 14  | P: 76.92% R: 71.43% F1: 74.07%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 1   FN: 0   | Total: 7   | P: 87.50% R: 100.00% F1: 93.33%
+  Social-Obligations-Management:Accept-Apology  | TP: 10  FP: 4   FN: 1   | Total: 11  | P: 71.43% R: 90.91% F1: 80.00%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 77  FN: 6   | Total: 89  | P: 51.88% R: 93.26% F1: 66.67%
+  Social-Obligations-Management:Init-Goodbye    | TP: 170 FP: 44  FN: 11  | Total: 181 | P: 79.44% R: 93.92% F1: 86.08%
+  Other:Other                                   | TP: 426 FP: 336 FN: 15  | Total: 441 | P: 55.91% R: 96.60% F1: 70.82%
+==================================================
+Epochs: 67
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 64.19584245076587%
+Micro-Recall: 90.79303675048355%
+Micro-F1: 75.21230572023714%
+Macro-Precision: 55.423077845402624%
+Macro-Recall: 74.20849583902296%
+Macro-F1: 61.919436185888635%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 64.19584245076587%
+Micro-Recall: 90.79303675048355%
+Micro-F1: 75.21230572023714%
+Macro-Precision: 53.03605309474582%
+Macro-Recall: 83.28062790008966%
+Macro-F1: 63.534870806319944%
+=== OTHER METRICS ===
+Hamming Loss: 7.566277836691411%
+Exact Match: 48.38282078472959%
+Average active dimensions per turn: pred=1.94, true=1.37
+Function-Level Total: TP: 4694, FP: 2618, FN: 476
+Dimension-Level Total: TP: 4694, FP: 2618, FN: 476
+Per-Dimension Accuracy:
+  Task                           | TP: 2201 FP: 772  FN: 245  | Total: 2446 | P: 74.03% R: 89.98% F1: 81.23%
+  Auto-Feedback                  | TP: 961  FP: 278  FN: 20   | Total: 981  | P: 77.56% R: 97.96% F1: 86.58%
+  Allo-Feedback                  | TP: 31   FP: 20   FN: 6    | Total: 37   | P: 60.78% R: 83.78% F1: 70.45%
+  Time-Management                | TP: 18   FP: 34   FN: 2    | Total: 20   | P: 34.62% R: 90.00% F1: 50.00%
+  Turn-Management                | TP: 252  FP: 81   FN: 57   | Total: 309  | P: 75.68% R: 81.55% F1: 78.50%
+  Own-Communication-Management   | TP: 3    FP: 13   FN: 4    | Total: 7    | P: 18.75% R: 42.86% F1: 26.09%
+  Partner-Communication-Management | TP: 66   FP: 138  FN: 25   | Total: 91   | P: 32.35% R: 72.53% F1: 44.75%
+  Discourse-Structuring          | TP: 457  FP: 809  FN: 79   | Total: 536  | P: 36.10% R: 85.26% F1: 50.72%
+  Social-Obligations-Management  | TP: 278  FP: 171  FN: 24   | Total: 302  | P: 61.92% R: 92.05% F1: 74.03%
+  Other                          | TP: 427  FP: 302  FN: 14   | Total: 441  | P: 58.57% R: 96.83% F1: 72.99%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1666 FP: 525 FN: 71  | Total: 1737 | P: 76.04% R: 95.91% F1: 84.83%
+  Task:Agreement                                | TP: 171 FP: 96  FN: 20  | Total: 191 | P: 64.04% R: 89.53% F1: 74.67%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 5   FP: 3   FN: 4   | Total: 9   | P: 62.50% R: 55.56% F1: 58.82%
+  Task:Confirm                                  | TP: 40  FP: 23  FN: 23  | Total: 63  | P: 63.49% R: 63.49% F1: 63.49%
+  Task:Disconfirm                               | TP: 35  FP: 3   FN: 7   | Total: 42  | P: 92.11% R: 83.33% F1: 87.50%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 48  FP: 6   FN: 10  | Total: 58  | P: 88.89% R: 82.76% F1: 85.71%
+  Task:Propositional-Question                   | TP: 150 FP: 35  FN: 71  | Total: 221 | P: 81.08% R: 67.87% F1: 73.89%
+  Task:Choice-Question                          | TP: 10  FP: 11  FN: 3   | Total: 13  | P: 47.62% R: 76.92% F1: 58.82%
+  Task:Check-Question                           | TP: 12  FP: 5   FN: 0   | Total: 12  | P: 70.59% R: 100.00% F1: 82.76%
+  Task:Offer                                    | TP: 5   FP: 5   FN: 4   | Total: 9   | P: 50.00% R: 55.56% F1: 52.63%
+  Task:Address-Offer                            | TP: 9   FP: 4   FN: 3   | Total: 12  | P: 69.23% R: 75.00% F1: 72.00%
+  Task:Instruct                                 | TP: 50  FP: 54  FN: 25  | Total: 75  | P: 48.08% R: 66.67% F1: 55.87%
+  Auto-Feedback:AutoPositive                    | TP: 929 FP: 209 FN: 17  | Total: 946 | P: 81.63% R: 98.20% F1: 89.16%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 69  FN: 3   | Total: 35  | P: 31.68% R: 91.43% F1: 47.06%
+  Allo-Feedback:FeedbackElicitation             | TP: 31  FP: 20  FN: 6   | Total: 37  | P: 60.78% R: 83.78% F1: 70.45%
+  Time-Management:Stalling                      | TP: 18  FP: 34  FN: 2   | Total: 20  | P: 34.62% R: 90.00% F1: 50.00%
+  Turn-Management:Turn-Take                     | TP: 252 FP: 81  FN: 57  | Total: 309 | P: 75.68% R: 81.55% F1: 78.50%
+  Own-Communication-Management:Self-Correction  | TP: 3   FP: 13  FN: 4   | Total: 7   | P: 18.75% R: 42.86% F1: 26.09%
+  Partner-Communication-Management:Completion   | TP: 66  FP: 138 FN: 25  | Total: 91  | P: 32.35% R: 72.53% F1: 44.75%
+  Discourse-Structuring:Interaction-Structuring | TP: 457 FP: 809 FN: 79  | Total: 536 | P: 36.10% R: 85.26% F1: 50.72%
+  Social-Obligations-Management:Init-Greeting   | TP: 10  FP: 7   FN: 4   | Total: 14  | P: 58.82% R: 71.43% F1: 64.52%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 7   FP: 7   FN: 4   | Total: 11  | P: 50.00% R: 63.64% F1: 56.00%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 104 FN: 6   | Total: 89  | P: 44.39% R: 93.26% F1: 60.14%
+  Social-Obligations-Management:Init-Goodbye    | TP: 171 FP: 51  FN: 10  | Total: 181 | P: 77.03% R: 94.48% F1: 84.86%
+  Other:Other                                   | TP: 427 FP: 302 FN: 14  | Total: 441 | P: 58.57% R: 96.83% F1: 72.99%
+==================================================
+Epochs: 83
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 65.4608938547486%
+Micro-Recall: 90.65764023210832%
+Micro-F1: 76.02595296025953%
+Macro-Precision: 60.79267294033944%
+Macro-Recall: 75.55842565786556%
+Macro-F1: 65.26847850274962%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 65.4608938547486%
+Micro-Recall: 90.65764023210832%
+Micro-F1: 76.02595296025953%
+Macro-Precision: 55.71918977992547%
+Macro-Recall: 85.6729016213723%
+Macro-F1: 66.13488042688147%
+=== OTHER METRICS ===
+Hamming Loss: 7.218981972428421%
+Exact Match: 49.57582184517497%
+Average active dimensions per turn: pred=1.90, true=1.37
+Function-Level Total: TP: 4687, FP: 2473, FN: 483
+Dimension-Level Total: TP: 4687, FP: 2473, FN: 483
+Per-Dimension Accuracy:
+  Task                           | TP: 2210 FP: 784  FN: 236  | Total: 2446 | P: 73.81% R: 90.35% F1: 81.25%
+  Auto-Feedback                  | TP: 954  FP: 204  FN: 27   | Total: 981  | P: 82.38% R: 97.25% F1: 89.20%
+  Allo-Feedback                  | TP: 31   FP: 21   FN: 6    | Total: 37   | P: 59.62% R: 83.78% F1: 69.66%
+  Time-Management                | TP: 18   FP: 28   FN: 2    | Total: 20   | P: 39.13% R: 90.00% F1: 54.55%
+  Turn-Management                | TP: 251  FP: 77   FN: 58   | Total: 309  | P: 76.52% R: 81.23% F1: 78.81%
+  Own-Communication-Management   | TP: 5    FP: 14   FN: 2    | Total: 7    | P: 26.32% R: 71.43% F1: 38.46%
+  Partner-Communication-Management | TP: 64   FP: 119  FN: 27   | Total: 91   | P: 34.97% R: 70.33% F1: 46.72%
+  Discourse-Structuring          | TP: 451  FP: 829  FN: 85   | Total: 536  | P: 35.23% R: 84.14% F1: 49.67%
+  Social-Obligations-Management  | TP: 276  FP: 134  FN: 26   | Total: 302  | P: 67.32% R: 91.39% F1: 77.53%
+  Other                          | TP: 427  FP: 263  FN: 14   | Total: 441  | P: 61.88% R: 96.83% F1: 75.51%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1676 FP: 524 FN: 61  | Total: 1737 | P: 76.18% R: 96.49% F1: 85.14%
+  Task:Agreement                                | TP: 177 FP: 121 FN: 14  | Total: 191 | P: 59.40% R: 92.67% F1: 72.39%
+  Task:Disagreement                             | TP: 0   FP: 1   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 5   FP: 0   FN: 4   | Total: 9   | P: 100.00% R: 55.56% F1: 71.43%
+  Task:Confirm                                  | TP: 39  FP: 19  FN: 24  | Total: 63  | P: 67.24% R: 61.90% F1: 64.46%
+  Task:Disconfirm                               | TP: 34  FP: 3   FN: 8   | Total: 42  | P: 91.89% R: 80.95% F1: 86.08%
+  Task:Question                                 | TP: 1   FP: 2   FN: 1   | Total: 2   | P: 33.33% R: 50.00% F1: 40.00%
+  Task:Set-Question                             | TP: 50  FP: 9   FN: 8   | Total: 58  | P: 84.75% R: 86.21% F1: 85.47%
+  Task:Propositional-Question                   | TP: 147 FP: 37  FN: 74  | Total: 221 | P: 79.89% R: 66.52% F1: 72.59%
+  Task:Choice-Question                          | TP: 8   FP: 8   FN: 5   | Total: 13  | P: 50.00% R: 61.54% F1: 55.17%
+  Task:Check-Question                           | TP: 12  FP: 4   FN: 0   | Total: 12  | P: 75.00% R: 100.00% F1: 85.71%
+  Task:Offer                                    | TP: 4   FP: 3   FN: 5   | Total: 9   | P: 57.14% R: 44.44% F1: 50.00%
+  Task:Address-Offer                            | TP: 9   FP: 3   FN: 3   | Total: 12  | P: 75.00% R: 75.00% F1: 75.00%
+  Task:Instruct                                 | TP: 48  FP: 50  FN: 27  | Total: 75  | P: 48.98% R: 64.00% F1: 55.49%
+  Auto-Feedback:AutoPositive                    | TP: 923 FP: 148 FN: 23  | Total: 946 | P: 86.18% R: 97.57% F1: 91.52%
+  Auto-Feedback:AutoNegative                    | TP: 31  FP: 56  FN: 4   | Total: 35  | P: 35.63% R: 88.57% F1: 50.82%
+  Allo-Feedback:FeedbackElicitation             | TP: 31  FP: 21  FN: 6   | Total: 37  | P: 59.62% R: 83.78% F1: 69.66%
+  Time-Management:Stalling                      | TP: 18  FP: 28  FN: 2   | Total: 20  | P: 39.13% R: 90.00% F1: 54.55%
+  Turn-Management:Turn-Take                     | TP: 251 FP: 77  FN: 58  | Total: 309 | P: 76.52% R: 81.23% F1: 78.81%
+  Own-Communication-Management:Self-Correction  | TP: 5   FP: 14  FN: 2   | Total: 7   | P: 26.32% R: 71.43% F1: 38.46%
+  Partner-Communication-Management:Completion   | TP: 64  FP: 119 FN: 27  | Total: 91  | P: 34.97% R: 70.33% F1: 46.72%
+  Discourse-Structuring:Interaction-Structuring | TP: 451 FP: 829 FN: 85  | Total: 536 | P: 35.23% R: 84.14% F1: 49.67%
+  Social-Obligations-Management:Init-Greeting   | TP: 8   FP: 3   FN: 6   | Total: 14  | P: 72.73% R: 57.14% F1: 64.00%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 1   FN: 0   | Total: 7   | P: 87.50% R: 100.00% F1: 93.33%
+  Social-Obligations-Management:Accept-Apology  | TP: 8   FP: 6   FN: 3   | Total: 11  | P: 57.14% R: 72.73% F1: 64.00%
+  Social-Obligations-Management:Thanking        | TP: 82  FP: 85  FN: 7   | Total: 89  | P: 49.10% R: 92.13% F1: 64.06%
+  Social-Obligations-Management:Init-Goodbye    | TP: 171 FP: 39  FN: 10  | Total: 181 | P: 81.43% R: 94.48% F1: 87.47%
+  Other:Other                                   | TP: 427 FP: 263 FN: 14  | Total: 441 | P: 61.88% R: 96.83% F1: 75.51%
+==================================================
+Epochs: 60
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 64.40631434454357%
+Micro-Recall: 90.75435203094777%
+Micro-F1: 75.343235648334%
+Macro-Precision: 57.69799464575141%
+Macro-Recall: 74.43062823827688%
+Macro-F1: 63.46686557549389%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 64.40631434454357%
+Micro-Recall: 90.75435203094777%
+Micro-F1: 75.343235648334%
+Macro-Precision: 53.78044301939629%
+Macro-Recall: 83.06811989805458%
+Macro-F1: 64.37055277864269%
+=== OTHER METRICS ===
+Hamming Loss: 7.513255567338282%
+Exact Match: 48.01166489925769%
+Average active dimensions per turn: pred=1.93, true=1.37
+Function-Level Total: TP: 4692, FP: 2593, FN: 478
+Dimension-Level Total: TP: 4692, FP: 2593, FN: 478
+Per-Dimension Accuracy:
+  Task                           | TP: 2208 FP: 802  FN: 238  | Total: 2446 | P: 73.36% R: 90.27% F1: 80.94%
+  Auto-Feedback                  | TP: 960  FP: 264  FN: 21   | Total: 981  | P: 78.43% R: 97.86% F1: 87.07%
+  Allo-Feedback                  | TP: 32   FP: 28   FN: 5    | Total: 37   | P: 53.33% R: 86.49% F1: 65.98%
+  Time-Management                | TP: 18   FP: 28   FN: 2    | Total: 20   | P: 39.13% R: 90.00% F1: 54.55%
+  Turn-Management                | TP: 249  FP: 93   FN: 60   | Total: 309  | P: 72.81% R: 80.58% F1: 76.50%
+  Own-Communication-Management   | TP: 3    FP: 10   FN: 4    | Total: 7    | P: 23.08% R: 42.86% F1: 30.00%
+  Partner-Communication-Management | TP: 63   FP: 103  FN: 28   | Total: 91   | P: 37.95% R: 69.23% F1: 49.03%
+  Discourse-Structuring          | TP: 456  FP: 815  FN: 80   | Total: 536  | P: 35.88% R: 85.07% F1: 50.47%
+  Social-Obligations-Management  | TP: 277  FP: 146  FN: 25   | Total: 302  | P: 65.48% R: 91.72% F1: 76.41%
+  Other                          | TP: 426  FP: 304  FN: 15   | Total: 441  | P: 58.36% R: 96.60% F1: 72.76%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1673 FP: 535 FN: 64  | Total: 1737 | P: 75.77% R: 96.32% F1: 84.82%
+  Task:Agreement                                | TP: 174 FP: 104 FN: 17  | Total: 191 | P: 62.59% R: 91.10% F1: 74.20%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 7   FP: 0   FN: 2   | Total: 9   | P: 100.00% R: 77.78% F1: 87.50%
+  Task:Confirm                                  | TP: 43  FP: 23  FN: 20  | Total: 63  | P: 65.15% R: 68.25% F1: 66.67%
+  Task:Disconfirm                               | TP: 36  FP: 7   FN: 6   | Total: 42  | P: 83.72% R: 85.71% F1: 84.71%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 51  FP: 8   FN: 7   | Total: 58  | P: 86.44% R: 87.93% F1: 87.18%
+  Task:Propositional-Question                   | TP: 144 FP: 37  FN: 77  | Total: 221 | P: 79.56% R: 65.16% F1: 71.64%
+  Task:Choice-Question                          | TP: 9   FP: 9   FN: 4   | Total: 13  | P: 50.00% R: 69.23% F1: 58.06%
+  Task:Check-Question                           | TP: 12  FP: 6   FN: 0   | Total: 12  | P: 66.67% R: 100.00% F1: 80.00%
+  Task:Offer                                    | TP: 4   FP: 3   FN: 5   | Total: 9   | P: 57.14% R: 44.44% F1: 50.00%
+  Task:Address-Offer                            | TP: 9   FP: 5   FN: 3   | Total: 12  | P: 64.29% R: 75.00% F1: 69.23%
+  Task:Instruct                                 | TP: 46  FP: 63  FN: 29  | Total: 75  | P: 42.20% R: 61.33% F1: 50.00%
+  Auto-Feedback:AutoPositive                    | TP: 929 FP: 203 FN: 17  | Total: 946 | P: 82.07% R: 98.20% F1: 89.41%
+  Auto-Feedback:AutoNegative                    | TP: 31  FP: 61  FN: 4   | Total: 35  | P: 33.70% R: 88.57% F1: 48.82%
+  Allo-Feedback:FeedbackElicitation             | TP: 32  FP: 28  FN: 5   | Total: 37  | P: 53.33% R: 86.49% F1: 65.98%
+  Time-Management:Stalling                      | TP: 18  FP: 28  FN: 2   | Total: 20  | P: 39.13% R: 90.00% F1: 54.55%
+  Turn-Management:Turn-Take                     | TP: 249 FP: 93  FN: 60  | Total: 309 | P: 72.81% R: 80.58% F1: 76.50%
+  Own-Communication-Management:Self-Correction  | TP: 3   FP: 10  FN: 4   | Total: 7   | P: 23.08% R: 42.86% F1: 30.00%
+  Partner-Communication-Management:Completion   | TP: 63  FP: 103 FN: 28  | Total: 91  | P: 37.95% R: 69.23% F1: 49.03%
+  Discourse-Structuring:Interaction-Structuring | TP: 456 FP: 815 FN: 80  | Total: 536 | P: 35.88% R: 85.07% F1: 50.47%
+  Social-Obligations-Management:Init-Greeting   | TP: 9   FP: 4   FN: 5   | Total: 14  | P: 69.23% R: 64.29% F1: 66.67%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 1   FN: 0   | Total: 7   | P: 87.50% R: 100.00% F1: 93.33%
+  Social-Obligations-Management:Accept-Apology  | TP: 8   FP: 5   FN: 3   | Total: 11  | P: 61.54% R: 72.73% F1: 66.67%
+  Social-Obligations-Management:Thanking        | TP: 83  FP: 97  FN: 6   | Total: 89  | P: 46.11% R: 93.26% F1: 61.71%
+  Social-Obligations-Management:Init-Goodbye    | TP: 170 FP: 39  FN: 11  | Total: 181 | P: 81.34% R: 93.92% F1: 87.18%
+  Other:Other                                   | TP: 426 FP: 304 FN: 15  | Total: 441 | P: 58.36% R: 96.60% F1: 72.76%
+==================================================
+Epochs: 76
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 64.7603260118801%
+Micro-Recall: 90.67698259187621%
+Micro-F1: 75.55806269643001%
+Macro-Precision: 62.871443540221506%
+Macro-Recall: 77.03287513971723%
+Macro-F1: 66.32799228848904%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 64.7603260118801%
+Micro-Recall: 90.67698259187621%
+Micro-F1: 75.55806269643001%
+Macro-Precision: 54.15358143108448%
+Macro-Recall: 83.9179693004375%
+Macro-F1: 64.8831445654231%
+=== OTHER METRICS ===
+Hamming Loss: 7.412513255567338%
+Exact Match: 48.67444326617179%
+Average active dimensions per turn: pred=1.92, true=1.37
+Function-Level Total: TP: 4688, FP: 2551, FN: 482
+Dimension-Level Total: TP: 4688, FP: 2551, FN: 482
+Per-Dimension Accuracy:
+  Task                           | TP: 2204 FP: 767  FN: 242  | Total: 2446 | P: 74.18% R: 90.11% F1: 81.37%
+  Auto-Feedback                  | TP: 960  FP: 267  FN: 21   | Total: 981  | P: 78.24% R: 97.86% F1: 86.96%
+  Allo-Feedback                  | TP: 32   FP: 29   FN: 5    | Total: 37   | P: 52.46% R: 86.49% F1: 65.31%
+  Time-Management                | TP: 18   FP: 31   FN: 2    | Total: 20   | P: 36.73% R: 90.00% F1: 52.17%
+  Turn-Management                | TP: 252  FP: 100  FN: 57   | Total: 309  | P: 71.59% R: 81.55% F1: 76.25%
+  Own-Communication-Management   | TP: 4    FP: 10   FN: 3    | Total: 7    | P: 28.57% R: 57.14% F1: 38.10%
+  Partner-Communication-Management | TP: 56   FP: 79   FN: 35   | Total: 91   | P: 41.48% R: 61.54% F1: 49.56%
+  Discourse-Structuring          | TP: 456  FP: 810  FN: 80   | Total: 536  | P: 36.02% R: 85.07% F1: 50.61%
+  Social-Obligations-Management  | TP: 281  FP: 164  FN: 21   | Total: 302  | P: 63.15% R: 93.05% F1: 75.23%
+  Other                          | TP: 425  FP: 294  FN: 16   | Total: 441  | P: 59.11% R: 96.37% F1: 73.28%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1664 FP: 512 FN: 73  | Total: 1737 | P: 76.47% R: 95.80% F1: 85.05%
+  Task:Agreement                                | TP: 176 FP: 104 FN: 15  | Total: 191 | P: 62.86% R: 92.15% F1: 74.73%
+  Task:Disagreement                             | TP: 1   FP: 0   FN: 1   | Total: 2   | P: 100.00% R: 50.00% F1: 66.67%
+  Task:Answer                                   | TP: 3   FP: 0   FN: 6   | Total: 9   | P: 100.00% R: 33.33% F1: 50.00%
+  Task:Confirm                                  | TP: 41  FP: 22  FN: 22  | Total: 63  | P: 65.08% R: 65.08% F1: 65.08%
+  Task:Disconfirm                               | TP: 36  FP: 3   FN: 6   | Total: 42  | P: 92.31% R: 85.71% F1: 88.89%
+  Task:Question                                 | TP: 1   FP: 4   FN: 1   | Total: 2   | P: 20.00% R: 50.00% F1: 28.57%
+  Task:Set-Question                             | TP: 50  FP: 7   FN: 8   | Total: 58  | P: 87.72% R: 86.21% F1: 86.96%
+  Task:Propositional-Question                   | TP: 155 FP: 45  FN: 66  | Total: 221 | P: 77.50% R: 70.14% F1: 73.63%
+  Task:Choice-Question                          | TP: 9   FP: 9   FN: 4   | Total: 13  | P: 50.00% R: 69.23% F1: 58.06%
+  Task:Check-Question                           | TP: 12  FP: 5   FN: 0   | Total: 12  | P: 70.59% R: 100.00% F1: 82.76%
+  Task:Offer                                    | TP: 5   FP: 4   FN: 4   | Total: 9   | P: 55.56% R: 55.56% F1: 55.56%
+  Task:Address-Offer                            | TP: 9   FP: 6   FN: 3   | Total: 12  | P: 60.00% R: 75.00% F1: 66.67%
+  Task:Instruct                                 | TP: 42  FP: 46  FN: 33  | Total: 75  | P: 47.73% R: 56.00% F1: 51.53%
+  Auto-Feedback:AutoPositive                    | TP: 928 FP: 206 FN: 18  | Total: 946 | P: 81.83% R: 98.10% F1: 89.23%
+  Auto-Feedback:AutoNegative                    | TP: 32  FP: 61  FN: 3   | Total: 35  | P: 34.41% R: 91.43% F1: 50.00%
+  Allo-Feedback:FeedbackElicitation             | TP: 32  FP: 29  FN: 5   | Total: 37  | P: 52.46% R: 86.49% F1: 65.31%
+  Time-Management:Stalling                      | TP: 18  FP: 31  FN: 2   | Total: 20  | P: 36.73% R: 90.00% F1: 52.17%
+  Turn-Management:Turn-Take                     | TP: 252 FP: 100 FN: 57  | Total: 309 | P: 71.59% R: 81.55% F1: 76.25%
+  Own-Communication-Management:Self-Correction  | TP: 4   FP: 10  FN: 3   | Total: 7   | P: 28.57% R: 57.14% F1: 38.10%
+  Partner-Communication-Management:Completion   | TP: 56  FP: 79  FN: 35  | Total: 91  | P: 41.48% R: 61.54% F1: 49.56%
+  Discourse-Structuring:Interaction-Structuring | TP: 456 FP: 810 FN: 80  | Total: 536 | P: 36.02% R: 85.07% F1: 50.61%
+  Social-Obligations-Management:Init-Greeting   | TP: 10  FP: 3   FN: 4   | Total: 14  | P: 76.92% R: 71.43% F1: 74.07%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 0   FN: 0   | Total: 7   | P: 100.00% R: 100.00% F1: 100.00%
+  Social-Obligations-Management:Accept-Apology  | TP: 7   FP: 6   FN: 4   | Total: 11  | P: 53.85% R: 63.64% F1: 58.33%
+  Social-Obligations-Management:Thanking        | TP: 84  FP: 101 FN: 5   | Total: 89  | P: 45.41% R: 94.38% F1: 61.31%
+  Social-Obligations-Management:Init-Goodbye    | TP: 173 FP: 54  FN: 8   | Total: 181 | P: 76.21% R: 95.58% F1: 84.80%
+  Other:Other                                   | TP: 425 FP: 294 FN: 16  | Total: 441 | P: 59.11% R: 96.37% F1: 73.28%
+==================================================
+Epochs: 27
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 56.33868887064618%
+Micro-Recall: 92.92069632495165%
+Micro-F1: 70.14674746294808%
+Macro-Precision: 52.28112379698484%
+Macro-Recall: 79.27721661527926%
+Macro-F1: 60.31004681884553%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 56.33868887064618%
+Micro-Recall: 92.92069632495165%
+Micro-F1: 70.14674746294808%
+Macro-Precision: 45.278941589860764%
+Macro-Recall: 91.95304690813535%
+Macro-F1: 58.801367354818524%
+=== OTHER METRICS ===
+Hamming Loss: 10.227995758218452%
+Exact Match: 35.021208907741254%
+Average active dimensions per turn: pred=2.26, true=1.37
+Function-Level Total: TP: 4804, FP: 3723, FN: 366
+Dimension-Level Total: TP: 4804, FP: 3723, FN: 366
+Per-Dimension Accuracy:
+  Task                           | TP: 2215 FP: 916  FN: 231  | Total: 2446 | P: 70.74% R: 90.56% F1: 79.43%
+  Auto-Feedback                  | TP: 971  FP: 473  FN: 10   | Total: 981  | P: 67.24% R: 98.98% F1: 80.08%
+  Allo-Feedback                  | TP: 33   FP: 48   FN: 4    | Total: 37   | P: 40.74% R: 89.19% F1: 55.93%
+  Time-Management                | TP: 18   FP: 44   FN: 2    | Total: 20   | P: 29.03% R: 90.00% F1: 43.90%
+  Turn-Management                | TP: 271  FP: 197  FN: 38   | Total: 309  | P: 57.91% R: 87.70% F1: 69.76%
+  Own-Communication-Management   | TP: 7    FP: 28   FN: 0    | Total: 7    | P: 20.00% R: 100.00% F1: 33.33%
+  Partner-Communication-Management | TP: 70   FP: 170  FN: 21   | Total: 91   | P: 29.17% R: 76.92% F1: 42.30%
+  Discourse-Structuring          | TP: 505  FP: 1244 FN: 31   | Total: 536  | P: 28.87% R: 94.22% F1: 44.20%
+  Social-Obligations-Management  | TP: 288  FP: 226  FN: 14   | Total: 302  | P: 56.03% R: 95.36% F1: 70.59%
+  Other                          | TP: 426  FP: 377  FN: 15   | Total: 441  | P: 53.05% R: 96.60% F1: 68.49%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1679 FP: 602 FN: 58  | Total: 1737 | P: 73.61% R: 96.66% F1: 83.57%
+  Task:Agreement                                | TP: 170 FP: 150 FN: 21  | Total: 191 | P: 53.12% R: 89.01% F1: 66.54%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 6   FP: 3   FN: 3   | Total: 9   | P: 66.67% R: 66.67% F1: 66.67%
+  Task:Confirm                                  | TP: 45  FP: 28  FN: 18  | Total: 63  | P: 61.64% R: 71.43% F1: 66.18%
+  Task:Disconfirm                               | TP: 36  FP: 3   FN: 6   | Total: 42  | P: 92.31% R: 85.71% F1: 88.89%
+  Task:Question                                 | TP: 0   FP: 2   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Set-Question                             | TP: 50  FP: 10  FN: 8   | Total: 58  | P: 83.33% R: 86.21% F1: 84.75%
+  Task:Propositional-Question                   | TP: 148 FP: 37  FN: 73  | Total: 221 | P: 80.00% R: 66.97% F1: 72.91%
+  Task:Choice-Question                          | TP: 8   FP: 10  FN: 5   | Total: 13  | P: 44.44% R: 61.54% F1: 51.61%
+  Task:Check-Question                           | TP: 12  FP: 6   FN: 0   | Total: 12  | P: 66.67% R: 100.00% F1: 80.00%
+  Task:Offer                                    | TP: 5   FP: 3   FN: 4   | Total: 9   | P: 62.50% R: 55.56% F1: 58.82%
+  Task:Address-Offer                            | TP: 9   FP: 2   FN: 3   | Total: 12  | P: 81.82% R: 75.00% F1: 78.26%
+  Task:Instruct                                 | TP: 47  FP: 60  FN: 28  | Total: 75  | P: 43.93% R: 62.67% F1: 51.65%
+  Auto-Feedback:AutoPositive                    | TP: 938 FP: 356 FN: 8   | Total: 946 | P: 72.49% R: 99.15% F1: 83.75%
+  Auto-Feedback:AutoNegative                    | TP: 33  FP: 117 FN: 2   | Total: 35  | P: 22.00% R: 94.29% F1: 35.68%
+  Allo-Feedback:FeedbackElicitation             | TP: 33  FP: 48  FN: 4   | Total: 37  | P: 40.74% R: 89.19% F1: 55.93%
+  Time-Management:Stalling                      | TP: 18  FP: 44  FN: 2   | Total: 20  | P: 29.03% R: 90.00% F1: 43.90%
+  Turn-Management:Turn-Take                     | TP: 271 FP: 197 FN: 38  | Total: 309 | P: 57.91% R: 87.70% F1: 69.76%
+  Own-Communication-Management:Self-Correction  | TP: 7   FP: 28  FN: 0   | Total: 7   | P: 20.00% R: 100.00% F1: 33.33%
+  Partner-Communication-Management:Completion   | TP: 70  FP: 170 FN: 21  | Total: 91  | P: 29.17% R: 76.92% F1: 42.30%
+  Discourse-Structuring:Interaction-Structuring | TP: 505 FP: 1244 FN: 31  | Total: 536 | P: 28.87% R: 94.22% F1: 44.20%
+  Social-Obligations-Management:Init-Greeting   | TP: 13  FP: 8   FN: 1   | Total: 14  | P: 61.90% R: 92.86% F1: 74.29%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 1   FN: 0   | Total: 7   | P: 87.50% R: 100.00% F1: 93.33%
+  Social-Obligations-Management:Accept-Apology  | TP: 10  FP: 14  FN: 1   | Total: 11  | P: 41.67% R: 90.91% F1: 57.14%
+  Social-Obligations-Management:Thanking        | TP: 84  FP: 128 FN: 5   | Total: 89  | P: 39.62% R: 94.38% F1: 55.81%
+  Social-Obligations-Management:Init-Goodbye    | TP: 174 FP: 75  FN: 7   | Total: 181 | P: 69.88% R: 96.13% F1: 80.93%
+  Other:Other                                   | TP: 426 FP: 377 FN: 15  | Total: 441 | P: 53.05% R: 96.60% F1: 68.49%
+==================================================
+Epochs: 58
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 64.9164018239602%
+Micro-Recall: 90.87040618955513%
+Micro-F1: 75.7314419279439%
+Macro-Precision: 59.73150770481548%
+Macro-Recall: 76.1750081171127%
+Macro-F1: 64.83008552574995%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 64.9164018239602%
+Micro-Recall: 90.87040618955513%
+Micro-F1: 75.7314419279439%
+Macro-Precision: 55.525170522788244%
+Macro-Recall: 84.30625726599544%
+Macro-F1: 65.94540177284489%
+=== OTHER METRICS ===
+Hamming Loss: 7.346235418875928%
+Exact Match: 48.80699893955461%
+Average active dimensions per turn: pred=1.92, true=1.37
+Function-Level Total: TP: 4698, FP: 2539, FN: 472
+Dimension-Level Total: TP: 4698, FP: 2539, FN: 472
+Per-Dimension Accuracy:
+  Task                           | TP: 2208 FP: 807  FN: 238  | Total: 2446 | P: 73.23% R: 90.27% F1: 80.86%
+  Auto-Feedback                  | TP: 960  FP: 258  FN: 21   | Total: 981  | P: 78.82% R: 97.86% F1: 87.31%
+  Allo-Feedback                  | TP: 32   FP: 26   FN: 5    | Total: 37   | P: 55.17% R: 86.49% F1: 67.37%
+  Time-Management                | TP: 18   FP: 31   FN: 2    | Total: 20   | P: 36.73% R: 90.00% F1: 52.17%
+  Turn-Management                | TP: 251  FP: 85   FN: 58   | Total: 309  | P: 74.70% R: 81.23% F1: 77.83%
+  Own-Communication-Management   | TP: 4    FP: 9    FN: 3    | Total: 7    | P: 30.77% R: 57.14% F1: 40.00%
+  Partner-Communication-Management | TP: 59   FP: 86   FN: 32   | Total: 91   | P: 40.69% R: 64.84% F1: 50.00%
+  Discourse-Structuring          | TP: 460  FP: 834  FN: 76   | Total: 536  | P: 35.55% R: 85.82% F1: 50.27%
+  Social-Obligations-Management  | TP: 281  FP: 126  FN: 21   | Total: 302  | P: 69.04% R: 93.05% F1: 79.27%
+  Other                          | TP: 425  FP: 277  FN: 16   | Total: 441  | P: 60.54% R: 96.37% F1: 74.37%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1673 FP: 540 FN: 64  | Total: 1737 | P: 75.60% R: 96.32% F1: 84.71%
+  Task:Agreement                                | TP: 174 FP: 96  FN: 17  | Total: 191 | P: 64.44% R: 91.10% F1: 75.49%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 4   FP: 0   FN: 5   | Total: 9   | P: 100.00% R: 44.44% F1: 61.54%
+  Task:Confirm                                  | TP: 44  FP: 21  FN: 19  | Total: 63  | P: 67.69% R: 69.84% F1: 68.75%
+  Task:Disconfirm                               | TP: 35  FP: 2   FN: 7   | Total: 42  | P: 94.59% R: 83.33% F1: 88.61%
+  Task:Question                                 | TP: 1   FP: 4   FN: 1   | Total: 2   | P: 20.00% R: 50.00% F1: 28.57%
+  Task:Set-Question                             | TP: 46  FP: 10  FN: 12  | Total: 58  | P: 82.14% R: 79.31% F1: 80.70%
+  Task:Propositional-Question                   | TP: 146 FP: 44  FN: 75  | Total: 221 | P: 76.84% R: 66.06% F1: 71.05%
+  Task:Choice-Question                          | TP: 9   FP: 10  FN: 4   | Total: 13  | P: 47.37% R: 69.23% F1: 56.25%
+  Task:Check-Question                           | TP: 12  FP: 4   FN: 0   | Total: 12  | P: 75.00% R: 100.00% F1: 85.71%
+  Task:Offer                                    | TP: 4   FP: 5   FN: 5   | Total: 9   | P: 44.44% R: 44.44% F1: 44.44%
+  Task:Address-Offer                            | TP: 10  FP: 2   FN: 2   | Total: 12  | P: 83.33% R: 83.33% F1: 83.33%
+  Task:Instruct                                 | TP: 50  FP: 69  FN: 25  | Total: 75  | P: 42.02% R: 66.67% F1: 51.55%
+  Auto-Feedback:AutoPositive                    | TP: 929 FP: 186 FN: 17  | Total: 946 | P: 83.32% R: 98.20% F1: 90.15%
+  Auto-Feedback:AutoNegative                    | TP: 31  FP: 72  FN: 4   | Total: 35  | P: 30.10% R: 88.57% F1: 44.93%
+  Allo-Feedback:FeedbackElicitation             | TP: 32  FP: 26  FN: 5   | Total: 37  | P: 55.17% R: 86.49% F1: 67.37%
+  Time-Management:Stalling                      | TP: 18  FP: 31  FN: 2   | Total: 20  | P: 36.73% R: 90.00% F1: 52.17%
+  Turn-Management:Turn-Take                     | TP: 251 FP: 85  FN: 58  | Total: 309 | P: 74.70% R: 81.23% F1: 77.83%
+  Own-Communication-Management:Self-Correction  | TP: 4   FP: 9   FN: 3   | Total: 7   | P: 30.77% R: 57.14% F1: 40.00%
+  Partner-Communication-Management:Completion   | TP: 59  FP: 86  FN: 32  | Total: 91  | P: 40.69% R: 64.84% F1: 50.00%
+  Discourse-Structuring:Interaction-Structuring | TP: 460 FP: 834 FN: 76  | Total: 536 | P: 35.55% R: 85.82% F1: 50.27%
+  Social-Obligations-Management:Init-Greeting   | TP: 11  FP: 3   FN: 3   | Total: 14  | P: 78.57% R: 78.57% F1: 78.57%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 8   FP: 5   FN: 3   | Total: 11  | P: 61.54% R: 72.73% F1: 66.67%
+  Social-Obligations-Management:Thanking        | TP: 84  FP: 76  FN: 5   | Total: 89  | P: 52.50% R: 94.38% F1: 67.47%
+  Social-Obligations-Management:Init-Goodbye    | TP: 171 FP: 40  FN: 10  | Total: 181 | P: 81.04% R: 94.48% F1: 87.24%
+  Other:Other                                   | TP: 425 FP: 277 FN: 16  | Total: 441 | P: 60.54% R: 96.37% F1: 74.37%
+==================================================
+Epochs: 88
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 66.65237278444826%
+Micro-Recall: 90.19342359767892%
+Micro-F1: 76.65625513726779%
+Macro-Precision: 63.17978220229905%
+Macro-Recall: 75.25655686640053%
+Macro-F1: 66.84990909833817%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 66.65237278444826%
+Micro-Recall: 90.19342359767892%
+Micro-F1: 76.65625513726779%
+Macro-Precision: 57.36673407725482%
+Macro-Recall: 83.32006682166305%
+Macro-F1: 67.02719495628057%
+=== OTHER METRICS ===
+Hamming Loss: 6.884941675503711%
+Exact Match: 51.21951219512195%
+Average active dimensions per turn: pred=1.85, true=1.37
+Function-Level Total: TP: 4663, FP: 2333, FN: 507
+Dimension-Level Total: TP: 4663, FP: 2333, FN: 507
+Per-Dimension Accuracy:
+  Task                           | TP: 2199 FP: 784  FN: 247  | Total: 2446 | P: 73.72% R: 89.90% F1: 81.01%
+  Auto-Feedback                  | TP: 956  FP: 238  FN: 25   | Total: 981  | P: 80.07% R: 97.45% F1: 87.91%
+  Allo-Feedback                  | TP: 31   FP: 24   FN: 6    | Total: 37   | P: 56.36% R: 83.78% F1: 67.39%
+  Time-Management                | TP: 18   FP: 30   FN: 2    | Total: 20   | P: 37.50% R: 90.00% F1: 52.94%
+  Turn-Management                | TP: 254  FP: 85   FN: 55   | Total: 309  | P: 74.93% R: 82.20% F1: 78.40%
+  Own-Communication-Management   | TP: 4    FP: 8    FN: 3    | Total: 7    | P: 33.33% R: 57.14% F1: 42.11%
+  Partner-Communication-Management | TP: 57   FP: 75   FN: 34   | Total: 91   | P: 43.18% R: 62.64% F1: 51.12%
+  Discourse-Structuring          | TP: 446  FP: 748  FN: 90   | Total: 536  | P: 37.35% R: 83.21% F1: 51.56%
+  Social-Obligations-Management  | TP: 274  FP: 98   FN: 28   | Total: 302  | P: 73.66% R: 90.73% F1: 81.31%
+  Other                          | TP: 424  FP: 243  FN: 17   | Total: 441  | P: 63.57% R: 96.15% F1: 76.53%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1669 FP: 546 FN: 68  | Total: 1737 | P: 75.35% R: 96.09% F1: 84.46%
+  Task:Agreement                                | TP: 168 FP: 80  FN: 23  | Total: 191 | P: 67.74% R: 87.96% F1: 76.54%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 5   FP: 0   FN: 4   | Total: 9   | P: 100.00% R: 55.56% F1: 71.43%
+  Task:Confirm                                  | TP: 40  FP: 22  FN: 23  | Total: 63  | P: 64.52% R: 63.49% F1: 64.00%
+  Task:Disconfirm                               | TP: 35  FP: 1   FN: 7   | Total: 42  | P: 97.22% R: 83.33% F1: 89.74%
+  Task:Question                                 | TP: 1   FP: 1   FN: 1   | Total: 2   | P: 50.00% R: 50.00% F1: 50.00%
+  Task:Set-Question                             | TP: 49  FP: 6   FN: 9   | Total: 58  | P: 89.09% R: 84.48% F1: 86.73%
+  Task:Propositional-Question                   | TP: 151 FP: 47  FN: 70  | Total: 221 | P: 76.26% R: 68.33% F1: 72.08%
+  Task:Choice-Question                          | TP: 8   FP: 8   FN: 5   | Total: 13  | P: 50.00% R: 61.54% F1: 55.17%
+  Task:Check-Question                           | TP: 11  FP: 6   FN: 1   | Total: 12  | P: 64.71% R: 91.67% F1: 75.86%
+  Task:Offer                                    | TP: 5   FP: 4   FN: 4   | Total: 9   | P: 55.56% R: 55.56% F1: 55.56%
+  Task:Address-Offer                            | TP: 8   FP: 1   FN: 4   | Total: 12  | P: 88.89% R: 66.67% F1: 76.19%
+  Task:Instruct                                 | TP: 49  FP: 62  FN: 26  | Total: 75  | P: 44.14% R: 65.33% F1: 52.69%
+  Auto-Feedback:AutoPositive                    | TP: 926 FP: 176 FN: 20  | Total: 946 | P: 84.03% R: 97.89% F1: 90.43%
+  Auto-Feedback:AutoNegative                    | TP: 30  FP: 62  FN: 5   | Total: 35  | P: 32.61% R: 85.71% F1: 47.24%
+  Allo-Feedback:FeedbackElicitation             | TP: 31  FP: 24  FN: 6   | Total: 37  | P: 56.36% R: 83.78% F1: 67.39%
+  Time-Management:Stalling                      | TP: 18  FP: 30  FN: 2   | Total: 20  | P: 37.50% R: 90.00% F1: 52.94%
+  Turn-Management:Turn-Take                     | TP: 254 FP: 85  FN: 55  | Total: 309 | P: 74.93% R: 82.20% F1: 78.40%
+  Own-Communication-Management:Self-Correction  | TP: 4   FP: 8   FN: 3   | Total: 7   | P: 33.33% R: 57.14% F1: 42.11%
+  Partner-Communication-Management:Completion   | TP: 57  FP: 75  FN: 34  | Total: 91  | P: 43.18% R: 62.64% F1: 51.12%
+  Discourse-Structuring:Interaction-Structuring | TP: 446 FP: 748 FN: 90  | Total: 536 | P: 37.35% R: 83.21% F1: 51.56%
+  Social-Obligations-Management:Init-Greeting   | TP: 9   FP: 2   FN: 5   | Total: 14  | P: 81.82% R: 64.29% F1: 72.00%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 1   FN: 0   | Total: 7   | P: 87.50% R: 100.00% F1: 93.33%
+  Social-Obligations-Management:Accept-Apology  | TP: 10  FP: 4   FN: 1   | Total: 11  | P: 71.43% R: 90.91% F1: 80.00%
+  Social-Obligations-Management:Thanking        | TP: 81  FP: 64  FN: 8   | Total: 89  | P: 55.86% R: 91.01% F1: 69.23%
+  Social-Obligations-Management:Init-Goodbye    | TP: 167 FP: 27  FN: 14  | Total: 181 | P: 86.08% R: 92.27% F1: 89.07%
+  Other:Other                                   | TP: 424 FP: 243 FN: 17  | Total: 441 | P: 63.57% R: 96.15% F1: 76.53%
+==================================================
+Epochs: 100
+Joint Training: False
+=== FUNCTION-LEVEL METRICS (Recommended) ===
+Micro-Precision: 67.38366988586479%
+Micro-Recall: 89.07156673114119%
+Micro-F1: 76.72442519160279%
+Macro-Precision: 60.07820103746868%
+Macro-Recall: 73.27017574008853%
+Macro-F1: 64.35887271719302%
+=== DIMENSION-LEVEL METRICS ===
+Micro-Precision: 67.38366988586479%
+Micro-Recall: 89.07156673114119%
+Micro-F1: 76.72442519160279%
+Macro-Precision: 57.353215073809%
+Macro-Recall: 80.27110164315744%
+Macro-F1: 66.08628125627719%
+=== OTHER METRICS ===
+Hamming Loss: 6.728525980911983%
+Exact Match: 52.49204665959704%
+Average active dimensions per turn: pred=1.81, true=1.37
+Function-Level Total: TP: 4605, FP: 2229, FN: 565
+Dimension-Level Total: TP: 4605, FP: 2229, FN: 565
+Per-Dimension Accuracy:
+  Task                           | TP: 2191 FP: 801  FN: 255  | Total: 2446 | P: 73.23% R: 89.57% F1: 80.58%
+  Auto-Feedback                  | TP: 953  FP: 220  FN: 28   | Total: 981  | P: 81.24% R: 97.15% F1: 88.49%
+  Allo-Feedback                  | TP: 32   FP: 22   FN: 5    | Total: 37   | P: 59.26% R: 86.49% F1: 70.33%
+  Time-Management                | TP: 18   FP: 26   FN: 2    | Total: 20   | P: 40.91% R: 90.00% F1: 56.25%
+  Turn-Management                | TP: 243  FP: 73   FN: 66   | Total: 309  | P: 76.90% R: 78.64% F1: 77.76%
+  Own-Communication-Management   | TP: 3    FP: 9    FN: 4    | Total: 7    | P: 25.00% R: 42.86% F1: 31.58%
+  Partner-Communication-Management | TP: 49   FP: 62   FN: 42   | Total: 91   | P: 44.14% R: 53.85% F1: 48.51%
+  Discourse-Structuring          | TP: 425  FP: 662  FN: 111  | Total: 536  | P: 39.10% R: 79.29% F1: 52.37%
+  Social-Obligations-Management  | TP: 270  FP: 117  FN: 32   | Total: 302  | P: 69.77% R: 89.40% F1: 78.37%
+  Other                          | TP: 421  FP: 237  FN: 20   | Total: 441  | P: 63.98% R: 95.46% F1: 76.62%
+Per-Function Accuracy:
+  Task:Inform                                   | TP: 1669 FP: 543 FN: 68  | Total: 1737 | P: 75.45% R: 96.09% F1: 84.53%
+  Task:Agreement                                | TP: 170 FP: 92  FN: 21  | Total: 191 | P: 64.89% R: 89.01% F1: 75.06%
+  Task:Disagreement                             | TP: 0   FP: 0   FN: 2   | Total: 2   | P:  0.00% R:  0.00% F1:  0.00%
+  Task:Answer                                   | TP: 5   FP: 2   FN: 4   | Total: 9   | P: 71.43% R: 55.56% F1: 62.50%
+  Task:Confirm                                  | TP: 39  FP: 28  FN: 24  | Total: 63  | P: 58.21% R: 61.90% F1: 60.00%
+  Task:Disconfirm                               | TP: 33  FP: 2   FN: 9   | Total: 42  | P: 94.29% R: 78.57% F1: 85.71%
+  Task:Question                                 | TP: 1   FP: 4   FN: 1   | Total: 2   | P: 20.00% R: 50.00% F1: 28.57%
+  Task:Set-Question                             | TP: 49  FP: 9   FN: 9   | Total: 58  | P: 84.48% R: 84.48% F1: 84.48%
+  Task:Propositional-Question                   | TP: 145 FP: 44  FN: 76  | Total: 221 | P: 76.72% R: 65.61% F1: 70.73%
+  Task:Choice-Question                          | TP: 9   FP: 9   FN: 4   | Total: 13  | P: 50.00% R: 69.23% F1: 58.06%
+  Task:Check-Question                           | TP: 12  FP: 4   FN: 0   | Total: 12  | P: 75.00% R: 100.00% F1: 85.71%
+  Task:Offer                                    | TP: 4   FP: 2   FN: 5   | Total: 9   | P: 66.67% R: 44.44% F1: 53.33%
+  Task:Address-Offer                            | TP: 8   FP: 1   FN: 4   | Total: 12  | P: 88.89% R: 66.67% F1: 76.19%
+  Task:Instruct                                 | TP: 47  FP: 61  FN: 28  | Total: 75  | P: 43.52% R: 62.67% F1: 51.37%
+  Auto-Feedback:AutoPositive                    | TP: 923 FP: 159 FN: 23  | Total: 946 | P: 85.30% R: 97.57% F1: 91.03%
+  Auto-Feedback:AutoNegative                    | TP: 30  FP: 61  FN: 5   | Total: 35  | P: 32.97% R: 85.71% F1: 47.62%
+  Allo-Feedback:FeedbackElicitation             | TP: 32  FP: 22  FN: 5   | Total: 37  | P: 59.26% R: 86.49% F1: 70.33%
+  Time-Management:Stalling                      | TP: 18  FP: 26  FN: 2   | Total: 20  | P: 40.91% R: 90.00% F1: 56.25%
+  Turn-Management:Turn-Take                     | TP: 243 FP: 73  FN: 66  | Total: 309 | P: 76.90% R: 78.64% F1: 77.76%
+  Own-Communication-Management:Self-Correction  | TP: 3   FP: 9   FN: 4   | Total: 7   | P: 25.00% R: 42.86% F1: 31.58%
+  Partner-Communication-Management:Completion   | TP: 49  FP: 62  FN: 42  | Total: 91  | P: 44.14% R: 53.85% F1: 48.51%
+  Discourse-Structuring:Interaction-Structuring | TP: 425 FP: 662 FN: 111 | Total: 536 | P: 39.10% R: 79.29% F1: 52.37%
+  Social-Obligations-Management:Init-Greeting   | TP: 9   FP: 3   FN: 5   | Total: 14  | P: 75.00% R: 64.29% F1: 69.23%
+  Social-Obligations-Management:Apology         | TP: 7   FP: 2   FN: 0   | Total: 7   | P: 77.78% R: 100.00% F1: 87.50%
+  Social-Obligations-Management:Accept-Apology  | TP: 8   FP: 6   FN: 3   | Total: 11  | P: 57.14% R: 72.73% F1: 64.00%
+  Social-Obligations-Management:Thanking        | TP: 78  FP: 72  FN: 11  | Total: 89  | P: 52.00% R: 87.64% F1: 65.27%
+  Social-Obligations-Management:Init-Goodbye    | TP: 168 FP: 34  FN: 13  | Total: 181 | P: 83.17% R: 92.82% F1: 87.73%
+  Other:Other                                   | TP: 421 FP: 237 FN: 20  | Total: 441 | P: 63.98% R: 95.46% F1: 76.62%
+==================================================
+
+

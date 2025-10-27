@@ -213,7 +213,7 @@ else:
             label_counts[label] = total_with_label
     
     print(f"\n3. Per-Label Accuracy (min 5 occurrences):")
-    for label in sorted(label_accuracy.keys(), key=lambda x: label_accuracy[x], reverse=True):
+    for label in sorted(label_accuracy.keys(), key=lambda x: label_counts[x], reverse=True):
         if label_counts[label] >= 5:
             print(f"   {label}: {label_accuracy[label]:.4f} ({label_counts[label]} occurrences)")
     
@@ -360,6 +360,7 @@ else:
         if model_tags == ref_tags:
             exact_matches += 1
         elif model_tags & ref_tags:  # Some overlap
+            # print(f"{model_tags} vs {ref_tags}")
             partial_matches += 1
         else:
             complete_mismatches += 1

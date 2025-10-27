@@ -1,0 +1,336 @@
+Epochs: 17
+Joint Training: True
+Micro-Precision: 64.66065747613999%
+Micro-Recall: 64.66065747613999%
+Micro-F1: 64.66065747613999%
+Macro-Precision: 52.42252728290183%
+Macro-Recall: 44.61917988423473%
+Macro-F1: 47.03533711705191%
+Hamming Loss: 35.339342523860026%
+Exact Match: 64.66065747613999%
+Total Confusion: TP: 2439, FP: 1333, FN: 1333
+Per-Class Detailed Breakdown:
+  Assess               | TP: 373  FP: 341  FN: 270  | Total: 643  | P: 52.24% R: 58.01% F1: 54.97%
+  Backchannel          | TP: 320  FP: 159  FN: 98   | Total: 418  | P: 66.81% R: 76.56% F1: 71.35%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 34   FP: 5    FN: 45   | Total: 79   | P: 87.18% R: 43.04% F1: 57.63%
+  Comment-About-Understanding | TP: 9    FP: 17   FN: 72   | Total: 81   | P: 34.62% R: 11.11% F1: 16.82%
+  Elicit-Assessment    | TP: 38   FP: 37   FN: 43   | Total: 81   | P: 50.67% R: 46.91% F1: 48.72%
+  Elicit-Comment-Understanding | TP: 0    FP: 1    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 89   FP: 40   FN: 58   | Total: 147  | P: 68.99% R: 60.54% F1: 64.49%
+  Elicit-Offer-Or-Suggestion | TP: 9    FP: 7    FN: 18   | Total: 27   | P: 56.25% R: 33.33% F1: 41.86%
+  Fragment             | TP: 206  FP: 105  FN: 88   | Total: 294  | P: 66.24% R: 70.07% F1: 68.10%
+  Inform               | TP: 941  FP: 381  FN: 282  | Total: 1223 | P: 71.18% R: 76.94% F1: 73.95%
+  Offer                | TP: 23   FP: 22   FN: 22   | Total: 45   | P: 51.11% R: 51.11% F1: 51.11%
+  Other                | TP: 18   FP: 19   FN: 59   | Total: 77   | P: 48.65% R: 23.38% F1: 31.58%
+  Stall                | TP: 199  FP: 68   FN: 98   | Total: 297  | P: 74.53% R: 67.00% F1: 70.57%
+  Suggest              | TP: 180  FP: 131  FN: 171  | Total: 351  | P: 57.88% R: 51.28% F1: 54.38%
+==================================================
+Epochs: 18
+Joint Training: True
+Micro-Precision: 64.8727465535525%
+Micro-Recall: 64.8727465535525%
+Micro-F1: 64.8727465535525%
+Macro-Precision: 50.57943089526004%
+Macro-Recall: 44.41657349766579%
+Macro-F1: 46.32108157151678%
+Hamming Loss: 35.12725344644751%
+Exact Match: 64.8727465535525%
+Total Confusion: TP: 2447, FP: 1325, FN: 1325
+Per-Class Detailed Breakdown:
+  Assess               | TP: 328  FP: 264  FN: 315  | Total: 643  | P: 55.41% R: 51.01% F1: 53.12%
+  Backchannel          | TP: 338  FP: 173  FN: 80   | Total: 418  | P: 66.14% R: 80.86% F1: 72.77%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 34   FP: 9    FN: 45   | Total: 79   | P: 79.07% R: 43.04% F1: 55.74%
+  Comment-About-Understanding | TP: 10   FP: 20   FN: 71   | Total: 81   | P: 33.33% R: 12.35% F1: 18.02%
+  Elicit-Assessment    | TP: 27   FP: 18   FN: 54   | Total: 81   | P: 60.00% R: 33.33% F1: 42.86%
+  Elicit-Comment-Understanding | TP: 0    FP: 1    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 97   FP: 45   FN: 50   | Total: 147  | P: 68.31% R: 65.99% F1: 67.13%
+  Elicit-Offer-Or-Suggestion | TP: 8    FP: 13   FN: 19   | Total: 27   | P: 38.10% R: 29.63% F1: 33.33%
+  Fragment             | TP: 206  FP: 122  FN: 88   | Total: 294  | P: 62.80% R: 70.07% F1: 66.24%
+  Inform               | TP: 978  FP: 426  FN: 245  | Total: 1223 | P: 69.66% R: 79.97% F1: 74.46%
+  Offer                | TP: 22   FP: 24   FN: 23   | Total: 45   | P: 47.83% R: 48.89% F1: 48.35%
+  Other                | TP: 26   FP: 35   FN: 51   | Total: 77   | P: 42.62% R: 33.77% F1: 37.68%
+  Stall                | TP: 214  FP: 76   FN: 83   | Total: 297  | P: 73.79% R: 72.05% F1: 72.91%
+  Suggest              | TP: 159  FP: 99   FN: 192  | Total: 351  | P: 61.63% R: 45.30% F1: 52.22%
+==================================================
+Epochs: 16
+Joint Training: True
+Micro-Precision: 63.33510074231177%
+Micro-Recall: 63.33510074231177%
+Micro-F1: 63.33510074231177%
+Macro-Precision: 50.817272389926075%
+Macro-Recall: 43.64082229064259%
+Macro-F1: 45.4851349076897%
+Hamming Loss: 36.664899257688226%
+Exact Match: 63.33510074231177%
+Total Confusion: TP: 2389, FP: 1383, FN: 1383
+Per-Class Detailed Breakdown:
+  Assess               | TP: 336  FP: 300  FN: 307  | Total: 643  | P: 52.83% R: 52.26% F1: 52.54%
+  Backchannel          | TP: 356  FP: 255  FN: 62   | Total: 418  | P: 58.27% R: 85.17% F1: 69.19%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 35   FP: 10   FN: 44   | Total: 79   | P: 77.78% R: 44.30% F1: 56.45%
+  Comment-About-Understanding | TP: 7    FP: 8    FN: 74   | Total: 81   | P: 46.67% R:  8.64% F1: 14.58%
+  Elicit-Assessment    | TP: 28   FP: 24   FN: 53   | Total: 81   | P: 53.85% R: 34.57% F1: 42.11%
+  Elicit-Comment-Understanding | TP: 0    FP: 2    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 96   FP: 47   FN: 51   | Total: 147  | P: 67.13% R: 65.31% F1: 66.21%
+  Elicit-Offer-Or-Suggestion | TP: 8    FP: 12   FN: 19   | Total: 27   | P: 40.00% R: 29.63% F1: 34.04%
+  Fragment             | TP: 208  FP: 125  FN: 86   | Total: 294  | P: 62.46% R: 70.75% F1: 66.35%
+  Inform               | TP: 901  FP: 340  FN: 322  | Total: 1223 | P: 72.60% R: 73.67% F1: 73.13%
+  Offer                | TP: 20   FP: 16   FN: 25   | Total: 45   | P: 55.56% R: 44.44% F1: 49.38%
+  Other                | TP: 23   FP: 26   FN: 54   | Total: 77   | P: 46.94% R: 29.87% F1: 36.51%
+  Stall                | TP: 199  FP: 66   FN: 98   | Total: 297  | P: 75.09% R: 67.00% F1: 70.82%
+  Suggest              | TP: 172  FP: 152  FN: 179  | Total: 351  | P: 53.09% R: 49.00% F1: 50.96%
+==================================================
+Epochs: 21
+Joint Training: True
+Micro-Precision: 63.653234358430545%
+Micro-Recall: 63.653234358430545%
+Micro-F1: 63.653234358430545%
+Macro-Precision: 51.2655688250798%
+Macro-Recall: 43.46864651858795%
+Macro-F1: 45.48319115777201%
+Hamming Loss: 36.34676564156946%
+Exact Match: 63.653234358430545%
+Total Confusion: TP: 2401, FP: 1371, FN: 1371
+Per-Class Detailed Breakdown:
+  Assess               | TP: 281  FP: 220  FN: 362  | Total: 643  | P: 56.09% R: 43.70% F1: 49.13%
+  Backchannel          | TP: 354  FP: 232  FN: 64   | Total: 418  | P: 60.41% R: 84.69% F1: 70.52%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 32   FP: 6    FN: 47   | Total: 79   | P: 84.21% R: 40.51% F1: 54.70%
+  Comment-About-Understanding | TP: 7    FP: 16   FN: 74   | Total: 81   | P: 30.43% R:  8.64% F1: 13.46%
+  Elicit-Assessment    | TP: 36   FP: 42   FN: 45   | Total: 81   | P: 46.15% R: 44.44% F1: 45.28%
+  Elicit-Comment-Understanding | TP: 0    FP: 1    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 94   FP: 46   FN: 53   | Total: 147  | P: 67.14% R: 63.95% F1: 65.51%
+  Elicit-Offer-Or-Suggestion | TP: 8    FP: 5    FN: 19   | Total: 27   | P: 61.54% R: 29.63% F1: 40.00%
+  Fragment             | TP: 215  FP: 146  FN: 79   | Total: 294  | P: 59.56% R: 73.13% F1: 65.65%
+  Inform               | TP: 971  FP: 430  FN: 252  | Total: 1223 | P: 69.31% R: 79.39% F1: 74.01%
+  Offer                | TP: 19   FP: 15   FN: 26   | Total: 45   | P: 55.88% R: 42.22% F1: 48.10%
+  Other                | TP: 21   FP: 23   FN: 56   | Total: 77   | P: 47.73% R: 27.27% F1: 34.71%
+  Stall                | TP: 213  FP: 85   FN: 84   | Total: 297  | P: 71.48% R: 71.72% F1: 71.60%
+  Suggest              | TP: 150  FP: 104  FN: 201  | Total: 351  | P: 59.06% R: 42.74% F1: 49.59%
+==================================================
+Epochs: 23
+Joint Training: True
+Micro-Precision: 63.83881230116649%
+Micro-Recall: 63.83881230116649%
+Micro-F1: 63.83881230116649%
+Macro-Precision: 59.20797971276631%
+Macro-Recall: 49.34381262167597%
+Macro-F1: 50.589501816436055%
+Hamming Loss: 36.16118769883351%
+Exact Match: 63.83881230116649%
+Total Confusion: TP: 2408, FP: 1364, FN: 1364
+Per-Class Detailed Breakdown:
+  Assess               | TP: 340  FP: 265  FN: 303  | Total: 643  | P: 56.20% R: 52.88% F1: 54.49%
+  Backchannel          | TP: 342  FP: 200  FN: 76   | Total: 418  | P: 63.10% R: 81.82% F1: 71.25%
+  Be-Negative          | TP: 1    FP: 0    FN: 6    | Total: 7    | P: 100.00% R: 14.29% F1: 25.00%
+  Be-Positive          | TP: 35   FP: 14   FN: 44   | Total: 79   | P: 71.43% R: 44.30% F1: 54.69%
+  Comment-About-Understanding | TP: 10   FP: 11   FN: 71   | Total: 81   | P: 47.62% R: 12.35% F1: 19.61%
+  Elicit-Assessment    | TP: 28   FP: 17   FN: 53   | Total: 81   | P: 62.22% R: 34.57% F1: 44.44%
+  Elicit-Comment-Understanding | TP: 1    FP: 2    FN: 1    | Total: 2    | P: 33.33% R: 50.00% F1: 40.00%
+  Elicit-Inform        | TP: 100  FP: 50   FN: 47   | Total: 147  | P: 66.67% R: 68.03% F1: 67.34%
+  Elicit-Offer-Or-Suggestion | TP: 9    FP: 13   FN: 18   | Total: 27   | P: 40.91% R: 33.33% F1: 36.73%
+  Fragment             | TP: 203  FP: 134  FN: 91   | Total: 294  | P: 60.24% R: 69.05% F1: 64.34%
+  Inform               | TP: 899  FP: 342  FN: 324  | Total: 1223 | P: 72.44% R: 73.51% F1: 72.97%
+  Offer                | TP: 22   FP: 26   FN: 23   | Total: 45   | P: 45.83% R: 48.89% F1: 47.31%
+  Other                | TP: 26   FP: 27   FN: 51   | Total: 77   | P: 49.06% R: 33.77% F1: 40.00%
+  Stall                | TP: 226  FP: 118  FN: 71   | Total: 297  | P: 65.70% R: 76.09% F1: 70.51%
+  Suggest              | TP: 166  FP: 145  FN: 185  | Total: 351  | P: 53.38% R: 47.29% F1: 50.15%
+==================================================
+Epochs: 18
+Joint Training: True
+Micro-Precision: 63.812301166489924%
+Micro-Recall: 63.812301166489924%
+Micro-F1: 63.812301166489924%
+Macro-Precision: 52.54916722627041%
+Macro-Recall: 47.93042120934031%
+Macro-F1: 49.27906233671531%
+Hamming Loss: 36.187698833510076%
+Exact Match: 63.812301166489924%
+Total Confusion: TP: 2407, FP: 1365, FN: 1365
+Per-Class Detailed Breakdown:
+  Assess               | TP: 348  FP: 296  FN: 295  | Total: 643  | P: 54.04% R: 54.12% F1: 54.08%
+  Backchannel          | TP: 320  FP: 154  FN: 98   | Total: 418  | P: 67.51% R: 76.56% F1: 71.75%
+  Be-Negative          | TP: 0    FP: 2    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 36   FP: 12   FN: 43   | Total: 79   | P: 75.00% R: 45.57% F1: 56.69%
+  Comment-About-Understanding | TP: 14   FP: 33   FN: 67   | Total: 81   | P: 29.79% R: 17.28% F1: 21.88%
+  Elicit-Assessment    | TP: 34   FP: 23   FN: 47   | Total: 81   | P: 59.65% R: 41.98% F1: 49.28%
+  Elicit-Comment-Understanding | TP: 1    FP: 2    FN: 1    | Total: 2    | P: 33.33% R: 50.00% F1: 40.00%
+  Elicit-Inform        | TP: 97   FP: 46   FN: 50   | Total: 147  | P: 67.83% R: 65.99% F1: 66.90%
+  Elicit-Offer-Or-Suggestion | TP: 8    FP: 7    FN: 19   | Total: 27   | P: 53.33% R: 29.63% F1: 38.10%
+  Fragment             | TP: 202  FP: 116  FN: 92   | Total: 294  | P: 63.52% R: 68.71% F1: 66.01%
+  Inform               | TP: 925  FP: 390  FN: 298  | Total: 1223 | P: 70.34% R: 75.63% F1: 72.89%
+  Offer                | TP: 21   FP: 21   FN: 24   | Total: 45   | P: 50.00% R: 46.67% F1: 48.28%
+  Other                | TP: 21   FP: 31   FN: 56   | Total: 77   | P: 40.38% R: 27.27% F1: 32.56%
+  Stall                | TP: 218  FP: 110  FN: 79   | Total: 297  | P: 66.46% R: 73.40% F1: 69.76%
+  Suggest              | TP: 162  FP: 122  FN: 189  | Total: 351  | P: 57.04% R: 46.15% F1: 51.02%
+==================================================
+Epochs: 22
+Joint Training: True
+Micro-Precision: 63.86532343584306%
+Micro-Recall: 63.86532343584306%
+Micro-F1: 63.86532343584306%
+Macro-Precision: 52.108432235077395%
+Macro-Recall: 43.3091118277188%
+Macro-F1: 45.863350488509695%
+Hamming Loss: 36.13467656415695%
+Exact Match: 63.86532343584306%
+Total Confusion: TP: 2409, FP: 1363, FN: 1363
+Per-Class Detailed Breakdown:
+  Assess               | TP: 352  FP: 338  FN: 291  | Total: 643  | P: 51.01% R: 54.74% F1: 52.81%
+  Backchannel          | TP: 339  FP: 211  FN: 79   | Total: 418  | P: 61.64% R: 81.10% F1: 70.04%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 35   FP: 8    FN: 44   | Total: 79   | P: 81.40% R: 44.30% F1: 57.38%
+  Comment-About-Understanding | TP: 12   FP: 13   FN: 69   | Total: 81   | P: 48.00% R: 14.81% F1: 22.64%
+  Elicit-Assessment    | TP: 30   FP: 17   FN: 51   | Total: 81   | P: 63.83% R: 37.04% F1: 46.88%
+  Elicit-Comment-Understanding | TP: 0    FP: 3    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 105  FP: 59   FN: 42   | Total: 147  | P: 64.02% R: 71.43% F1: 67.52%
+  Elicit-Offer-Or-Suggestion | TP: 6    FP: 7    FN: 21   | Total: 27   | P: 46.15% R: 22.22% F1: 30.00%
+  Fragment             | TP: 199  FP: 103  FN: 95   | Total: 294  | P: 65.89% R: 67.69% F1: 66.78%
+  Inform               | TP: 932  FP: 375  FN: 291  | Total: 1223 | P: 71.31% R: 76.21% F1: 73.68%
+  Offer                | TP: 18   FP: 18   FN: 27   | Total: 45   | P: 50.00% R: 40.00% F1: 44.44%
+  Other                | TP: 21   FP: 24   FN: 56   | Total: 77   | P: 46.67% R: 27.27% F1: 34.43%
+  Stall                | TP: 198  FP: 74   FN: 99   | Total: 297  | P: 72.79% R: 66.67% F1: 69.60%
+  Suggest              | TP: 162  FP: 113  FN: 189  | Total: 351  | P: 58.91% R: 46.15% F1: 51.76%
+==================================================
+Epochs: 18
+Joint Training: True
+Micro-Precision: 63.86532343584306%
+Micro-Recall: 63.86532343584306%
+Micro-F1: 63.86532343584306%
+Macro-Precision: 51.49226805026936%
+Macro-Recall: 44.70114243452121%
+Macro-F1: 47.018995580473735%
+Hamming Loss: 36.13467656415695%
+Exact Match: 63.86532343584306%
+Total Confusion: TP: 2409, FP: 1363, FN: 1363
+Per-Class Detailed Breakdown:
+  Assess               | TP: 353  FP: 326  FN: 290  | Total: 643  | P: 51.99% R: 54.90% F1: 53.40%
+  Backchannel          | TP: 326  FP: 181  FN: 92   | Total: 418  | P: 64.30% R: 77.99% F1: 70.49%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 36   FP: 6    FN: 43   | Total: 79   | P: 85.71% R: 45.57% F1: 59.50%
+  Comment-About-Understanding | TP: 17   FP: 31   FN: 64   | Total: 81   | P: 35.42% R: 20.99% F1: 26.36%
+  Elicit-Assessment    | TP: 32   FP: 32   FN: 49   | Total: 81   | P: 50.00% R: 39.51% F1: 44.14%
+  Elicit-Comment-Understanding | TP: 0    FP: 3    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 91   FP: 55   FN: 56   | Total: 147  | P: 62.33% R: 61.90% F1: 62.12%
+  Elicit-Offer-Or-Suggestion | TP: 10   FP: 12   FN: 17   | Total: 27   | P: 45.45% R: 37.04% F1: 40.82%
+  Fragment             | TP: 199  FP: 111  FN: 95   | Total: 294  | P: 64.19% R: 67.69% F1: 65.89%
+  Inform               | TP: 931  FP: 379  FN: 292  | Total: 1223 | P: 71.07% R: 76.12% F1: 73.51%
+  Offer                | TP: 20   FP: 16   FN: 25   | Total: 45   | P: 55.56% R: 44.44% F1: 49.38%
+  Other                | TP: 21   FP: 17   FN: 56   | Total: 77   | P: 55.26% R: 27.27% F1: 36.52%
+  Stall                | TP: 209  FP: 89   FN: 88   | Total: 297  | P: 70.13% R: 70.37% F1: 70.25%
+  Suggest              | TP: 164  FP: 105  FN: 187  | Total: 351  | P: 60.97% R: 46.72% F1: 52.90%
+==================================================
+Epochs: 28
+Joint Training: True
+Micro-Precision: 63.94485683987274%
+Micro-Recall: 63.94485683987274%
+Micro-F1: 63.94485683987274%
+Macro-Precision: 52.173853082096855%
+Macro-Recall: 44.14530867203191%
+Macro-F1: 46.52735230472154%
+Hamming Loss: 36.05514316012725%
+Exact Match: 63.94485683987274%
+Total Confusion: TP: 2412, FP: 1360, FN: 1360
+Per-Class Detailed Breakdown:
+  Assess               | TP: 380  FP: 362  FN: 263  | Total: 643  | P: 51.21% R: 59.10% F1: 54.87%
+  Backchannel          | TP: 340  FP: 209  FN: 78   | Total: 418  | P: 61.93% R: 81.34% F1: 70.32%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 34   FP: 9    FN: 45   | Total: 79   | P: 79.07% R: 43.04% F1: 55.74%
+  Comment-About-Understanding | TP: 9    FP: 11   FN: 72   | Total: 81   | P: 45.00% R: 11.11% F1: 17.82%
+  Elicit-Assessment    | TP: 30   FP: 21   FN: 51   | Total: 81   | P: 58.82% R: 37.04% F1: 45.45%
+  Elicit-Comment-Understanding | TP: 0    FP: 1    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 97   FP: 51   FN: 50   | Total: 147  | P: 65.54% R: 65.99% F1: 65.76%
+  Elicit-Offer-Or-Suggestion | TP: 10   FP: 8    FN: 17   | Total: 27   | P: 55.56% R: 37.04% F1: 44.44%
+  Fragment             | TP: 195  FP: 97   FN: 99   | Total: 294  | P: 66.78% R: 66.33% F1: 66.55%
+  Inform               | TP: 935  FP: 374  FN: 288  | Total: 1223 | P: 71.43% R: 76.45% F1: 73.85%
+  Offer                | TP: 21   FP: 21   FN: 24   | Total: 45   | P: 50.00% R: 46.67% F1: 48.28%
+  Other                | TP: 25   FP: 33   FN: 52   | Total: 77   | P: 43.10% R: 32.47% F1: 37.04%
+  Stall                | TP: 191  FP: 68   FN: 106  | Total: 297  | P: 73.75% R: 64.31% F1: 68.71%
+  Suggest              | TP: 145  FP: 95   FN: 206  | Total: 351  | P: 60.42% R: 41.31% F1: 49.07%
+==================================================
+Epochs: 37
+Joint Training: True
+Micro-Precision: 63.06998939554613%
+Micro-Recall: 63.06998939554613%
+Micro-F1: 63.06998939554613%
+Macro-Precision: 52.07984068621211%
+Macro-Recall: 46.66966489380845%
+Macro-F1: 47.69622812795839%
+Hamming Loss: 36.93001060445387%
+Exact Match: 63.06998939554613%
+Total Confusion: TP: 2379, FP: 1393, FN: 1393
+Per-Class Detailed Breakdown:
+  Assess               | TP: 349  FP: 323  FN: 294  | Total: 643  | P: 51.93% R: 54.28% F1: 53.08%
+  Backchannel          | TP: 329  FP: 200  FN: 89   | Total: 418  | P: 62.19% R: 78.71% F1: 69.48%
+  Be-Negative          | TP: 0    FP: 1    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 33   FP: 10   FN: 46   | Total: 79   | P: 76.74% R: 41.77% F1: 54.10%
+  Comment-About-Understanding | TP: 16   FP: 25   FN: 65   | Total: 81   | P: 39.02% R: 19.75% F1: 26.23%
+  Elicit-Assessment    | TP: 28   FP: 28   FN: 53   | Total: 81   | P: 50.00% R: 34.57% F1: 40.88%
+  Elicit-Comment-Understanding | TP: 1    FP: 4    FN: 1    | Total: 2    | P: 20.00% R: 50.00% F1: 28.57%
+  Elicit-Inform        | TP: 93   FP: 49   FN: 54   | Total: 147  | P: 65.49% R: 63.27% F1: 64.36%
+  Elicit-Offer-Or-Suggestion | TP: 9    FP: 10   FN: 18   | Total: 27   | P: 47.37% R: 33.33% F1: 39.13%
+  Fragment             | TP: 207  FP: 127  FN: 87   | Total: 294  | P: 61.98% R: 70.41% F1: 65.92%
+  Inform               | TP: 952  FP: 444  FN: 271  | Total: 1223 | P: 68.19% R: 77.84% F1: 72.70%
+  Offer                | TP: 21   FP: 20   FN: 24   | Total: 45   | P: 51.22% R: 46.67% F1: 48.84%
+  Other                | TP: 22   FP: 27   FN: 55   | Total: 77   | P: 44.90% R: 28.57% F1: 34.92%
+  Stall                | TP: 193  FP: 48   FN: 104  | Total: 297  | P: 80.08% R: 64.98% F1: 71.75%
+  Suggest              | TP: 126  FP: 77   FN: 225  | Total: 351  | P: 62.07% R: 35.90% F1: 45.49%
+==================================================
+Epochs: 15
+Joint Training: True
+Micro-Precision: 63.54718981972428%
+Micro-Recall: 63.54718981972428%
+Micro-F1: 63.54718981972428%
+Macro-Precision: 53.030394593099594%
+Macro-Recall: 41.865663504449394%
+Macro-F1: 45.210393240170085%
+Hamming Loss: 36.45281018027571%
+Exact Match: 63.54718981972428%
+Total Confusion: TP: 2397, FP: 1375, FN: 1375
+Per-Class Detailed Breakdown:
+  Assess               | TP: 365  FP: 349  FN: 278  | Total: 643  | P: 51.12% R: 56.77% F1: 53.80%
+  Backchannel          | TP: 328  FP: 182  FN: 90   | Total: 418  | P: 64.31% R: 78.47% F1: 70.69%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 33   FP: 9    FN: 46   | Total: 79   | P: 78.57% R: 41.77% F1: 54.55%
+  Comment-About-Understanding | TP: 7    FP: 10   FN: 74   | Total: 81   | P: 41.18% R:  8.64% F1: 14.29%
+  Elicit-Assessment    | TP: 35   FP: 40   FN: 46   | Total: 81   | P: 46.67% R: 43.21% F1: 44.87%
+  Elicit-Comment-Understanding | TP: 0    FP: 1    FN: 2    | Total: 2    | P:  0.00% R:  0.00% F1:  0.00%
+  Elicit-Inform        | TP: 87   FP: 42   FN: 60   | Total: 147  | P: 67.44% R: 59.18% F1: 63.04%
+  Elicit-Offer-Or-Suggestion | TP: 8    FP: 6    FN: 19   | Total: 27   | P: 57.14% R: 29.63% F1: 39.02%
+  Fragment             | TP: 188  FP: 80   FN: 106  | Total: 294  | P: 70.15% R: 63.95% F1: 66.90%
+  Inform               | TP: 959  FP: 454  FN: 264  | Total: 1223 | P: 67.87% R: 78.41% F1: 72.76%
+  Offer                | TP: 15   FP: 11   FN: 30   | Total: 45   | P: 57.69% R: 33.33% F1: 42.25%
+  Other                | TP: 19   FP: 14   FN: 58   | Total: 77   | P: 57.58% R: 24.68% F1: 34.55%
+  Stall                | TP: 181  FP: 51   FN: 116  | Total: 297  | P: 78.02% R: 60.94% F1: 68.43%
+  Suggest              | TP: 172  FP: 126  FN: 179  | Total: 351  | P: 57.72% R: 49.00% F1: 53.00%
+==================================================
+Epochs: 24
+Joint Training: True
+Micro-Precision: 65.2439024390244%
+Micro-Recall: 65.2439024390244%
+Micro-F1: 65.2439024390244%
+Macro-Precision: 52.4611952108818%
+Macro-Recall: 48.080451092382226%
+Macro-F1: 48.66567502968138%
+Hamming Loss: 34.756097560975604%
+Exact Match: 65.2439024390244%
+Total Confusion: TP: 2461, FP: 1311, FN: 1311
+Per-Class Detailed Breakdown:
+  Assess               | TP: 324  FP: 240  FN: 319  | Total: 643  | P: 57.45% R: 50.39% F1: 53.69%
+  Backchannel          | TP: 352  FP: 207  FN: 66   | Total: 418  | P: 62.97% R: 84.21% F1: 72.06%
+  Be-Negative          | TP: 0    FP: 0    FN: 7    | Total: 7    | P:  0.00% R:  0.00% F1:  0.00%
+  Be-Positive          | TP: 37   FP: 13   FN: 42   | Total: 79   | P: 74.00% R: 46.84% F1: 57.36%
+  Comment-About-Understanding | TP: 11   FP: 21   FN: 70   | Total: 81   | P: 34.38% R: 13.58% F1: 19.47%
+  Elicit-Assessment    | TP: 28   FP: 20   FN: 53   | Total: 81   | P: 58.33% R: 34.57% F1: 43.41%
+  Elicit-Comment-Understanding | TP: 1    FP: 3    FN: 1    | Total: 2    | P: 25.00% R: 50.00% F1: 33.33%
+  Elicit-Inform        | TP: 102  FP: 49   FN: 45   | Total: 147  | P: 67.55% R: 69.39% F1: 68.46%
+  Elicit-Offer-Or-Suggestion | TP: 7    FP: 11   FN: 20   | Total: 27   | P: 38.89% R: 25.93% F1: 31.11%
+  Fragment             | TP: 219  FP: 141  FN: 75   | Total: 294  | P: 60.83% R: 74.49% F1: 66.97%
+  Inform               | TP: 949  FP: 366  FN: 274  | Total: 1223 | P: 72.17% R: 77.60% F1: 74.78%
+  Offer                | TP: 20   FP: 21   FN: 25   | Total: 45   | P: 48.78% R: 44.44% F1: 46.51%
+  Other                | TP: 21   FP: 17   FN: 56   | Total: 77   | P: 55.26% R: 27.27% F1: 36.52%
+  Stall                | TP: 220  FP: 87   FN: 77   | Total: 297  | P: 71.66% R: 74.07% F1: 72.85%
+  Suggest              | TP: 170  FP: 115  FN: 181  | Total: 351  | P: 59.65% R: 48.43% F1: 53.46%
+==================================================

@@ -498,10 +498,4 @@ my project documents .,{Discourse-Structuring:Interaction-Structuring},{CORRECT}
 "um you open it up , there's a circuit board inside ,",{Task:Inform},{CORRECT},True
 mm-hmm .,{Auto-Feedback:AutoPositive},{CORRECT},True
 "i mean it's probably more fruit and veg than most other things out there bar fruit and veg ,",{Task:Inform},{CORRECT},True
-"it does seem a little silly to have this screen if you hardly are ever using it , you know ,",{Task:Inform},{CORRECT},True
-yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
-yeah .,{Auto-Feedback:AutoPositive},{CORRECT},True
 so off you go and design stuff,{Task:Inform},"{INCORRECT, Task:Instruct}",False
-touch .,"{Partner-Communication-Management:Completion, Discourse-Structuring:Interaction-Structuring}",{CORRECT},True
-"um something like this shape ,","{Task:Inform, Discourse-Structuring:Interaction-Structuring}",{CORRECT},True
-"i think that was you talked about a beeper for a location ,",{Task:Inform},{CORRECT},True
