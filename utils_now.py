@@ -100,7 +100,7 @@ def padSentence(s, max_length, vocab, word_in_sent_length=0):
 
 def computeMetrics(correct_das, pred_das):
     # Initialize counters
-    total_tp_dim = 0  # Dimension-level TP (CORRECTED: only when function is correct)
+    total_tp_dim = 0  # Dimension-level TP 
     total_fp_dim = 0  # Dimension-level FP  
     total_fn_dim = 0  # Dimension-level FN
     
@@ -172,7 +172,6 @@ def computeMetrics(correct_das, pred_das):
                     total_fn_dim += 1
                     dim_fn[dim_idx] += 1
 
-                # CORRECTED: Dimension-level TP/FP/FN
                 # A dimension-level TP only occurs when BOTH:
                 # 1. The dimension is present in gold AND prediction
                 # 2. The specific function is correct
@@ -351,7 +350,7 @@ def computeMetrics(correct_das, pred_das):
 
     # Return both dimension-level and function-level metrics
     return {
-        # Dimension-level metrics (CORRECTED)
+        # Dimension-level metrics
         'micro_precision_dim': micro_precision_dim * 100,
         'micro_recall_dim': micro_recall_dim * 100,
         'micro_f1_dim': micro_f1_dim * 100,
@@ -492,14 +491,14 @@ class DataProcessor(object):
         for i, data in enumerate(self.all_data):
             weight = 0.0
             
-            # FIX 1: Use smoother inverse frequency
+            # Use smoother inverse frequency
             for df in data['dimension_functions']:
                 frequency = self.dimension_function_frequencies[df] / total_utterances
                 # Use sqrt(inverse_frequency) for more balanced weighting
                 inverse_freq = 1.0 / (frequency + 1e-8)
                 weight += np.sqrt(inverse_freq)  # sqrt instead of log
             
-            # FIX 2: Better length normalization
+            # Better length normalization
             if data['dimension_functions']:
                 # Use geometric mean instead of arithmetic mean
                 weight = weight / np.sqrt(len(data['dimension_functions']))
@@ -508,7 +507,7 @@ class DataProcessor(object):
             
             self.sampling_weights.append(weight)
         
-        # FIX 3: Better normalization
+        # Better normalization
         # Convert to probabilities while preserving relative differences
         total_weight = sum(self.sampling_weights)
         self.sampling_weights = [w / total_weight for w in self.sampling_weights]

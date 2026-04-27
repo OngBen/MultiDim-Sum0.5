@@ -1,0 +1,125 @@
+SAMPLING STATISTICS ANALYSIS
+==================================================
+
+1. DATASET COUNTS
+--------------------
+Total dialogues before sampling: 7024
+Total dialogues after sampling: 7024
+Sampling method: Weighted sampling with replacement
+Total unique dimension-function labels: 28
+
+2. DIMENSION-LEVEL STATISTICS
+--------------------
+Dimension                      Original   Final      Change     Change %       
+---------------------------------------------------------------------------
+"Allo-Feedback                 658        899        +241       +36.6%         
+"Auto-Feedback                 17056      7164       -9892      -58.0%         
+"Discourse-Structuring         9281       4930       -4351      -46.9%         
+"Other                         7536       4621       -2915      -38.7%         
+"Own-Communication-Management  163        263        +100       +61.3%         
+"Partner-Communication-Management 1516       1498       -18        -1.2%          
+"Social-Obligations-Management 5755       5251       -504       -8.8%          
+"Task                          41712      19160      -22552     -54.1%         
+"Time-Management               470        715        +245       +52.1%         
+"Turn-Management               5313       4177       -1136      -21.4%         
+TOTAL                          89460      48678      -40782++++ -45.6%
+
+3. LABEL DISTRIBUTION CHANGES (Detailed)
+--------------------
+Label                                              Original   Final      Change     Change %       
+----------------------------------------------------------------------------------------------------
+"Task:Answer"                                      83         161        +78        +94.0%         
+"Task:Disagreement"                                37         70         +33        +89.2%         
+"Task:Offer"                                       119        222        +103       +86.6%         
+"Social-Obligations-Management:Accept-Apology"     141        252        +111       +78.7%         
+"Task:Inform"                                      29282      6865       -22417     -76.6%         
+"Auto-Feedback:AutoPositive"                       16412      6235       -10177     -62.0%         
+"Own-Communication-Management:Self-Correction"     163        263        +100       +61.3%         
+"Task:Check-Question"                              273        432        +159       +58.2%         
+"Task:Choice-Question"                             255        397        +142       +55.7%         
+"Time-Management:Stalling"                         470        715        +245       +52.1%         
+"Social-Obligations-Management:Apology"            274        414        +140       +51.1%         
+"Task:Address-Offer"                               154        228        +74        +48.1%         
+"Discourse-Structuring:Interaction-Structuring"    9281       4930       -4351      -46.9%         
+"Task:Question"                                    196        283        +87        +44.4%         
+"Auto-Feedback:AutoNegative"                       644        929        +285       +44.3%         
+"Other:Other"                                      7536       4621       -2915      -38.7%         
+"Allo-Feedback:FeedbackElicitation"                658        899        +241       +36.6%         
+"Turn-Management:Turn-Take"                        5313       4177       -1136      -21.4%         
+"Social-Obligations-Management:Init-Goodbye"       3204       2577       -627       -19.6%         
+"Task:Agreement"                                   3268       2648       -620       -19.0%         
+"Task:Set-Question"                                1032       1197       +165       +16.0%         
+"Task:Propositional-Question"                      3683       3162       -521       -14.1%         
+"Social-Obligations-Management:Init-Greeting"      192        210        +18        +9.4%          
+"Task:Confirm"                                     1003       1096       +93        +9.3%          
+"Task:Disconfirm"                                  880        960        +80        +9.1%          
+"Social-Obligations-Management:Thanking"           1944       1798       -146       -7.5%          
+"Partner-Communication-Management:Completion"      1516       1498       -18        -1.2%          
+"Task:Instruct"                                    1447       1439       -8         -0.6%          
+
+4. SAMPLING WEIGHT STATISTICS
+--------------------
+Min sampling weight: 0.000034
+Max sampling weight: 0.000429
+Average sampling weight: 0.000142
+Uniform weight (1/N): 0.000142
+Weight ratio (max/min): 12.4x
+
+Dialogues oversampled (>2x uniform): 181/7024
+Dialogues undersampled (<0.5x uniform): 583/7024
+Dialogues normally sampled: 6260/7024
+
+5. RARE LABEL ANALYSIS
+--------------------
+No rare labels (count < 10) found.
+
+6. DIMENSION BREAKDOWN BY FUNCTION
+--------------------
+
+"Allo-Feedback:
+  FeedbackElicitation"                     658    -> 899    (  +241,   +36.6%)
+
+"Auto-Feedback:
+  AutoNegative"                            644    -> 929    (  +285,   +44.3%)
+  AutoPositive"                            16412  -> 6235   (-10177,   -62.0%)
+
+"Discourse-Structuring:
+  Interaction-Structuring"                 9281   -> 4930   ( -4351,   -46.9%)
+
+"Other:
+  Other"                                   7536   -> 4621   ( -2915,   -38.7%)
+
+"Own-Communication-Management:
+  Self-Correction"                         163    -> 263    (  +100,   +61.3%)
+
+"Partner-Communication-Management:
+  Completion"                              1516   -> 1498   (   -18,    -1.2%)
+
+"Social-Obligations-Management:
+  Accept-Apology"                          141    -> 252    (  +111,   +78.7%)
+  Apology"                                 274    -> 414    (  +140,   +51.1%)
+  Init-Goodbye"                            3204   -> 2577   (  -627,   -19.6%)
+  Init-Greeting"                           192    -> 210    (   +18,    +9.4%)
+  Thanking"                                1944   -> 1798   (  -146,    -7.5%)
+
+"Task:
+  Address-Offer"                           154    -> 228    (   +74,   +48.1%)
+  Agreement"                               3268   -> 2648   (  -620,   -19.0%)
+  Answer"                                  83     -> 161    (   +78,   +94.0%)
+  Check-Question"                          273    -> 432    (  +159,   +58.2%)
+  Choice-Question"                         255    -> 397    (  +142,   +55.7%)
+  Confirm"                                 1003   -> 1096   (   +93,    +9.3%)
+  Disagreement"                            37     -> 70     (   +33,   +89.2%)
+  Disconfirm"                              880    -> 960    (   +80,    +9.1%)
+  Inform"                                  29282  -> 6865   (-22417,   -76.6%)
+  Instruct"                                1447   -> 1439   (    -8,    -0.6%)
+  Offer"                                   119    -> 222    (  +103,   +86.6%)
+  Propositional-Question"                  3683   -> 3162   (  -521,   -14.1%)
+  Question"                                196    -> 283    (   +87,   +44.4%)
+  Set-Question"                            1032   -> 1197   (  +165,   +16.0%)
+
+"Time-Management:
+  Stalling"                                470    -> 715    (  +245,   +52.1%)
+
+"Turn-Management:
+  Turn-Take"                               5313   -> 4177   ( -1136,   -21.4%)

@@ -81,7 +81,6 @@ if joint_training:
 else:
     print('INDEPENDENT TRAINING. DA PREDICTION ONLY.')
 
-# Add this function after the imports and before valid_model
 def da_turn_to_string(indices, da_vocab_per_dim):
     """Convert a turn's DA indices to string like {Dimension:Function, ...}"""
     parts = []
@@ -96,7 +95,7 @@ def da_turn_to_string(indices, da_vocab_per_dim):
     else:
         return "{}"
 
-# Add this function near the top
+# Add Label smoothing function
 def sparse_label_smoothed_cross_entropy(labels, logits, weights, smoothing=0.1):
     num_classes = tf.shape(logits)[-1]
     smooth_positives = 1.0 - smoothing
