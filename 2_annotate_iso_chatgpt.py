@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # ---------- CONFIG ----------
-UTTER_FILE   = './data/train/in'      # your original utterance file
+UTTER_FILE   = './data/train/in'      
 ANNOT_FILE   = './data/train/da_iso_improved_3'   # model’s annotation output (one JSON‐set per utterance)
 OUTPUT_CSV   = 'chatbot_eval_improved_3.csv'
 SAMPLE_SIZE  = 25
